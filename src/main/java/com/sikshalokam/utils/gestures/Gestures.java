@@ -46,6 +46,10 @@ public class Gestures {
     public boolean isDisplayed(WebElement element) {
         return element.isDisplayed();
     }
+    
+    public boolean isEnabled(WebElement element) {
+        return element.isEnabled();
+    }
 
     public boolean click(WebElement element) throws Exception {
         String identifyBy = "xpath";

@@ -99,9 +99,19 @@ public class LoginPageAction {
     }
 
     public void selectTeacher() throws Exception {
+    	SikshaLokamClient.get().gestures().click(loginPageObjects.teacherIcon);
         SikshaLokamClient.get().report().log(Status.INFO, "Select Teacher");
     }
+    
+    public void selectStudent() throws Exception {
+    	SikshaLokamClient.get().gestures().click(loginPageObjects.studentIcon);
+        SikshaLokamClient.get().report().log(Status.INFO, "Select Student");
+    }
 
+    public void selectParent() throws Exception {
+    	SikshaLokamClient.get().gestures().click(loginPageObjects.parentIcon);
+        SikshaLokamClient.get().report().log(Status.INFO, "Select Parent");
+    }
     public void selectBoard() throws Exception {
         SikshaLokamClient.get().report().log(Status.INFO, "Select Board");
     }
@@ -233,6 +243,7 @@ public class LoginPageAction {
     	SikshaLokamClient.get().gestures().click(loginPageObjects.courseWindowSubmitButton);
     	Logger.logAndReportInfo("Clicked on the submit button on BMC selection window.");
     }
+    
     
     public void clickOnSubmitButtonOnLocationWindow() throws Exception {
 		js.executeScript("arguments[0].click();", loginPageObjects.LocationWindowSubmitButton);
@@ -408,4 +419,25 @@ public class LoginPageAction {
         Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(loginPageObjects.dikshaUATLoginTitle),"Diksha UAT title is not displayed.");
 		Logger.logAndReportPass("Diksha UAT login title is displayed succesfully.");
 	}
+	
+	   public void verifySubmitButtonEnabled() throws Exception {
+		   SikshaLokamClient.get().gestures().waitTillTheElementIsVisibleAndClickable(loginPageObjects.courseWindowSubmitButton);
+		   Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(loginPageObjects.courseWindowSubmitButton),"Submit button not Enabled on BMC selection window.");
+		   Logger.logAndReportInfo("Submit button is Enabled on BMC selection window.");
+	    	SikshaLokamClient.get().gestures().click(loginPageObjects.courseWindowSubmitButton);
+	    	
+	    }
+	  
+	   public void verifySubmitButtonisDisabled() throws Exception {  
+		   Assert.assertFalse(SikshaLokamClient.get().gestures().isEnabled(loginPageObjects.courseWindowSubmitButton),"Submit button is Enabled on BMC selection window.");
+		   Logger.logAndReportInfo("Submit button is disabled on BMC selection window.");
+	    		
+	    }
+	  
+	    
+	    public void verifyYourLocationPopUp() throws Exception {
+	    	SikshaLokamClient.get().gestures().waitTillTheElementIsVisibleAndClickable(loginPageObjects.YourLocationPopUp);
+	    	 Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(loginPageObjects.YourLocationPopUp),"Your Location pop-up is not displayed");  
+	    	Logger.logAndReportInfo("Your Location pop-up is displayed");
+	    }
 }

@@ -230,5 +230,101 @@ public class LoginPageTest {
         Assert.assertTrue(true,"User name is not present on profile");
         //getLoginPageActions().getUserNameFromProfile();
         //Assert.assertEquals(getLoginPageActions().getUserNameFromProfile(), loginTestData.get("userNameOnLocationWindow"), "User name is not matching");
+    
+        
+        
+        //NEW TC'S login
     }
+    @Test(description = "Board is mandatory field in BMC Pop-up for HTofficial role")
+    @Author(name = "Manjunatha K")
+    public void HTofficialsAndSubmit() throws Exception {
+        loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!A:B");
+        //getLoginPageActions().clickOnExploreDiksha();
+        if(getEnvironmentValue().contains("preprod")) {
+        	getLoginPageActions().clickOnExploreDiksha();
+        }
+        getLoginPageActions().verifyWelcomeTitle();
+        getLoginPageActions().selectRoleHTAndOffical();
+        getLoginPageActions().clickOnContinue();
+        getLoginPageActions().clickOnBoardDropDown();
+        getLoginPageActions().selectcbseOrNcertBoardOption();
+        Thread.sleep(5000);
+        System.out.println("5 Seconds wait is over");
+        getLoginPageActions().verifySubmitButtonEnabled();
+        getLoginPageActions().verifyYourLocationPopUp();
+}
+  
+   
+    @Test(description = "Board Medium Grade are mandatory fields in BMC Pop-up for Teacher role")
+    @Author(name = "Manjunatha K")
+    public void TeacherAndSubmit() throws Exception {
+        loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!A:B");
+        //getLoginPageActions().clickOnExploreDiksha();
+        if(getEnvironmentValue().contains("preprod")) {
+        	getLoginPageActions().clickOnExploreDiksha();
+        }
+        getLoginPageActions().verifyWelcomeTitle();
+        getLoginPageActions().selectTeacher();
+        getLoginPageActions().clickOnContinue();
+        getLoginPageActions().clickOnBoardDropDown();
+        getLoginPageActions().selectcbseOrNcertBoardOption();
+        Thread.sleep(5000);
+        System.out.println("5 Seconds wait is over");
+        getLoginPageActions().verifySubmitButtonisDisabled();
+        getLoginPageActions().clickOnMediumDropDown();
+        getLoginPageActions().selectEnglishOption();
+        getLoginPageActions().clickOnClassDropDown();
+        getLoginPageActions().selectClass1Option();
+        getLoginPageActions().verifySubmitButtonEnabled();
+        getLoginPageActions().verifyYourLocationPopUp();
+}
+   
+    
+    @Test(description = "Board Medium Grade are mandatory fields in BMC Pop-up for Student role")
+    @Author(name = "Manjunatha K")
+    public void StudentAndSubmit() throws Exception {
+        loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!A:B");
+        //getLoginPageActions().clickOnExploreDiksha();
+        if(getEnvironmentValue().contains("preprod")) {
+        	getLoginPageActions().clickOnExploreDiksha();
+        }
+        getLoginPageActions().verifyWelcomeTitle();
+        getLoginPageActions().selectStudent();
+        getLoginPageActions().clickOnContinue();
+        getLoginPageActions().clickOnBoardDropDown();
+        getLoginPageActions().selectcbseOrNcertBoardOption();
+        Thread.sleep(5000);
+        System.out.println("5 Seconds wait is over");
+        getLoginPageActions().verifySubmitButtonisDisabled();
+        getLoginPageActions().clickOnMediumDropDown();
+        getLoginPageActions().selectEnglishOption();
+        getLoginPageActions().clickOnClassDropDown();
+        getLoginPageActions().selectClass1Option();
+        getLoginPageActions().verifySubmitButtonEnabled();
+        getLoginPageActions().verifyYourLocationPopUp();
+}
+    @Test(description = "Board Medium Grade are mandatory fields in BMC Pop-up for Parent role")
+    @Author(name = "Manjunatha K")
+    public void ParentAndSubmit() throws Exception {
+        loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!A:B");
+        //getLoginPageActions().clickOnExploreDiksha();
+        if(getEnvironmentValue().contains("preprod")) {
+        	getLoginPageActions().clickOnExploreDiksha();
+        }
+        getLoginPageActions().verifyWelcomeTitle();
+        getLoginPageActions().selectParent();
+        getLoginPageActions().clickOnContinue();
+        getLoginPageActions().clickOnBoardDropDown();
+        getLoginPageActions().selectcbseOrNcertBoardOption();
+        Thread.sleep(5000);
+        System.out.println("5 Seconds wait is over");
+        getLoginPageActions().verifySubmitButtonisDisabled();
+        getLoginPageActions().clickOnMediumDropDown();
+        getLoginPageActions().selectEnglishOption();
+        getLoginPageActions().clickOnClassDropDown();
+        getLoginPageActions().selectClass1Option();
+        getLoginPageActions().verifySubmitButtonEnabled();
+        getLoginPageActions().verifyYourLocationPopUp();
+}
+    
 }

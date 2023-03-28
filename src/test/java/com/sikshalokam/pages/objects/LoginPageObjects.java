@@ -265,5 +265,8 @@ public class LoginPageObjects {
     @FindBy(xpath = "////h4[@class='mb-4']")
     public WebElement Ot;
     
+    @FindBy(xpath = "//p[.='Your Location']")
+    public WebElement YourLocationPopUp;
+    
 }
 
