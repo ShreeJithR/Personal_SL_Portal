@@ -1,5 +1,6 @@
 package com.sikshalokam.test.observationTestcaseStaging;
 
+import org.testng.annotations.Test;
 import java.util.Map;
 
 import org.testng.annotations.Test;
@@ -41,8 +42,8 @@ public class ObservationPageTest {
         getLoginPageActions().BMCLSelection();
         getLoginPageActions().clickOnGuest();
         getLoginPageActions().clickOnLogin();
-        getLoginPageActions().enterUserName(loginTestData.get("userName"));
-        getLoginPageActions().enterPassword(loginTestData.get("password"));
+        getLoginPageActions().enterUserName(loginTestData.get("user"));
+        getLoginPageActions().enterPassword(loginTestData.get("pwd"));
         getLoginPageActions().clickOnLoginButton();
         getObservationPageActions().verifyObservationButton();
         getObservationPageActions().clickOnObservationButton();

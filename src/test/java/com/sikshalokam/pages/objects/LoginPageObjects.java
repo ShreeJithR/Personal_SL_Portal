@@ -195,6 +195,9 @@ public class LoginPageObjects {
     @FindBy(xpath="//div[@id='error-summary']")
     public WebElement loginErorMessage;
     
+    @FindBy(xpath ="//p[contains(text(),'Hi')]")
+    public WebElement loginSuccess;
+    
     @FindBy(xpath="//div[@id='fgtPortalFlow']")
     public WebElement forgotPasswordButton;
     

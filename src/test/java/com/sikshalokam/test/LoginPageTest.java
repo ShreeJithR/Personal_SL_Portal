@@ -1,5 +1,7 @@
 package com.sikshalokam.test;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import com.sikshalokam.annotation.Author;
 import com.sikshalokam.pages.actions.LoginPageAction;
 import com.sikshalokam.utils.gSheet.TestData;
@@ -33,9 +35,9 @@ public class LoginPageTest {
         }
     }
     
-    @Test(description = "login to application with valid Credentials")
+  /*  @Test(description = "login to application with valid Credentials")
     @Author(name = "Sunil H N")
-    public void loginToApplication() throws Exception {
+    public void Application() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!A:B");
         if(getEnvironmentValue().contains("preprod")) {
         	getLoginPageActions().clickOnExploreDiksha();
@@ -44,8 +46,8 @@ public class LoginPageTest {
         getLoginPageActions().clickOnLogin();
         getLoginPageActions().enterUserName(loginTestData.get("userName"));
         getLoginPageActions().enterPassword(loginTestData.get("password"));
-        getLoginPageActions().clickOnLoginButton();
-    }
+        getLoginPageActions().clickOnLoginButton();  
+}  */ //i made this change ,flow is not correct and failing
 
     // not using..
     @Test(description = "login to application with valid Credentials")
@@ -61,9 +63,10 @@ public class LoginPageTest {
         getLoginPageActions().enterUserName(loginTestData.get("userName"));
         getLoginPageActions().enterPassword(loginTestData.get("password"));
         getLoginPageActions().clickOnLoginButton();
+        getLoginPageActions().verifyValidLoginSuccessful();
     }
     
-    
+    // can be part of regression
     @Test(description = "login to application with Invalid Credentials")
     @Author(name = "Sunil H N")
     public void loginToWithInvalidCredentails() throws Exception {
@@ -96,7 +99,8 @@ public class LoginPageTest {
         getLoginPageActions().verifyRegisterWindowTitle();
 
     }
-
+    
+    //can be part of regression
     @Test(description = "State System Login Enable")
     @Author(name = "Manjunatha K")
     public void loginWithStateSystem() throws Exception {

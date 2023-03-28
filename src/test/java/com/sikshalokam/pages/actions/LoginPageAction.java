@@ -375,6 +375,11 @@ public class LoginPageAction {
 		Logger.logAndReportPass("login error message displayed succesfully.");
 	}
 	
+	public void verifyValidLoginSuccessful() throws Exception {
+		Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(loginPageObjects.loginSuccess),"Login Success Hi Username is not displayed.");
+		Logger.logAndReportPass("Login Success Hi Username is displayed.");
+	}
+	
 	public void verifyForgotPasswordTitle() throws Exception {
         Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(loginPageObjects.forgotPasswordTitle),"Forgot password window title is not displayed.");
 		Logger.logAndReportPass("Forgot password window title is displayed succesfully.");
