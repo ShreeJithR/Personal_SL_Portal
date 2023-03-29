@@ -433,7 +433,7 @@ public class LoginPageAction {
 		   Logger.logAndReportInfo("Submit button is disabled on BMC selection window.");
 	    		
 	    }
-	  
+	  //waitTillTheElementIsVisibleAndClickable
 	    
 	    public void verifyYourLocationPopUp() throws Exception {
 	    	SikshaLokamClient.get().gestures().waitTillTheElementIsVisibleAndClickable(loginPageObjects.YourLocationPopUp);

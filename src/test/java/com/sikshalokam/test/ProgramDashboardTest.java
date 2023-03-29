@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import com.sikshalokam.annotation.Author;
 import com.sikshalokam.pages.actions.LoginPageAction;
 import com.sikshalokam.pages.actions.ObservationPageAction;
+import com.sikshalokam.pages.actions.ProgramDashboardAction;
 import com.sikshalokam.pages.actions.ReportPageAction;
 import com.sikshalokam.utils.gSheet.TestData;
 import com.sikshalokam.utils.prop.PropUtlis;
@@ -16,8 +17,13 @@ public class ProgramDashboardTest {
 	Map<String, String> loginTestData;
     Map<String, String> observationPageTestData;
     String appUrl;
+   
+    
     public LoginPageAction getLoginPageActions() throws Exception {
         return new LoginPageAction();
+    }
+    public ProgramDashboardAction getProgramDashboardActions() throws Exception {
+        return new ProgramDashboardAction();
     }
     
     public ObservationPageAction getObservationPageActions() throws Exception {
@@ -29,7 +35,7 @@ public class ProgramDashboardTest {
     }
     
     @Test(description = "login and verify observation tile")
-    @Author(name = "Manjunatha K")
+    @Author(name = "SHREEJITH R")
     public void PMD() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!D:E");
        // observationPageTestData = TestData.getFullGoogleSheetDataAsMapString("Observation!A:B");
@@ -46,5 +52,13 @@ public class ProgramDashboardTest {
         getLoginPageActions().enterPassword(loginTestData.get("password"));
         Thread.sleep(2000);
         getLoginPageActions().clickOnLoginButton();
-
+        getProgramDashboardActions().clickOnProfileIcon();
+        Thread.sleep(5000);
+        getProgramDashboardActions().clickOnprogramdashboard();
+        Thread.sleep(2000);
+        getProgramDashboardActions().verifyProgramResourcePopup();
+        getProgramDashboardActions().clickOnSelectProgramDropdown();
+        getProgramDashboardActions().scrollandclickOnTesting4point4();
+        getProgramDashboardActions().clickOnSelectResourceDropdown();
+        Thread.sleep(2000);
 }}
