@@ -1,152 +1,218 @@
-Thu Mar 30 19:02:18 IST 2023 INFO TestListeners-onStart-84 *********************onStart********************* mode null
-Thu Mar 30 19:02:18 IST 2023 INFO GlobalSession-get-23 On GetAppiumManger Global
-Thu Mar 30 19:02:18 IST 2023 INFO GlobalSession-setDriverManager-32 SetAppiumManager Global
-Thu Mar 30 19:02:18 IST 2023 INFO TestListeners-onStart-92 Running in local
-Thu Mar 30 19:02:18 IST 2023 INFO GlobalSession-get-23 On GetAppiumManger Global
-Thu Mar 30 19:02:18 IST 2023 INFO GlobalSession-setDriverManager-32 SetAppiumManager Global
-Thu Mar 30 19:02:18 IST 2023 INFO ExtentTestManager-InitReport-23 On InitReports
-Thu Mar 30 19:02:18 IST 2023 INFO ExtentManager-getExtent-23 On GetExtent
-Thu Mar 30 19:02:18 IST 2023 INFO TestListeners-onTestStart-34 .ObservationPageTest
-Thu Mar 30 19:02:18 IST 2023 INFO TestListeners-onTestStart-35 *********************onTestStart********************* SchoolEntityNotAddedBydefault
-Thu Mar 30 19:02:18 IST 2023 INFO PropUtlis-readConfig-29 Chrome
-Thu Mar 30 19:02:18 IST 2023 INFO GlobalSession-get-23 On GetAppiumManger Global
-Thu Mar 30 19:02:18 IST 2023 INFO DriverManager-createDriver-51 On Create Driver...
-Thu Mar 30 19:02:18 IST 2023 INFO DriverManager-setDriver-38 on **************** setDriver
-Thu Mar 30 19:02:18 IST 2023 INFO WebDriverManagerUtils-initialization-33 On initialization 
-Thu Mar 30 19:02:18 IST 2023 INFO PropUtlis-readConfig-29 Chrome
-Thu Mar 30 19:02:18 IST 2023 INFO PropUtlis-readConfig-29 false
-Thu Mar 30 19:02:19 IST 2023 DEBUG WebDriverManagerUtils-initialization-48 Chrome Browser launched in Head Mode
-Thu Mar 30 19:02:19 IST 2023 INFO PropUtlis-readConfig-29 https://staging.sunbirded.org/
-Thu Mar 30 19:02:26 IST 2023 INFO DriverManager-setDriverToThreadLocal-27 On SetDriverToThreadLocal
-Thu Mar 30 19:02:26 IST 2023 INFO DriverManager-setDriver-42 Driver is set
-Thu Mar 30 19:02:26 IST 2023 INFO DriverManager-getDriver-32 On GetAppiumDriver
-Thu Mar 30 19:02:26 IST 2023 INFO SikshaLokamClient-<init>-35 On Constructor SikshaLokamClient
-Thu Mar 30 19:02:26 IST 2023 INFO SikshaLokamClient-setSikshaLokamClient-40 On SetGoodWorkerClient
-Thu Mar 30 19:02:26 IST 2023 INFO TestListeners-onTestStart-42 instance created for Web
-Thu Mar 30 19:02:28 IST 2023 INFO PropUtlis-readConfig-29 https://staging.sunbirded.org/
-Thu Mar 30 19:02:28 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:28 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:28 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:28 IST 2023 INFO SikshaLokamClient-gestures-109 On Gestures
-Thu Mar 30 19:02:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:29 IST 2023 INFO SikshaLokamClient-logger-78 On GetLogUtlis
-Thu Mar 30 19:02:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:32 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:32 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:32 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:32 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:34 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:34 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:34 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:34 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:34 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:39 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:40 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:40 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:40 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:40 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:02:41 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:03:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:03:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:03:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:03:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:03:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:03:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:03:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:03:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:03:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:03:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:03:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:03:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:03:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:03:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:03:23 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:03:23 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:03:23 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:03:24 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:03:24 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:03:24 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:03:24 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:03:24 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:03:25 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:05 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:05 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:05 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:05 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:05 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:05 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:07 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:07 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:07 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:07 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:07 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:09 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:09 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:09 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:09 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:09 IST 2023 INFO PropUtlis-readConfig-29 https://staging.sunbirded.org/
-Thu Mar 30 19:04:09 IST 2023 INFO PropUtlis-readConfig-29 https://staging.sunbirded.org/
-Thu Mar 30 19:04:09 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:09 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:09 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:09 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:09 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:09 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:10 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:10 IST 2023 INFO PropUtlis-readConfig-29 https://staging.sunbirded.org/
-Thu Mar 30 19:04:10 IST 2023 INFO PropUtlis-readConfig-29 https://staging.sunbirded.org/
-Thu Mar 30 19:04:10 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:10 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:10 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:10 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:10 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:10 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:10 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:10 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:10 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:10 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:15 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:15 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:15 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:15 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:15 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:15 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:15 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:15 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:15 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:15 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:15 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:16 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:17 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:19 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:19 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:19 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:19 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:59 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:59 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:59 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:04:59 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:05:39 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
-Thu Mar 30 19:05:39 IST 2023 INFO TestListeners-onTestSuccess-53 @onTestSuccess
-Thu Mar 30 19:05:39 IST 2023 INFO GlobalSession-get-23 On GetAppiumManger Global
-Thu Mar 30 19:05:39 IST 2023 INFO DriverManager-quitDriver-60 On QuitDriver
-Thu Mar 30 19:05:39 IST 2023 INFO DriverManager-quitDriver-62 ***************************QUTTING**************************
-Thu Mar 30 19:05:39 IST 2023 INFO TestListeners-onTestSuccess-57 Driver closed
-Thu Mar 30 19:05:39 IST 2023 INFO TestListeners-onFinish-108 *********************onFinish*********************
+Thu Mar 30 22:31:35 IST 2023 INFO TestListeners-onStart-84 *********************onStart********************* mode null
+Thu Mar 30 22:31:35 IST 2023 INFO GlobalSession-get-23 On GetAppiumManger Global
+Thu Mar 30 22:31:35 IST 2023 INFO GlobalSession-setDriverManager-32 SetAppiumManager Global
+Thu Mar 30 22:31:35 IST 2023 INFO TestListeners-onStart-92 Running in local
+Thu Mar 30 22:31:35 IST 2023 INFO GlobalSession-get-23 On GetAppiumManger Global
+Thu Mar 30 22:31:35 IST 2023 INFO GlobalSession-setDriverManager-32 SetAppiumManager Global
+Thu Mar 30 22:31:35 IST 2023 INFO ExtentTestManager-InitReport-23 On InitReports
+Thu Mar 30 22:31:35 IST 2023 INFO ExtentManager-getExtent-23 On GetExtent
+Thu Mar 30 22:31:35 IST 2023 INFO TestListeners-onTestStart-34 .ObservationPageTest
+Thu Mar 30 22:31:35 IST 2023 INFO TestListeners-onTestStart-35 *********************onTestStart********************* SchoolandBlockEntityNotAddedBydefault
+Thu Mar 30 22:31:35 IST 2023 INFO PropUtlis-readConfig-29 Chrome
+Thu Mar 30 22:31:35 IST 2023 INFO GlobalSession-get-23 On GetAppiumManger Global
+Thu Mar 30 22:31:35 IST 2023 INFO DriverManager-createDriver-51 On Create Driver...
+Thu Mar 30 22:31:35 IST 2023 INFO DriverManager-setDriver-38 on **************** setDriver
+Thu Mar 30 22:31:35 IST 2023 INFO WebDriverManagerUtils-initialization-33 On initialization 
+Thu Mar 30 22:31:35 IST 2023 INFO PropUtlis-readConfig-29 Chrome
+Thu Mar 30 22:31:35 IST 2023 INFO PropUtlis-readConfig-29 false
+Thu Mar 30 22:31:36 IST 2023 DEBUG WebDriverManagerUtils-initialization-48 Chrome Browser launched in Head Mode
+Thu Mar 30 22:31:36 IST 2023 INFO PropUtlis-readConfig-29 https://staging.sunbirded.org/
+Thu Mar 30 22:31:40 IST 2023 INFO DriverManager-setDriverToThreadLocal-27 On SetDriverToThreadLocal
+Thu Mar 30 22:31:40 IST 2023 INFO DriverManager-setDriver-42 Driver is set
+Thu Mar 30 22:31:40 IST 2023 INFO DriverManager-getDriver-32 On GetAppiumDriver
+Thu Mar 30 22:31:40 IST 2023 INFO SikshaLokamClient-<init>-35 On Constructor SikshaLokamClient
+Thu Mar 30 22:31:40 IST 2023 INFO SikshaLokamClient-setSikshaLokamClient-40 On SetGoodWorkerClient
+Thu Mar 30 22:31:40 IST 2023 INFO TestListeners-onTestStart-42 instance created for Web
+Thu Mar 30 22:31:42 IST 2023 INFO PropUtlis-readConfig-29 https://staging.sunbirded.org/
+Thu Mar 30 22:31:42 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:42 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:42 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:42 IST 2023 INFO SikshaLokamClient-gestures-109 On Gestures
+Thu Mar 30 22:31:42 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:42 IST 2023 INFO SikshaLokamClient-logger-78 On GetLogUtlis
+Thu Mar 30 22:31:42 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:42 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:42 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:42 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:42 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:42 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:42 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:42 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:42 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:42 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:42 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:42 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:42 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:43 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:43 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:43 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:43 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:43 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:44 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:45 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:45 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:45 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:47 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:47 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:47 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:47 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:47 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:52 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:52 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:52 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:52 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:52 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:31:53 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:32:33 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:32:33 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:32:33 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:32:33 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:32:33 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:32:33 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:32:33 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:32:33 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:32:33 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:32:33 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:32:33 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:32:33 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:32:33 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:32:33 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:32:35 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:32:35 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:32:35 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:32:36 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:32:36 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:32:36 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:32:36 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:32:36 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:32:36 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:16 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:16 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:16 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:16 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:17 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:17 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:19 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:19 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:19 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:19 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:19 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:21 IST 2023 INFO PropUtlis-readConfig-29 https://staging.sunbirded.org/
+Thu Mar 30 22:33:21 IST 2023 INFO PropUtlis-readConfig-29 https://staging.sunbirded.org/
+Thu Mar 30 22:33:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:21 IST 2023 INFO PropUtlis-readConfig-29 https://staging.sunbirded.org/
+Thu Mar 30 22:33:21 IST 2023 INFO PropUtlis-readConfig-29 https://staging.sunbirded.org/
+Thu Mar 30 22:33:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:21 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:23 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:24 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:29 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:30 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:32 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:32 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:32 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:33:32 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:34:13 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:34:13 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:34:13 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:34:13 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:34:53 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:34:53 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:34:53 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:34:53 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:34:53 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:34:53 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:34:53 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:34:53 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:34:54 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:35:34 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:35:34 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:35:34 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:35:34 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:14 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:14 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:14 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:14 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:14 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:14 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:14 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:14 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:14 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:14 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:55 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:55 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:55 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:55 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:55 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:55 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:55 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:55 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:55 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:55 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:55 IST 2023 INFO PropUtlis-readConfig-29 https://staging.sunbirded.org/
+Thu Mar 30 22:36:55 IST 2023 INFO PropUtlis-readConfig-29 https://staging.sunbirded.org/
+Thu Mar 30 22:36:55 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:57 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:57 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:57 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:57 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:57 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:57 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:57 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:59 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:36:59 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:37:01 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:37:01 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:37:01 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:37:02 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:37:02 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:37:02 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:37:02 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:37:02 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:37:02 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:37:02 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:37:02 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:37:02 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:37:03 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:37:05 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:37:05 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:37:05 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:37:05 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:37:45 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:37:45 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:37:45 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:37:45 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:38:25 IST 2023 INFO SikshaLokamClient-get-45 On SikshaLokamClient
+Thu Mar 30 22:38:25 IST 2023 INFO TestListeners-onTestSuccess-53 @onTestSuccess
+Thu Mar 30 22:38:25 IST 2023 INFO GlobalSession-get-23 On GetAppiumManger Global
+Thu Mar 30 22:38:25 IST 2023 INFO DriverManager-quitDriver-60 On QuitDriver
+Thu Mar 30 22:38:25 IST 2023 INFO DriverManager-quitDriver-62 ***************************QUTTING**************************
+Thu Mar 30 22:38:25 IST 2023 INFO TestListeners-onTestSuccess-57 Driver closed
+Thu Mar 30 22:38:25 IST 2023 INFO TestListeners-onFinish-108 *********************onFinish*********************
