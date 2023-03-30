@@ -282,13 +282,20 @@ public class LoginPageObjects {
     @FindBy(xpath = "//div[.='DEO']")
     public WebElement DEOsubrole;
     
-    @FindBy(xpath = "//button[.='Submit ']")
+    @FindBy(xpath = "(//button[@type='submit'])[3]")            ////button[.='Submit ']
     public WebElement submitbuttonpersonadetailspage;
     
     @FindBy(xpath = "//button[@aria-label='Back']")
     public WebElement backButton;
     
+    @FindBy(xpath = "//div[@aria-label='Select Block']")
+    public WebElement blockDropdown;
     
+    @FindBy(xpath = "//span[.='ACHHNERA']")
+    public WebElement AchhneraBlock;
     
-}
+    @FindBy(xpath = "//span[.='AGALI']")
+    public WebElement AgaliBlock;
+    
+}//span[.='AGALI']
 

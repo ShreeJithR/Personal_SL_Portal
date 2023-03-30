@@ -136,7 +136,7 @@ public class ObservationPageTest {
     }
     @Test(description = "To verify school enitity is not added by deafault")
     @Author(name = "SHREEJITH R")
-    public void SchoolEntityNotAddedBydefault() throws Exception {
+    public void SchoolandBlockEntityNotAddedBydefault() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!F:G");
         observationPageTestData = TestData.getFullGoogleSheetDataAsMapString("Observation!A:B");
         //getLoginPageActions().clickOnExploreDiksha();
@@ -178,6 +178,24 @@ public class ObservationPageTest {
         getObservationPageActions().clickOnObservationButton();
         Thread.sleep(2000);
         getObservationPageActions().clickOnSchoolEntityobsevation();  
-       
+        getObservationPageActions().verifySchoolentityisnotadded();
+        getLoginPageActions().clickOnBackbutton();
+        getObservationPageActions().clickOnBlockEntityobsevation();
+        getObservationPageActions().verifyBlockentityisnotadded();
+        
+        getProgramDashboardActions().clickOnProfileIcon();
+        getLoginPageActions().selectProfile();
+        getLoginPageActions().clickOnEdit();
+        getLoginPageActions().selectBlock();
+        
+        getLoginPageActions().verifySubmitButtonEnabledonPersonaldetailspage();
+        Thread.sleep(2000);
+        getLoginPageActions().clickOnBackbutton();
+        
+        getObservationPageActions().verifyObservationButton();
+        getObservationPageActions().clickOnObservationButton();
+        
+        Thread.sleep(2000);
+        getObservationPageActions().clickOnSchoolEntityobsevation();  
         getObservationPageActions().verifySchoolentityisnotadded();
 }}

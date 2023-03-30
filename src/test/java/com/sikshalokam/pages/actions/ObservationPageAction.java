@@ -241,11 +241,18 @@ public class ObservationPageAction {
     	} */
     	
     	 public void clickOnSchoolEntityobsevation() throws Exception {
-    		
-    		 SikshaLokamClient.get().gestures().click(observationPageObjects.SchoolEnityNotAdded);
+    		SikshaLokamClient.get().gestures().click(observationPageObjects.SchoolEnityNotAdded);
     	        SikshaLokamClient.get().report().log(Status.INFO, "Solution with rubrics -File button – FD-429");
     		
     		 }
+    	 
+    	 public void clickOnBlockEntityobsevation() throws Exception {
+    		 SikshaLokamClient.get().gestures().click(observationPageObjects.BlockEnityNotAdded);
+    	        SikshaLokamClient.get().report().log(Status.INFO, "QA solution - entity type block - FD 335']");
+    		
+    		 }
+    	 
+    	 
     	//******************Verify*********************************************************//
     	
     	public void verifyObservationButton() throws Exception {
@@ -391,6 +398,16 @@ public class ObservationPageAction {
     	
     	public void verifySchoolentityisnotadded() throws Exception {  
     		  Assert.assertTrue(SikshaLokamClient.get().gestures().verifyNoelement(observationPageObjects.observationform),"Entity added by default");
-   	    	Logger.logAndReportInfo("No entity added by default");
-}}
+   	    	Logger.logAndReportInfo("No School entity added by default");
+    	}
+   	    	
+   	    	public void verifyBlockentityisnotadded() throws Exception {  
+      		  Assert.assertTrue(SikshaLokamClient.get().gestures().verifyNoelement(observationPageObjects.observationform),"Entity added by default");
+     	    	Logger.logAndReportInfo("No Block entity added by default");
+          }
+
+
+
+}
+
 

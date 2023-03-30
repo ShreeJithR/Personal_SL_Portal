@@ -172,4 +172,8 @@ public class ObservationPageObjects {
     @FindBy(xpath = "(//div[.=' Observation form '])[2]")
     public WebElement observationform;
     
+    @FindBy(xpath = "//h4[@title='QA solution - entity type block - FD 335']")
+    public WebElement BlockEnityNotAdded;
+    
+    
 }

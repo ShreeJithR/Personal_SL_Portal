@@ -165,6 +165,23 @@ public class LoginPageAction {
             SikshaLokamClient.get().report().log(Status.INFO, "Ananathpura District Selected.");        	
         }
     }
+    
+    public void selectBlock() throws Exception {
+        SikshaLokamClient.get().gestures().click(loginPageObjects.blockDropdown);
+        if(getEnvironmentValue().contains("diksha")) {
+            SikshaLokamClient.get().gestures().click(loginPageObjects.alappuzhaDistrict);
+            SikshaLokamClient.get().report().log(Status.INFO, "Alappuzha District Selected.");
+        } else if(getEnvironmentValue().contains("preprod")) {
+            SikshaLokamClient.get().gestures().click(loginPageObjects.AchhneraBlock);
+            SikshaLokamClient.get().report().log(Status.INFO, "Achhnera Block Selected.");
+        } else {
+        	SikshaLokamClient.get().gestures().click(loginPageObjects.AgaliBlock);
+            SikshaLokamClient.get().report().log(Status.INFO, "Agali Block Selected.");        	
+        }
+    }
+    
+    
+    
 
     public void clickOnSubmit2() throws Exception {
         SikshaLokamClient.get().gestures().click(loginPageObjects.courseWindowSubmitButton);
@@ -473,8 +490,9 @@ public class LoginPageAction {
 	    }
 	    public void verifySubmitButtonEnabledonPersonaldetailspage() throws Exception {
 			   SikshaLokamClient.get().gestures().waitTillTheElementIsVisibleAndClickable(loginPageObjects.submitbuttonpersonadetailspage);
-			  Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(loginPageObjects.submitbuttonpersonadetailspage),"Submit button not Enabled on Personal Details page.");
+			  Assert.assertTrue(SikshaLokamClient.get().gestures().isEnabled(loginPageObjects.submitbuttonpersonadetailspage),"Submit button not Enabled on Personal Details page.");
 			   Logger.logAndReportInfo("Submit button is Enabled on Personal Details page.");
+			   Thread.sleep(2000);
 			  SikshaLokamClient.get().gestures().click(loginPageObjects.submitbuttonpersonadetailspage);
 		    	
 		    }
