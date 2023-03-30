@@ -174,8 +174,7 @@ public class LoginPageObjects {
     @FindBy(xpath="//mat-option[@aria-label=\"Class 1\"]")
     public WebElement class1Option;
     
-    @FindBy(xpath = "//div[@aria-label='Select State']")
-    public WebElement  selectStateDropdown;
+
     
     @FindBy(xpath="(//span[contains(text(),'Uttar Pradesh')])[2]")
     public WebElement uttarPradeshSate;
@@ -267,6 +266,29 @@ public class LoginPageObjects {
     
     @FindBy(xpath = "//p[.='Your Location']")
     public WebElement YourLocationPopUp;
+    
+    @FindBy(xpath = "//button[.='Clear ']")
+    public WebElement click;
+    
+    @FindBy(xpath = "//div[@aria-label='undefined, selected ,Select State']")
+    public WebElement stateDropdown;
+    
+    @FindBy(xpath = "(//button[.='Edit'])[1]")
+    public WebElement edit;
+    
+    @FindBy(xpath = "//div[@aria-label=', selected ,Select Subrole']")
+    public WebElement subroleDropdown;
+    
+    @FindBy(xpath = "//div[.='DEO']")
+    public WebElement DEOsubrole;
+    
+    @FindBy(xpath = "//button[.='Submit ']")
+    public WebElement submitbuttonpersonadetailspage;
+    
+    @FindBy(xpath = "//button[@aria-label='Back']")
+    public WebElement backButton;
+    
+    
     
 }
 

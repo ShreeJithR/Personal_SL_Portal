@@ -149,6 +149,8 @@ public class LoginPageAction {
         }
         
     }
+   
+    
 
     public void selectDistrict() throws Exception {
         SikshaLokamClient.get().gestures().click(loginPageObjects.selectDistrict);
@@ -187,7 +189,36 @@ public class LoginPageAction {
     public void selectProfile() throws Exception {
         SikshaLokamClient.get().gestures().click(loginPageObjects.profile);
         SikshaLokamClient.get().report().log(Status.INFO, "Clicked on User Icon");
-
+    }
+    
+    public void clickOnEdit() throws Exception {
+        SikshaLokamClient.get().gestures().click(loginPageObjects.edit);
+        SikshaLokamClient.get().report().log(Status.INFO, "Clicked on Edit Button");
+    }
+    public void clickOnClear() throws Exception {
+        SikshaLokamClient.get().gestures().click(loginPageObjects.clear);
+        SikshaLokamClient.get().report().log(Status.INFO, "Clicked on Clear Button"); 
+    }
+    
+    public void clickOnSelectSubrole() throws Exception {
+        SikshaLokamClient.get().gestures().click(loginPageObjects.subroleDropdown);
+        SikshaLokamClient.get().report().log(Status.INFO, "Clicked subrole dropdown"); 
+    }
+    public void selectDeo() throws Exception {
+		 js.executeScript("arguments[0].scrollIntoView(true);", loginPageObjects.DEOsubrole);
+		 SikshaLokamClient.get().gestures().click(loginPageObjects.DEOsubrole);
+	        SikshaLokamClient.get().report().log(Status.INFO, "Selected DEO as Subrole");
+		
+		 }
+    
+    public void clickOnBackbutton() throws Exception {
+    	SikshaLokamClient.get().gestures().waitAndClickElementisVisible(loginPageObjects.backButton);
+        SikshaLokamClient.get().report().log(Status.INFO, "Clicked on Back Button");
+    }
+    
+    public void clickOnStateDropdown() throws Exception {
+        SikshaLokamClient.get().gestures().click(loginPageObjects.stateDropdown);
+        SikshaLokamClient.get().report().log(Status.INFO, "Clicked on State Dropdown");
     }
 
     public void selectRoleHTAndOffical() throws Exception {
@@ -282,11 +313,11 @@ public class LoginPageAction {
         SikshaLokamClient.get().gestures().click(loginPageObjects.signInStateSystem);
         Logger.logAndReportInfo("Clicked on sign in with State System.");
     }
-    
     public void clickOnSelectStateDropDown() throws Exception {
     	SikshaLokamClient.get().gestures().click(loginPageObjects.selectStateDropDownForLogin);
     	Logger.logAndReportInfo("Clicked on the select state dropdown.");
     }
+   
     
     public void selectTNStateForStateLoginInStaging() throws Exception {
     	SikshaLokamClient.get().gestures().click(loginPageObjects.TNStateForStateLogin);
@@ -440,4 +471,11 @@ public class LoginPageAction {
 	    	 Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(loginPageObjects.YourLocationPopUp),"Your Location pop-up is not displayed");  
 	    	Logger.logAndReportInfo("Your Location pop-up is displayed");
 	    }
+	    public void verifySubmitButtonEnabledonPersonaldetailspage() throws Exception {
+			   SikshaLokamClient.get().gestures().waitTillTheElementIsVisibleAndClickable(loginPageObjects.submitbuttonpersonadetailspage);
+			  Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(loginPageObjects.submitbuttonpersonadetailspage),"Submit button not Enabled on Personal Details page.");
+			   Logger.logAndReportInfo("Submit button is Enabled on Personal Details page.");
+			  SikshaLokamClient.get().gestures().click(loginPageObjects.submitbuttonpersonadetailspage);
+		    	
+		    }
 }

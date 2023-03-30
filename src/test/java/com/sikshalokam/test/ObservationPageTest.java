@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import com.sikshalokam.annotation.Author;
 import com.sikshalokam.pages.actions.LoginPageAction;
 import com.sikshalokam.pages.actions.ObservationPageAction;
+import com.sikshalokam.pages.actions.ProgramDashboardAction;
 import com.sikshalokam.pages.actions.ReportPageAction;
 import com.sikshalokam.pages.objects.ObservationPageObjects;
 import com.sikshalokam.utils.gSheet.TestData;
@@ -24,6 +25,9 @@ public class ObservationPageTest {
     
     public ObservationPageAction getObservationPageActions() throws Exception {
         return new ObservationPageAction();
+    }
+    public ProgramDashboardAction getProgramDashboardActions() throws Exception {
+        return new ProgramDashboardAction();
     }
     
     public ReportPageAction getReportPageActions() throws Exception {
@@ -52,6 +56,7 @@ public class ObservationPageTest {
         Thread.sleep(5000);
         getObservationPageActions().verifyObservationTitle();
         getLoginPageActions().enterNameToSearchbox(observationPageTestData.get("observatonForVerifyObservationTile"));
+        Thread.sleep(5000);
         getLoginPageActions().clickOnSerachButton();
         getObservationPageActions().clickOnObservationButton();
         getLoginPageActions().clickOnSearchedObservationTitle();
@@ -129,4 +134,50 @@ public class ObservationPageTest {
         //getLoginPageActions().clickOnProfileIcon();
         //getReportPageActions().clickOnMyReportsTab();
     }
-}
+    @Test(description = "To verify school enitity is not added by deafault")
+    @Author(name = "SHREEJITH R")
+    public void SchoolEntityNotAddedBydefault() throws Exception {
+        loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!F:G");
+        observationPageTestData = TestData.getFullGoogleSheetDataAsMapString("Observation!A:B");
+        //getLoginPageActions().clickOnExploreDiksha();
+        appUrl = PropUtlis.readConfig("webAppConfig", "appUrl");
+        if(appUrl.contentEquals("https://preprod.ntp.net.in/"))
+        {
+        	getLoginPageActions().clickOnExploreDiksha();
+        }
+        getLoginPageActions().selectRoleHTAndOffical();
+        getLoginPageActions().clickOnContinue();
+        getLoginPageActions().clickOnBoardDropDown();
+        getLoginPageActions().selectcbseOrNcertBoardOption();
+        getLoginPageActions().verifySubmitButtonEnabled();
+        Thread.sleep(2000);
+        getLoginPageActions().clickOnSubmitButtonOnLocationWindow();
+        //getLoginPageActions().BMCLSelection();
+        getLoginPageActions().clickOnGuest();
+        getLoginPageActions().clickOnLogin();
+        getLoginPageActions().enterUserName(loginTestData.get("userName"));
+        getLoginPageActions().enterPassword(loginTestData.get("password"));
+        getLoginPageActions().clickOnLoginButton();
+        Thread.sleep(2000);
+        getProgramDashboardActions().clickOnProfileIcon();
+        getLoginPageActions().selectProfile();
+        getLoginPageActions().clickOnEdit();
+        Thread.sleep(2000);
+        getLoginPageActions().clickOnClear();
+        Thread.sleep(2000);
+        getLoginPageActions().selectState();
+        getLoginPageActions().selectDistrict();
+       // getLoginPageActions().clickOnSelectSubrole();
+        //getLoginPageActions().selectDeo();
+        //Thread.sleep(2000);
+        getLoginPageActions().verifySubmitButtonEnabledonPersonaldetailspage();
+        Thread.sleep(5000);
+        getLoginPageActions().clickOnBackbutton();
+        
+        getObservationPageActions().verifyObservationButton();
+        getObservationPageActions().clickOnObservationButton();
+        Thread.sleep(2000);
+        getObservationPageActions().clickOnSchoolEntityobsevation();  
+       
+        getObservationPageActions().verifySchoolentityisnotadded();
+}}

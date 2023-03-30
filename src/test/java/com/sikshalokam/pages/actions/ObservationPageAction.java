@@ -4,6 +4,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
+import com.aventstack.extentreports.Status;
 import com.sikshalokam.client.SikshaLokamClient;
 import com.sikshalokam.pages.objects.LoginPageObjects;
 import com.sikshalokam.pages.objects.ObservationPageObjects;
@@ -233,6 +234,18 @@ public class ObservationPageAction {
     		SikshaLokamClient.get().gestures().click(observationPageObjects.observationTitleForSearch);
     		Logger.logAndReportInfo("Clicked on the serached observation title.");
     	}
+    	
+  /*  	public void clickOnSearchedObsworubric2() throws Exception {
+    		SikshaLokamClient.get().gestures().click(observationPageObjects.Obsworubric2);
+    		Logger.logAndReportInfo("Clicked on the obsworubric2."); 
+    	} */
+    	
+    	 public void clickOnSchoolEntityobsevation() throws Exception {
+    		
+    		 SikshaLokamClient.get().gestures().click(observationPageObjects.SchoolEnityNotAdded);
+    	        SikshaLokamClient.get().report().log(Status.INFO, "Solution with rubrics -File button – FD-429");
+    		
+    		 }
     	//******************Verify*********************************************************//
     	
     	public void verifyObservationButton() throws Exception {
@@ -351,5 +364,33 @@ public class ObservationPageAction {
     		SikshaLokamClient.get().getAsserts().assertEquals(actualObservationName.trim(), presentObservationName.trim(), "Observation Name not matching..");
     		Logger.logAndReportPass("Observation name is matched and displayed succesfully.");
     	}
-}
+    	
+    /*	public boolean verifyNoelement() throws Exception {
+            try
+            {
+               if(observationPageObjects.observationform.isDisplayed())
+               {
+               return false;
+               }
+               return false;
+            }
+            catch(Exception e)
+            {
+            	Logger.logAndReportPass("No entity added by default");
+                return true;
+            }
+    	}  */
+    	
+ 	/*   public void verifySchoolentityisnotadded() throws Exception {  
+ 		 // Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.observationform),"Entity added by default");
+	    	//Logger.logAndReportInfo("No entity added by default");
+	    	
+	    	Assert.assertTrue(observationPageObjects.observationform.isDisplayed(),"yes");
+	    	Logger.logAndReportPass("No entity added by default");              
+	    } */
+    	
+    	public void verifySchoolentityisnotadded() throws Exception {  
+    		  Assert.assertTrue(SikshaLokamClient.get().gestures().verifyNoelement(observationPageObjects.observationform),"Entity added by default");
+   	    	Logger.logAndReportInfo("No entity added by default");
+}}
 

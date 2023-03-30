@@ -17,7 +17,7 @@ public class ObservationPageObjects {
 	@FindBy(xpath = "(//h4[contains(@class,'title') ])[1]")
 	public WebElement observationTitle;
 	
-	@FindBy(xpath = "//h4//bdi[text()='Obs with Rub � Only slider with score']")
+	@FindBy(xpath = "//h4//bdi[text()='Obs with Rub � Only slider with score']")
 	public WebElement observationWithRubic;
 	
 	@FindBy(xpath = "//h4[text()='Observation Details ']")
@@ -161,6 +161,15 @@ public class ObservationPageObjects {
     @FindBy(xpath = "//h4[@class='mb-4']")
     public WebElement ObservationName;
 	
+	//,,,,,,,,,,,,,,,,
+    
+   // @FindBy(xpath = "//bdi[.='Test - Obs without rub – 2']")
+    //public WebElement Obsworubric2;  
+   
+    @FindBy(xpath = "//h4[@title='Solution with rubrics -File button – FD-429']")
+    public WebElement SchoolEnityNotAdded;
 	
-	
+    @FindBy(xpath = "(//div[.=' Observation form '])[2]")
+    public WebElement observationform;
+    
 }

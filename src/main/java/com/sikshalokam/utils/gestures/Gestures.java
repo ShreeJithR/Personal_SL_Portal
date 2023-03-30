@@ -3,6 +3,8 @@ package com.sikshalokam.utils.gestures;
 import com.aventstack.extentreports.Status;
 import com.sikshalokam.client.SikshaLokamClient;
 import com.sikshalokam.report.SikshaLokamReport;
+import com.sikshalokam.utils.logger.Logger;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -192,6 +194,23 @@ public class Gestures {
             return false;
         }
     }
+    //*****new
+	public boolean verifyNoelement(WebElement element) throws Exception {
+        try
+        {
+           if(element.isDisplayed())
+        	   
+           {
+           return false;
+           }
+           return false;
+        }
+        catch(Exception e)
+        {
+        	
+            return true;
+        }
+	}
 
     public WebElement waitForElementToAppear(WebElement id) {
         WebDriverWait wait = new WebDriverWait(this.driver, 25);
