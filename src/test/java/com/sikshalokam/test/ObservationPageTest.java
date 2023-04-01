@@ -171,7 +171,7 @@ public class ObservationPageTest {
         //getLoginPageActions().selectDeo();
         //Thread.sleep(2000);
         getLoginPageActions().verifySubmitButtonEnabledonPersonaldetailspage();
-        Thread.sleep(5000);
+        //Thread.sleep(8000);
         getLoginPageActions().clickOnBackbutton();
         
         getObservationPageActions().verifyObservationButton();
@@ -186,10 +186,11 @@ public class ObservationPageTest {
         getProgramDashboardActions().clickOnProfileIcon();
         getLoginPageActions().selectProfile();
         getLoginPageActions().clickOnEdit();
+        Thread.sleep(5000);
         getLoginPageActions().selectBlock();
         
         getLoginPageActions().verifySubmitButtonEnabledonPersonaldetailspage();
-        Thread.sleep(2000);
+        //Thread.sleep(8000);
         getLoginPageActions().clickOnBackbutton();
         
         getObservationPageActions().verifyObservationButton();
@@ -198,4 +199,10 @@ public class ObservationPageTest {
         Thread.sleep(2000);
         getObservationPageActions().clickOnSchoolEntityobsevation();  
         getObservationPageActions().verifySchoolentityisnotadded();
+     //verifying credits and license
+        getLoginPageActions().clickOnBackbutton();
+        getObservationPageActions().clickOnCreditAndLicenceobservation();
+        Thread.sleep(2000);
+        getObservationPageActions().clickOnCreditAndLicencedropdown();
+        getObservationPageActions().verifyCreditsandLicensecontents();
 }}

@@ -167,13 +167,41 @@ public class ObservationPageObjects {
     //public WebElement Obsworubric2;  
    
     @FindBy(xpath = "//h4[@title='Solution with rubrics -File button – FD-429']")
-    public WebElement SchoolEnityNotAdded;
+    public WebElement SchoolEnityNotAddedObs;
 	
     @FindBy(xpath = "(//div[.=' Observation form '])[2]")
     public WebElement observationform;
     
     @FindBy(xpath = "//h4[@title='QA solution - entity type block - FD 335']")
-    public WebElement BlockEnityNotAdded;
+    public WebElement BlockEnityNotAddedObs;
+     
+    @FindBy(xpath = "//h4[@title='Infrastructure Assessment- Furniture']")
+    public WebElement CerditsAndLicenceObs;
+    
+    @FindBy(xpath = "//mat-panel-title[@aria-label='Credits & license info accordion']")
+    public WebElement CerditsAndLicenceDroapdown;
+    
+    @FindBy(xpath = "//div[.=' Author']")
+    public WebElement author;
+    
+    @FindBy(xpath = "//div[.=' Created by']")
+    public WebElement createdby;
+    
+    @FindBy(xpath = "//div[.=' Published on SUNBIRD by']")
+    public WebElement publishedonSunbirdBy;
+    
+    @FindBy(xpath = "//div[.=' Created on']")
+    public WebElement creadtedon;
+    
+    @FindBy(xpath = "//div[.=' Updated on']")
+    public WebElement updatedon;
+    
+    @FindBy(xpath = "//a[.=' Credits ']")
+    public WebElement creditslink;
+    
+    @FindBy(xpath = "//div[.=' License terms']")
+    public WebElement licenseterms;
     
     
-}
+  //mat-panel-title[@aria-label='Credits & license info accordion']   
+}//h4[@title='Infrastructure Assessment- Furniture']

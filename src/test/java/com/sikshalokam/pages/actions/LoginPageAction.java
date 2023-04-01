@@ -167,6 +167,7 @@ public class LoginPageAction {
     }
     
     public void selectBlock() throws Exception {
+        SikshaLokamClient.get().gestures().waitTillTheElementIsVisibleAndClickable(loginPageObjects.blockDropdown);
         SikshaLokamClient.get().gestures().click(loginPageObjects.blockDropdown);
         if(getEnvironmentValue().contains("diksha")) {
             SikshaLokamClient.get().gestures().click(loginPageObjects.alappuzhaDistrict);
@@ -494,6 +495,8 @@ public class LoginPageAction {
 			   Logger.logAndReportInfo("Submit button is Enabled on Personal Details page.");
 			   Thread.sleep(2000);
 			  SikshaLokamClient.get().gestures().click(loginPageObjects.submitbuttonpersonadetailspage);
+			  Thread.sleep(8000);
 		    	
 		    }
+	    
 }

@@ -241,16 +241,28 @@ public class ObservationPageAction {
     	} */
     	
     	 public void clickOnSchoolEntityobsevation() throws Exception {
-    		SikshaLokamClient.get().gestures().click(observationPageObjects.SchoolEnityNotAdded);
+    		SikshaLokamClient.get().gestures().click(observationPageObjects.SchoolEnityNotAddedObs);
     	        SikshaLokamClient.get().report().log(Status.INFO, "Solution with rubrics -File button – FD-429");
     		
     		 }
     	 
     	 public void clickOnBlockEntityobsevation() throws Exception {
-    		 SikshaLokamClient.get().gestures().click(observationPageObjects.BlockEnityNotAdded);
+    		 SikshaLokamClient.get().gestures().click(observationPageObjects.BlockEnityNotAddedObs);
     	        SikshaLokamClient.get().report().log(Status.INFO, "QA solution - entity type block - FD 335']");
     		
     		 }
+    	 public void clickOnCreditAndLicenceobservation() throws Exception {
+    		 SikshaLokamClient.get().gestures().click(observationPageObjects.CerditsAndLicenceObs);
+    	        SikshaLokamClient.get().report().log(Status.INFO, "Credits And License Observation");
+    		
+    		 }
+    	
+    	 
+    	 public void clickOnCreditAndLicencedropdown() throws Exception {
+    		 SikshaLokamClient.get().gestures().click(observationPageObjects.CerditsAndLicenceDroapdown);
+    	        SikshaLokamClient.get().report().log(Status.INFO, "Clicked on Credits And License Dropdown");
+    	 }
+    		
     	 
     	 
     	//******************Verify*********************************************************//
@@ -398,15 +410,62 @@ public class ObservationPageAction {
     	
     	public void verifySchoolentityisnotadded() throws Exception {  
     		  Assert.assertTrue(SikshaLokamClient.get().gestures().verifyNoelement(observationPageObjects.observationform),"Entity added by default");
-   	    	Logger.logAndReportInfo("No School entity added by default");
+   	    	Logger.logAndReportPass("No School entity added by default");
     	}
    	    	
    	    	public void verifyBlockentityisnotadded() throws Exception {  
       		  Assert.assertTrue(SikshaLokamClient.get().gestures().verifyNoelement(observationPageObjects.observationform),"Entity added by default");
-     	    	Logger.logAndReportInfo("No Block entity added by default");
+     	    	Logger.logAndReportPass("No Block entity added by default");
           }
+   	    	//credits and license contents verification
+   	    	public void verifyCreditsandLicensecontents() throws Exception {
+   	    		VerifyAuthor();
+   	    		VerifyCreatedBy();
+   	    		VerifyPublishedonSunbirdby();
+   	    		VerifyCreadtedon();
+   	    		VerifyUpdatedon();
+   	    		VerifyCreditslink();
+   	    		VerifyLicenseterms();
+   	    		Logger.logAndReportPass("Credits and License Contents are Verified");
+   	    		
+   	    	}
+   	    	
 
+   	    	public void VerifyAuthor() throws Exception {
+   	            Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.author),"Author Section is not Present.");
+   	    		Logger.logAndReportInfo("Author Section is Present .");
+   	    	}
+           
+   	    	public void VerifyCreatedBy() throws Exception {
+   	            Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.createdby),"Created By Section is not Present.");
+   	    		Logger.logAndReportInfo("Created By Section is Present .");
+   	    	}
+             
+   	    	public void VerifyPublishedonSunbirdby() throws Exception {
+   	            Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.publishedonSunbirdBy),"Published On Sunbird By Section is not Present.");
+   	    		Logger.logAndReportInfo("Published On Sunbird By Section is Present .");
+   	    	}
+   	    	
+   	    	public void VerifyCreadtedon() throws Exception {
+   	            Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.creadtedon),"Created On Section is not Present.");
+   	    		Logger.logAndReportInfo("Created On Section is Present .");
+   	    	}
+   	    	
 
+   	    	public void VerifyUpdatedon() throws Exception {
+   	            Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.updatedon),"Updated On Section is not Present.");
+   	    		Logger.logAndReportInfo("Updated On Section is Present .");
+   	    	}
+   	    	
+   	    	public void VerifyCreditslink() throws Exception {
+   	            Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.creditslink),"Credits link is not Present.");
+   	    		Logger.logAndReportInfo("Credits link is Present .");
+   	    	}
+   	    	
+   	    	public void VerifyLicenseterms() throws Exception {
+   	            Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.licenseterms),"License terms section is not Present.");
+   	    		Logger.logAndReportInfo("License terms section is Present .");
+   	    	}
 
 }
 
