@@ -1,8 +1,12 @@
 package com.sikshalokam.pages.objects;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
+
+import com.aventstack.extentreports.Status;
+import com.sikshalokam.client.SikshaLokamClient;
 
 import io.appium.java_client.MobileElement;
 
@@ -276,11 +280,37 @@ public class LoginPageObjects {
     @FindBy(xpath = "(//button[.='Edit'])[1]")
     public WebElement edit;
     
-    @FindBy(xpath = "//div[@aria-label=', selected ,Select Subrole']")
+    @FindBy(xpath = "(//sb-caret-down[@class='cfe-multiselect-field-caret caret-down ng-star-inserted'])[3]")
     public WebElement subroleDropdown;
     
-    @FindBy(xpath = "//div[.='DEO']")
+    @FindBy(xpath = "//span[.='DEO']")
     public WebElement DEOsubrole;
+    
+    
+    @FindBy(xpath = "//div[@aria-label='DEO, selected ,Select Subrole']")
+    public WebElement DEOsubroleselectedbydefault;
+  //div[@aria-label='DEO, selected ,Select Subrole']
+    
+    @FindBy(xpath = "//sb-caret-up[@class='cfe-multiselect-field-caret caret-down ng-star-inserted']")
+    public WebElement subroleDropdownup;
+  //sb-caret-up[@class='cfe-multiselect-field-caret caret-down ng-star-inserted']
+    
+    
+  /*  @FindBy(xpath = "(//span[@class='cfe-multiselect-field-label ng-star-inserted'])[3]")
+    public WebElement DEOsubrolealreadyselected;
+  //.....##########nooo 
+    public void abc() throws Exception {
+    String deoselected = DEOsubrolealreadyselected.getText();
+    if(deoselected.contains(" DEO"))
+    	SikshaLokamClient.get().report().log(Status.INFO, "Already Selected DEO as Subrole");
+    else
+    	 SikshaLokamClient.get().gestures().click(subroleDropdown);
+    JavascriptExecutor js = (JavascriptExecutor) SikshaLokamClient.get().driver();
+    js.executeScript("arguments[0].scrollIntoView(true);", DEOsubrole);
+	 SikshaLokamClient.get().gestures().click(DEOsubrole);
+       SikshaLokamClient.get().report().log(Status.INFO, "Selected DEO as Subrole");
+    }  */
+ 
     
     @FindBy(xpath = "//button[.='Submit ']")            ////button[.='Submit ']   //(//button[@type='submit'])[3]
     public WebElement submitbuttonpersonadetailspage;

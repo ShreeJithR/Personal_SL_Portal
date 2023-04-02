@@ -222,12 +222,27 @@ public class LoginPageAction {
         SikshaLokamClient.get().gestures().click(loginPageObjects.subroleDropdown);
         SikshaLokamClient.get().report().log(Status.INFO, "Clicked subrole dropdown"); 
     }
+   
+    
     public void selectDeo() throws Exception {
-		 js.executeScript("arguments[0].scrollIntoView(true);", loginPageObjects.DEOsubrole);
-		 SikshaLokamClient.get().gestures().click(loginPageObjects.DEOsubrole);
+    	if(SikshaLokamClient.get().gestures().isDisplayed(loginPageObjects.DEOsubroleselectedbydefault))
+    	{
+    		 SikshaLokamClient.get().report().log(Status.INFO, "Already Selected DEO as Subrole");
+    	}
+    		// SikshaLokamClient.get().gestures().click(loginPageObjects.subroleDropdown);
+    	 //SikshaLokamClient.get().report().log(Status.INFO, "Clicked subrole dropdown"); 
+    	// Thread.sleep(3000);
+		 else {
+			 SikshaLokamClient.get().gestures().click(loginPageObjects.subroleDropdown);
+			 SikshaLokamClient.get().report().log(Status.INFO, "Clicked subrole dropdown");
+			 Thread.sleep(3000);
+			 js.executeScript("arguments[0].scrollIntoView(true);", loginPageObjects.DEOsubrole);
+		  SikshaLokamClient.get().gestures().click(loginPageObjects.DEOsubrole);
 	        SikshaLokamClient.get().report().log(Status.INFO, "Selected DEO as Subrole");
 		
-		 }
+		 }}
+    
+  
     
     public void clickOnBackbutton() throws Exception {
     	SikshaLokamClient.get().gestures().waitAndClickElementisVisible(loginPageObjects.backButton);

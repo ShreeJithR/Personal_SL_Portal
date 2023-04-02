@@ -10,6 +10,7 @@ import com.sikshalokam.pages.actions.LoginPageAction;
 import com.sikshalokam.pages.actions.ObservationPageAction;
 import com.sikshalokam.pages.actions.ProgramDashboardAction;
 import com.sikshalokam.pages.actions.ReportPageAction;
+import com.sikshalokam.pages.objects.LoginPageObjects;
 import com.sikshalokam.pages.objects.ObservationPageObjects;
 import com.sikshalokam.utils.gSheet.TestData;
 import com.sikshalokam.utils.prop.PropUtlis;
@@ -33,6 +34,10 @@ public class ObservationPageTest {
     public ReportPageAction getReportPageActions() throws Exception {
     	return new ReportPageAction();
     }
+    
+  
+    
+    
     
     @Test(description = "login and verify observation tile")
     @Author(name = "Manjunatha K")
@@ -150,9 +155,10 @@ public class ObservationPageTest {
         getLoginPageActions().clickOnBoardDropDown();
         getLoginPageActions().selectcbseOrNcertBoardOption();
         getLoginPageActions().verifySubmitButtonEnabled();
-        Thread.sleep(2000);
+        Thread.sleep(5000);
         getLoginPageActions().clickOnSubmitButtonOnLocationWindow();
         //getLoginPageActions().BMCLSelection();
+        Thread.sleep(5000);
         getLoginPageActions().clickOnGuest();
         getLoginPageActions().clickOnLogin();
         getLoginPageActions().enterUserName(loginTestData.get("userName"));
@@ -167,11 +173,11 @@ public class ObservationPageTest {
         Thread.sleep(2000);
         getLoginPageActions().selectState();
         getLoginPageActions().selectDistrict();
+       
        // getLoginPageActions().clickOnSelectSubrole();
-        //getLoginPageActions().selectDeo();
+        getLoginPageActions().selectDeo();
         //Thread.sleep(2000);
         getLoginPageActions().verifySubmitButtonEnabledonPersonaldetailspage();
-        //Thread.sleep(8000);
         getLoginPageActions().clickOnBackbutton();
         
         getObservationPageActions().verifyObservationButton();
@@ -190,7 +196,6 @@ public class ObservationPageTest {
         getLoginPageActions().selectBlock();
         
         getLoginPageActions().verifySubmitButtonEnabledonPersonaldetailspage();
-        //Thread.sleep(8000);
         getLoginPageActions().clickOnBackbutton();
         
         getObservationPageActions().verifyObservationButton();

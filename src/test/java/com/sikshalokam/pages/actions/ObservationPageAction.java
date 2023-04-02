@@ -251,6 +251,7 @@ public class ObservationPageAction {
     	        SikshaLokamClient.get().report().log(Status.INFO, "QA solution - entity type block - FD 335']");
     		
     		 }
+    	 
     	 public void clickOnCreditAndLicenceobservation() throws Exception {
     		 SikshaLokamClient.get().gestures().click(observationPageObjects.CerditsAndLicenceObs);
     	        SikshaLokamClient.get().report().log(Status.INFO, "Credits And License Observation");
