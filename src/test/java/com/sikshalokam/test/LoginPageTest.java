@@ -236,7 +236,7 @@ public class LoginPageTest {
         //NEW TC'S login
     }
     @Test(description = "Board is mandatory field in BMC Pop-up for HTofficial role")
-    @Author(name = "Manjunatha K")
+    @Author(name = "SHREEJITH")
     public void HTofficialsAndSubmit() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!A:B");
         //getLoginPageActions().clickOnExploreDiksha();
@@ -256,7 +256,7 @@ public class LoginPageTest {
   
    
     @Test(description = "Board Medium Grade are mandatory fields in BMC Pop-up for Teacher role")
-    @Author(name = "Manjunatha K")
+    @Author(name = "SHREEJITH")
     public void TeacherAndSubmit() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!A:B");
         //getLoginPageActions().clickOnExploreDiksha();
@@ -281,7 +281,7 @@ public class LoginPageTest {
    
     
     @Test(description = "Board Medium Grade are mandatory fields in BMC Pop-up for Student role")
-    @Author(name = "Manjunatha K")
+    @Author(name = "SHREEJITH")
     public void StudentAndSubmit() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!A:B");
         //getLoginPageActions().clickOnExploreDiksha();
@@ -304,7 +304,7 @@ public class LoginPageTest {
         getLoginPageActions().verifyYourLocationPopUp();
 }
     @Test(description = "Board Medium Grade are mandatory fields in BMC Pop-up for Parent role")
-    @Author(name = "Manjunatha K")
+    @Author(name = "SHREEJITH")
     public void ParentAndSubmit() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!A:B");
         //getLoginPageActions().clickOnExploreDiksha();

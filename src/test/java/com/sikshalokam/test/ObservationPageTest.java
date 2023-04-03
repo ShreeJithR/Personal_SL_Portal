@@ -98,6 +98,14 @@ public class ObservationPageTest {
         	getLoginPageActions().clickOnExploreDiksha();
         }
         getLoginPageActions().BMCLSelection();
+       /* getLoginPageActions().selectRoleHTAndOffical();
+        getLoginPageActions().clickOnContinue();
+        getLoginPageActions().clickOnBoardDropDown();
+        getLoginPageActions().selectcbseOrNcertBoardOption();
+        getLoginPageActions().verifySubmitButtonEnabled();
+        Thread.sleep(5000);
+        getLoginPageActions().clickOnSubmitButtonOnLocationWindow(); */
+        Thread.sleep(5000);
         getLoginPageActions().clickOnGuest();
         getLoginPageActions().clickOnLogin();
         getLoginPageActions().enterUserName(loginTestData.get("userName"));
@@ -139,8 +147,11 @@ public class ObservationPageTest {
         //getLoginPageActions().clickOnProfileIcon();
         //getReportPageActions().clickOnMyReportsTab();
     }
+    
+    
+    //####new tc's
     @Test(description = "To verify school enitity is not added by deafault")
-    @Author(name = "SHREEJITH R")
+    @Author(name = "SHREEJITH")
     public void SchoolandBlockEntityNotAddedBydefault() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!F:G");
         observationPageTestData = TestData.getFullGoogleSheetDataAsMapString("Observation!A:B");
@@ -150,14 +161,14 @@ public class ObservationPageTest {
         {
         	getLoginPageActions().clickOnExploreDiksha();
         }
-        getLoginPageActions().selectRoleHTAndOffical();
+      /*  getLoginPageActions().selectRoleHTAndOffical();
         getLoginPageActions().clickOnContinue();
         getLoginPageActions().clickOnBoardDropDown();
         getLoginPageActions().selectcbseOrNcertBoardOption();
         getLoginPageActions().verifySubmitButtonEnabled();
         Thread.sleep(5000);
-        getLoginPageActions().clickOnSubmitButtonOnLocationWindow();
-        //getLoginPageActions().BMCLSelection();
+        getLoginPageActions().clickOnSubmitButtonOnLocationWindow();  */
+        getLoginPageActions().BMCLSelection();
         Thread.sleep(5000);
         getLoginPageActions().clickOnGuest();
         getLoginPageActions().clickOnLogin();

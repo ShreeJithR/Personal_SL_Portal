@@ -389,15 +389,16 @@ public class LoginPageAction {
     	Logger.logAndReportPass("User name on profile is present");
 		return true;
     }
-  //BMCL = Board, medium, class and location selection
+  // = Board, medium, class and location selection
     public void BMCLSelection() throws Exception {
     	 verifyWelcomeTitle();
          selectRoleHTAndOffical();
          clickOnContinue();
          clickOnBoardDropDown();
          selectcbseOrNcertBoardOption();
+         Thread.sleep(2000);
          clickOnSubmitButtonOnCourseWindow();
-         selectState();
+        selectState();
          selectDistrict();
          clickOnSubmitButtonOnLocationWindow();
          verifyHomeButton();

@@ -45,20 +45,37 @@ public class ProgramDashboardTest {
         {
         	getLoginPageActions().clickOnExploreDiksha();
         }
-        getLoginPageActions().BMCLSelection();
+        //getLoginPageActions().BMCLSelection();
+        getLoginPageActions().selectRoleHTAndOffical();
+        getLoginPageActions().clickOnContinue();
+        getLoginPageActions().clickOnBoardDropDown();
+        getLoginPageActions().selectcbseOrNcertBoardOption();
+        Thread.sleep(2000);
+        getLoginPageActions().clickOnSubmitButtonOnCourseWindow();
+        Thread.sleep(2000);
+       
+        getLoginPageActions().clickOnSubmitButtonOnLocationWindow();
+        Thread.sleep(3000);
         getLoginPageActions().clickOnGuest();
         getLoginPageActions().clickOnLogin();
         getLoginPageActions().enterUserName(loginTestData.get("userName"));
         getLoginPageActions().enterPassword(loginTestData.get("password"));
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
         getLoginPageActions().clickOnLoginButton();
-        getProgramDashboardActions().clickOnProfileIcon();
         Thread.sleep(5000);
+        getProgramDashboardActions().clickOnProfileIcon();
+   
         getProgramDashboardActions().clickOnprogramdashboard();
-        Thread.sleep(2000);
         getProgramDashboardActions().verifyProgramResourcePopup();
-        getProgramDashboardActions().clickOnSelectProgramDropdown();
-        getProgramDashboardActions().scrollandclickOnTesting4point4();
+        getProgramDashboardActions().selectProgram();
+        Thread.sleep(5000);
+       /* getProgramDashboardActions().clickOnSelectProgramDropdown();
+        getProgramDashboardActions().scrollandclickOnTesting4point4staging();
         getProgramDashboardActions().clickOnSelectResourceDropdown();
-        Thread.sleep(2000);
+       // Thread.sleep(2000);
+        getProgramDashboardActions().scrollandclickOnprojectlinkconsumptionfd98staging();
+        getProgramDashboardActions().verifyandclickConfirmbuttEnabledonProgramResourcePopup();
+        getProgramDashboardActions().verifyTabsOnProgramdashboardPage();
+        getProgramDashboardActions().selectDistrictandOrgstaging();
+        getProgramDashboardActions().verifyProjectReports();   */
 }}
