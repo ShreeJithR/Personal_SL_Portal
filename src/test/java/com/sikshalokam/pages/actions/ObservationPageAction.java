@@ -3,12 +3,14 @@ package com.sikshalokam.pages.actions;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 import com.aventstack.extentreports.Status;
 import com.sikshalokam.client.SikshaLokamClient;
 import com.sikshalokam.pages.objects.LoginPageObjects;
 import com.sikshalokam.pages.objects.ObservationPageObjects;
 import com.sikshalokam.utils.logger.Logger;
+import com.sikshalokam.utils.prop.PropUtlis;
 
 public class ObservationPageAction {
 
@@ -17,6 +19,13 @@ public class ObservationPageAction {
 
     JavascriptExecutor js = (JavascriptExecutor) SikshaLokamClient.get().driver();
 //    js.executeScript("window.scrollBy(0,250)", "");
+    
+    SoftAssert softAssert = new SoftAssert();
+    
+    String appUrl;
+    public String getEnvironmentValue() throws Exception {
+    	return appUrl = PropUtlis.readConfig("webAppConfig", "appUrl");
+    }
     
     public ObservationPageAction() throws Exception {
     	observationPageObjects = PageFactory.initElements(SikshaLokamClient.get().driver(), ObservationPageObjects.class);
@@ -240,20 +249,61 @@ public class ObservationPageAction {
     		Logger.logAndReportInfo("Clicked on the obsworubric2."); 
     	} */
     	
+    	
+    	public void selectSchoolEntityobservation() throws Exception {
+               if(getEnvironmentValue().contains("diksha")) {
+                SikshaLokamClient.get().gestures().click(loginPageObjects.alappuzhaDistrict);
+                SikshaLokamClient.get().report().log(Status.INFO, "Alappuzha District Selected.");
+            } else if(getEnvironmentValue().contains("preprod")) {
+                SikshaLokamClient.get().gestures().click(observationPageObjects.SchoolEnityNotAddedObsPreprod);
+                SikshaLokamClient.get().report().log(Status.INFO, "Testing project 5.1observation 5B 928.");
+            } else {
+            	SikshaLokamClient.get().gestures().click(observationPageObjects.SchoolEnityNotAddedObsStaging);
+                SikshaLokamClient.get().report().log(Status.INFO, "Solution with rubrics -File button – FD-429");        	
+            }
+        }
+    	
+    	public void selectBlockEntityobservation() throws Exception {
+            if(getEnvironmentValue().contains("diksha")) {
+             SikshaLokamClient.get().gestures().click(loginPageObjects.alappuzhaDistrict);
+             SikshaLokamClient.get().report().log(Status.INFO, "Alappuzha District Selected.");
+         } else if(getEnvironmentValue().contains("preprod")) {
+             SikshaLokamClient.get().gestures().click(observationPageObjects.BlockEnityNotAddedObsPreprod);
+             SikshaLokamClient.get().report().log(Status.INFO, "Infrastructure Assessment- Furniture.");
+         } else {
+         	SikshaLokamClient.get().gestures().click(observationPageObjects.BlockEnityNotAddedObsStaging);
+             SikshaLokamClient.get().report().log(Status.INFO, "QA solution - entity type block - FD 335']");        	
+         }
+     }
+    	
+    	
+    	public void selectCreditAndLicenceobservation() throws Exception {
+            if(getEnvironmentValue().contains("diksha")) {
+             SikshaLokamClient.get().gestures().click(loginPageObjects.alappuzhaDistrict);
+             SikshaLokamClient.get().report().log(Status.INFO, "Alappuzha District Selected.");
+         } else if(getEnvironmentValue().contains("preprod")) {
+             SikshaLokamClient.get().gestures().click(observationPageObjects.BlockEnityNotAddedObsPreprod);
+             SikshaLokamClient.get().report().log(Status.INFO, "Credits And License Observation.");
+         } else {
+         	SikshaLokamClient.get().gestures().click(observationPageObjects.CerditsAndLicenceObsStaging);
+             SikshaLokamClient.get().report().log(Status.INFO, "Credits And License Observation");        	
+         }
+     }
+    	
     	 public void clickOnSchoolEntityobsevation() throws Exception {
-    		SikshaLokamClient.get().gestures().click(observationPageObjects.SchoolEnityNotAddedObs);
+    		SikshaLokamClient.get().gestures().click(observationPageObjects.SchoolEnityNotAddedObsStaging);
     	        SikshaLokamClient.get().report().log(Status.INFO, "Solution with rubrics -File button – FD-429");
     		
     		 }
     	 
     	 public void clickOnBlockEntityobsevation() throws Exception {
-    		 SikshaLokamClient.get().gestures().click(observationPageObjects.BlockEnityNotAddedObs);
+    		 SikshaLokamClient.get().gestures().click(observationPageObjects.BlockEnityNotAddedObsStaging);
     	        SikshaLokamClient.get().report().log(Status.INFO, "QA solution - entity type block - FD 335']");
     		
     		 }
     	 
     	 public void clickOnCreditAndLicenceobservation() throws Exception {
-    		 SikshaLokamClient.get().gestures().click(observationPageObjects.CerditsAndLicenceObs);
+    		 SikshaLokamClient.get().gestures().click(observationPageObjects.CerditsAndLicenceObsStaging);
     	        SikshaLokamClient.get().report().log(Status.INFO, "Credits And License Observation");
     		
     		 }
@@ -422,50 +472,71 @@ public class ObservationPageAction {
    	    	public void verifyCreditsandLicensecontents() throws Exception {
    	    		VerifyAuthor();
    	    		VerifyCreatedBy();
-   	    		VerifyPublishedonSunbirdby();
+   	    		VerifyPublishedonby();
    	    		VerifyCreadtedon();
    	    		VerifyUpdatedon();
    	    		VerifyCreditslink();
    	    		VerifyLicenseterms();
+   	    		softAssert.assertAll();
+   	    		
    	    		Logger.logAndReportPass("Credits and License Contents are Verified");
    	    		
    	    	}
    	    	
 
    	    	public void VerifyAuthor() throws Exception {
-   	            Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.author),"Author Section is not Present.");
+   	    		//SoftAssert softAssert = new SoftAssert();
+   	    		softAssert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.author),"Author Section is not Present.");
    	    		Logger.logAndReportInfo("Author Section is Present .");
+   	    		
    	    	}
            
    	    	public void VerifyCreatedBy() throws Exception {
-   	            Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.createdby),"Created By Section is not Present.");
+   	    		softAssert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.createdby),"Created By Section is not Present.");
    	    		Logger.logAndReportInfo("Created By Section is Present .");
+   	    	
    	    	}
              
-   	    	public void VerifyPublishedonSunbirdby() throws Exception {
-   	            Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.publishedonSunbirdBy),"Published On Sunbird By Section is not Present.");
-   	    		Logger.logAndReportInfo("Published On Sunbird By Section is Present .");
-   	    	}
+   	    	public void VerifyPublishedonby() throws Exception {
+   	    	  if(getEnvironmentValue().contains("diksha")) {
+   	    		softAssert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.publishedonDikshaBy),"Published On Diksha By Section is not Present .");
+  	             SikshaLokamClient.get().report().log(Status.INFO, "Published On Diksha By Section is Present .");
+  	           
+   	         } else if(getEnvironmentValue().contains("preprod")) {
+   	        	softAssert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.publishedonDikshaBy),"Published On Diksha By Section is not Present .");
+   	             SikshaLokamClient.get().report().log(Status.INFO, "Published On Diksha By Section is Present .");
+   	          
+   	         } else {
+   	        	softAssert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.publishedonSunbirdBy),"Published On Sunbird By Section is not Present .");
+   	        	SikshaLokamClient.get().report().log(Status.INFO, "Published On Sunbird By Section is Present ."); 
+   	        	
+   	         	      	
+   	         }
+   	     } 
    	    	
    	    	public void VerifyCreadtedon() throws Exception {
-   	            Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.creadtedon),"Created On Section is not Present.");
+   	    		softAssert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.creadtedon),"Created On Section is not Present.");
    	    		Logger.logAndReportInfo("Created On Section is Present .");
+   	    		
    	    	}
    	    	
 
    	    	public void VerifyUpdatedon() throws Exception {
-   	            Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.updatedon),"Updated On Section is not Present.");
+   	    		softAssert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.updatedon),"Updated On Section is not Present.");
    	    		Logger.logAndReportInfo("Updated On Section is Present .");
+   	    		
    	    	}
    	    	
    	    	public void VerifyCreditslink() throws Exception {
-   	            Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.creditslink),"Credits link is not Present.");
+   	    		softAssert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.creditslink),"Credits link is not Present.");
    	    		Logger.logAndReportInfo("Credits link is Present .");
+   	    		
    	    	}
    	    	
    	    	public void VerifyLicenseterms() throws Exception {
-   	            Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.licenseterms),"License terms section is not Present.");
+   	    		softAssert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.licenseterms),"License terms section is not Present.");
    	    		Logger.logAndReportInfo("License terms section is Present .");
+   	    		
    	    	}
 
 }

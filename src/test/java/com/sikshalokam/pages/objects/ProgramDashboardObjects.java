@@ -36,6 +36,10 @@ public class ProgramDashboardObjects {
      @FindBy(xpath="//span[normalize-space()='Project link consumption -FD 98']")
      public  WebElement projectlinkconsumptionfd98;
      
+     @FindBy(xpath="//span[normalize-space()='Project link consumption -FD 137']")
+     public  WebElement projectlinkconsumptionfd137;
+   //span[normalize-space()='Project link consumption -FD 137']
+     
      @FindBy(xpath="//span[normalize-space()='Program datasets']")
      public  WebElement Programdatasets;
      
@@ -54,6 +58,13 @@ public class ProgramDashboardObjects {
      @FindBy(xpath="//span[normalize-space()='Chittoor']")
      public  WebElement Chittordistrict;
      
+     @FindBy(xpath="//span[normalize-space()='Agra']")
+     public  WebElement Agradistrict;
+     
+     @FindBy(xpath="//span[normalize-space()='Ambedkar Nagar']")
+     public  WebElement Ambedkarnagardistrict;
+     
+   //span[.=' Agra '] //span[normalize-space()='Agra']   //span[normalize-space()='Ambedkar Nagar']
      @FindBy(xpath="(//div[@class='mat-select-arrow-wrapper'])[5]")
      public  WebElement organisationsDropdown;
      
@@ -61,7 +72,11 @@ public class ProgramDashboardObjects {
      public  WebElement stagingcustodianorg;
      
      
-     @FindBy(xpath="//span[@class='mat-select-placeholder mat-select-min-line ng-tns-c47-3 ng-star-inserted']")
+     @FindBy(xpath="//span[normalize-space()='Pre-prod Custodian Organization']")
+     public  WebElement preprodcustodianorg;
+   //span[normalize-space()='Pre-prod Custodian Organization']
+     
+     @FindBy(xpath="//span[.='Select report']")
      public  WebElement selectReportDropdown;
      
      @FindBy(xpath="//span[@class='mat-option-text'][normalize-space()='Task Report']")
@@ -73,8 +88,19 @@ public class ProgramDashboardObjects {
      @FindBy(xpath="//span[@class='mat-option-text'][normalize-space()='Filtered task detail report']")
      public  WebElement filteredtaskReport;
      
+     @FindBy(xpath="//button[normalize-space()='Request report']")
+     public  WebElement requestReport;
      
+     @FindBy(xpath="//div[normalize-space()='Are you sure you want to request this report?']")
+     public  WebElement requestReportPasswordPopup;
      
+     @FindBy(xpath="//input[@placeholder='Enter a password to request Report']")
+     public  WebElement enterPassword;
+     
+   //input[@placeholder='Enter a password to request Report']
+     
+   //div[normalize-space()='Are you sure you want to request this report?']
+   //button[.=' Request report ']  
 }//span[@class='mat-select-placeholder mat-select-min-line ng-tns-c47-3 ng-star-inserted']
 //span[@class='mat-option-text'][normalize-space()='Task Report']
 //span[@class='mat-option-text'][normalize-space()='Status Report']

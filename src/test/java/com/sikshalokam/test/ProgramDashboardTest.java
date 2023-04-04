@@ -45,8 +45,8 @@ public class ProgramDashboardTest {
         {
         	getLoginPageActions().clickOnExploreDiksha();
         }
-        //getLoginPageActions().BMCLSelection();
-        getLoginPageActions().selectRoleHTAndOffical();
+        getLoginPageActions().BMCLSelection();
+       /* getLoginPageActions().selectRoleHTAndOffical();
         getLoginPageActions().clickOnContinue();
         getLoginPageActions().clickOnBoardDropDown();
         getLoginPageActions().selectcbseOrNcertBoardOption();
@@ -54,7 +54,7 @@ public class ProgramDashboardTest {
         getLoginPageActions().clickOnSubmitButtonOnCourseWindow();
         Thread.sleep(2000);
        
-        getLoginPageActions().clickOnSubmitButtonOnLocationWindow();
+        getLoginPageActions().clickOnSubmitButtonOnLocationWindow();  */
         Thread.sleep(3000);
         getLoginPageActions().clickOnGuest();
         getLoginPageActions().clickOnLogin();
@@ -68,14 +68,16 @@ public class ProgramDashboardTest {
         getProgramDashboardActions().clickOnprogramdashboard();
         getProgramDashboardActions().verifyProgramResourcePopup();
         getProgramDashboardActions().selectProgram();
+        Thread.sleep(2000);
+        getProgramDashboardActions().selectResource();
         Thread.sleep(5000);
        /* getProgramDashboardActions().clickOnSelectProgramDropdown();
         getProgramDashboardActions().scrollandclickOnTesting4point4staging();
         getProgramDashboardActions().clickOnSelectResourceDropdown();
        // Thread.sleep(2000);
-        getProgramDashboardActions().scrollandclickOnprojectlinkconsumptionfd98staging();
+        getProgramDashboardActions().scrollandclickOnprojectlinkconsumptionfd98staging();   */
         getProgramDashboardActions().verifyandclickConfirmbuttEnabledonProgramResourcePopup();
         getProgramDashboardActions().verifyTabsOnProgramdashboardPage();
-        getProgramDashboardActions().selectDistrictandOrgstaging();
-        getProgramDashboardActions().verifyProjectReports();   */
+        getProgramDashboardActions().selectDistrictandOrgPD();
+        getProgramDashboardActions().verifyProjectReports();  
 }}

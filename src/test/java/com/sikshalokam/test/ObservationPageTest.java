@@ -34,7 +34,15 @@ public class ObservationPageTest {
     public ReportPageAction getReportPageActions() throws Exception {
     	return new ReportPageAction();
     }
+    public String getEnvironmentValue() throws Exception {
+    	return appUrl = PropUtlis.readConfig("webAppConfig", "appUrl");
+    }
     
+    public void switchEnvironment() throws Exception {
+    	if(getEnvironmentValue().contains("preprod") || getEnvironmentValue().contains("prod")) {
+        	getLoginPageActions().clickOnExploreDiksha();
+        }
+    }
   
     
     
@@ -155,12 +163,16 @@ public class ObservationPageTest {
     public void SchoolandBlockEntityNotAddedBydefault() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!F:G");
         observationPageTestData = TestData.getFullGoogleSheetDataAsMapString("Observation!A:B");
+        switchEnvironment();
         //getLoginPageActions().clickOnExploreDiksha();
-        appUrl = PropUtlis.readConfig("webAppConfig", "appUrl");
+     /*   appUrl = PropUtlis.readConfig("webAppConfig", "appUrl");
         if(appUrl.contentEquals("https://preprod.ntp.net.in/"))
         {
         	getLoginPageActions().clickOnExploreDiksha();
         }
+        appUrl = PropUtlis.readConfig("webAppConfig", "appUrl");  */
+     
+        
       /*  getLoginPageActions().selectRoleHTAndOffical();
         getLoginPageActions().clickOnContinue();
         getLoginPageActions().clickOnBoardDropDown();
@@ -183,18 +195,46 @@ public class ObservationPageTest {
         getLoginPageActions().clickOnClear();
         Thread.sleep(2000);
         getLoginPageActions().selectState();
-        getLoginPageActions().selectDistrict();
-       
+        getLoginPageActions().selectDistrict(); 
+        Thread.sleep(2000);
        // getLoginPageActions().clickOnSelectSubrole();
-        getLoginPageActions().selectDeo();
-        //Thread.sleep(2000);
-        getLoginPageActions().verifySubmitButtonEnabledonPersonaldetailspage();
+        //getLoginPageActions().selectDeo();
+        //Thread.sleep(2000);  
+       getLoginPageActions().verifySubmitButtonEnabledonPersonaldetailspage();
         getLoginPageActions().clickOnBackbutton();
         
         getObservationPageActions().verifyObservationButton();
         getObservationPageActions().clickOnObservationButton();
         Thread.sleep(2000);
-        getObservationPageActions().clickOnSchoolEntityobsevation();  
+        getObservationPageActions().selectSchoolEntityobservation();
+        getObservationPageActions().verifySchoolentityisnotadded();
+        getLoginPageActions().clickOnBackbutton();
+        getObservationPageActions().selectBlockEntityobservation();
+        getObservationPageActions().verifyBlockentityisnotadded();
+        
+        getProgramDashboardActions().clickOnProfileIcon();
+        getLoginPageActions().selectProfile();
+        getLoginPageActions().clickOnEdit();
+        Thread.sleep(2000);
+        getLoginPageActions().selectBlock();
+        
+        getLoginPageActions().verifySubmitButtonEnabledonPersonaldetailspage();
+        getLoginPageActions().clickOnBackbutton();
+        
+        getObservationPageActions().verifyObservationButton();
+        getObservationPageActions().clickOnObservationButton();
+        
+        //Thread.sleep(2000);
+        getObservationPageActions().selectSchoolEntityobservation();  
+        getObservationPageActions().verifySchoolentityisnotadded(); 
+        //verifying credits and license
+        getLoginPageActions().clickOnBackbutton();
+        getObservationPageActions().selectCreditAndLicenceobservation();
+        //Thread.sleep(2000);
+        getObservationPageActions().clickOnCreditAndLicencedropdown();
+        getObservationPageActions().verifyCreditsandLicensecontents();
+        
+     /*   getObservationPageActions().clickOnSchoolEntityobsevation();  
         getObservationPageActions().verifySchoolentityisnotadded();
         getLoginPageActions().clickOnBackbutton();
         getObservationPageActions().clickOnBlockEntityobsevation();
@@ -220,5 +260,5 @@ public class ObservationPageTest {
         getObservationPageActions().clickOnCreditAndLicenceobservation();
         Thread.sleep(2000);
         getObservationPageActions().clickOnCreditAndLicencedropdown();
-        getObservationPageActions().verifyCreditsandLicensecontents();
+        getObservationPageActions().verifyCreditsandLicensecontents();    */
 }}

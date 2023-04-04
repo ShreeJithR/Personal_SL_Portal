@@ -141,6 +141,7 @@ public class LoginPageAction {
             SikshaLokamClient.get().gestures().click(loginPageObjects.keralaState);
             SikshaLokamClient.get().report().log(Status.INFO, "Kerala State selected.");	
         } else if(getEnvironmentValue().contains("preprod")) {
+        	js.executeScript("arguments[0].scrollIntoView(true);", loginPageObjects.uttarPradeshSate);
         	SikshaLokamClient.get().gestures().click(loginPageObjects.uttarPradeshSate);
             SikshaLokamClient.get().report().log(Status.INFO, "Uttara Pradesh State selected.");	
         } else {

@@ -180,13 +180,13 @@ public class LoginPageObjects {
     
 
     
-    @FindBy(xpath="(//span[contains(text(),'Uttar Pradesh')])[2]")
+    @FindBy(xpath=" (//span[contains(text(),'Uttar Pradesh')])")        // (//span[contains(text(),'Uttar Pradesh')])  //(//span[contains(text(),'Uttar Pradesh')])[2]
     public WebElement uttarPradeshSate;
     
     @FindBy(xpath="(//span[contains(text(),'Andhra Pradesh')])")
     public WebElement andhraPradeshSate;
     
-    @FindBy(xpath="(//span[contains(text(),'Kerala')])[2]")
+    @FindBy(xpath="(//span[contains(text(),'Kerala')])")   //(//span[contains(text(),'Kerala')])   //(//span[contains(text(),'Kerala')])[2]"
     public WebElement keralaState;
     
     @FindBy(xpath="//a[text()=' Home ']")

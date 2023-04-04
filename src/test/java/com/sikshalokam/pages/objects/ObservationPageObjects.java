@@ -167,16 +167,25 @@ public class ObservationPageObjects {
     //public WebElement Obsworubric2;  
    
     @FindBy(xpath = "//h4[@title='Solution with rubrics -File button – FD-429']")
-    public WebElement SchoolEnityNotAddedObs;
+    public WebElement SchoolEnityNotAddedObsStaging;
+    
+    @FindBy(xpath = "//h4[@title='Testing project 5.1observation 5B 928']")
+    public WebElement SchoolEnityNotAddedObsPreprod;
+    
+  //h4[@title='Testing project 5.1observation 5B 928']
 	
     @FindBy(xpath = "(//div[.=' Observation form '])[2]")
     public WebElement observationform;
     
     @FindBy(xpath = "//h4[@title='QA solution - entity type block - FD 335']")
-    public WebElement BlockEnityNotAddedObs;
+    public WebElement BlockEnityNotAddedObsStaging;
+    
+    @FindBy(xpath = "//h4[@title='Infrastructure Assessment- Furniture']")
+    public WebElement BlockEnityNotAddedObsPreprod;
+  //h4[@title='Infrastructure Assessment- Furniture']
      
     @FindBy(xpath = "//h4[@title='Infrastructure Assessment- Furniture']")
-    public WebElement CerditsAndLicenceObs;
+    public WebElement CerditsAndLicenceObsStaging;
     
     @FindBy(xpath = "//mat-panel-title[@aria-label='Credits & license info accordion']")
     public WebElement CerditsAndLicenceDroapdown;
@@ -189,6 +198,10 @@ public class ObservationPageObjects {
     
     @FindBy(xpath = "//div[.=' Published on SUNBIRD by']")
     public WebElement publishedonSunbirdBy;
+    
+    @FindBy(xpath = "//div[.=' Published on DIKSHA by']")
+    public WebElement publishedonDikshaBy;
+  //div[.=' Published on DIKSHA by']
     
     @FindBy(xpath = "//div[.=' Created on']")
     public WebElement creadtedon;

@@ -60,7 +60,6 @@ public class ProgramDashboardAction {
 			 SikshaLokamClient.get().gestures().click(programDashboardObjects.selectprogramdropdown);
 			Thread.sleep(2000);
 		        if(getEnvironmentValue().contains("diksha")) {
-		           
 		            SikshaLokamClient.get().report().log(Status.INFO, "NO Program");	
 		        } else if(getEnvironmentValue().contains("preprod")) {
 		        	 js.executeScript("arguments[0].scrollIntoView(true);", programDashboardObjects.programTestingProgram4point4);
@@ -70,6 +69,24 @@ public class ProgramDashboardAction {
 		        	 js.executeScript("arguments[0].scrollIntoView(true);", programDashboardObjects.programTesting4point4);
 		    		 SikshaLokamClient.get().gestures().click(programDashboardObjects.programTesting4point4);
 		    	        SikshaLokamClient.get().report().log(Status.INFO, "Selected Testing 4.4 Program");
+		        }
+		        
+		    }
+		 
+		 public void selectResource() throws Exception {
+			 SikshaLokamClient.get().gestures().click(programDashboardObjects.selectresoursedropdown);
+			Thread.sleep(2000);
+		        if(getEnvironmentValue().contains("diksha")) {
+		            SikshaLokamClient.get().report().log(Status.INFO, "NO Resource");	
+		        } else if(getEnvironmentValue().contains("preprod")) {
+		        	 js.executeScript("arguments[0].scrollIntoView(true);", programDashboardObjects.projectlinkconsumptionfd137);
+		    		 SikshaLokamClient.get().gestures().click(programDashboardObjects.projectlinkconsumptionfd137);
+		    	        SikshaLokamClient.get().report().log(Status.INFO, "Selected Project Link Consumption -FD 137");
+		        } else {
+		        	js.executeScript("arguments[0].scrollIntoView(true);", programDashboardObjects.projectlinkconsumptionfd98);
+					 SikshaLokamClient.get().gestures().click(programDashboardObjects.projectlinkconsumptionfd98);
+				         SikshaLokamClient.get().report().log(Status.INFO, "Selected Project link consumption -FD 98");
+		             
 		        }
 		        
 		    }
@@ -128,38 +145,68 @@ public class ProgramDashboardAction {
    	    	}
    	    	
    	    	//selecting district and organisation in staging
-   	    	public void selectDistrictandOrgstaging() throws Exception {
-   	    		selectDistrictStaging();
-   	    		selectOrgStaging();
+   	    	public void selectDistrictandOrgPD() throws Exception {
+   	    		selectDistrictPD();
+   	    		selectOrgPD();
    		 }
-   	    	public void selectDistrictStaging() throws Exception {
-   	          SikshaLokamClient.get().gestures().click(programDashboardObjects.districtDropdown);
+   	    	public void selectDistrictPD() throws Exception {
+   	         SikshaLokamClient.get().gestures().click(programDashboardObjects.districtDropdown);
 		      //Thread.sleep(2000);
-		      SikshaLokamClient.get().gestures().click(programDashboardObjects.Anantapurdistrict);
-              SikshaLokamClient.get().report().log(Status.INFO, "Selected Ananthapur District");
-              Thread.sleep(3000);
-              SikshaLokamClient.get().gestures().click(programDashboardObjects.districtDropdown);
-              SikshaLokamClient.get().gestures().click(programDashboardObjects.Chittordistrict);
-              SikshaLokamClient.get().report().log(Status.INFO, "Reselected Chittor District");
-   	     }//Chittordistrict
+   	      if(getEnvironmentValue().contains("diksha")) {
+	            SikshaLokamClient.get().report().log(Status.INFO, "NO Resource");	
+	        } else if(getEnvironmentValue().contains("preprod")) {
+	        	SikshaLokamClient.get().gestures().click(programDashboardObjects.Ambedkarnagardistrict);
+	              SikshaLokamClient.get().report().log(Status.INFO, "Selected Ambedkarnagar District");
+	              Thread.sleep(3000);
+	              SikshaLokamClient.get().gestures().click(programDashboardObjects.districtDropdown);
+	              SikshaLokamClient.get().gestures().click(programDashboardObjects.Agradistrict);
+	              SikshaLokamClient.get().report().log(Status.INFO, "Reselected Agra District");
+	        
+	        } else {
+			      SikshaLokamClient.get().gestures().click(programDashboardObjects.Anantapurdistrict);
+	              SikshaLokamClient.get().report().log(Status.INFO, "Selected Ananthapur District");
+	              Thread.sleep(3000);
+	              SikshaLokamClient.get().gestures().click(programDashboardObjects.districtDropdown);
+	              SikshaLokamClient.get().gestures().click(programDashboardObjects.Chittordistrict);
+	              SikshaLokamClient.get().report().log(Status.INFO, "Reselected Chittor District");
+	        }
+	    }//Chittordistrict
    	    	
    	    	
-   	    	public void selectOrgStaging() throws Exception {
+   	    	public void selectOrgPD() throws Exception {
      	          SikshaLokamClient.get().gestures().click(programDashboardObjects.organisationsDropdown);
   		      Thread.sleep(2000);
-  		      SikshaLokamClient.get().gestures().click(programDashboardObjects.stagingcustodianorg);
-                SikshaLokamClient.get().report().log(Status.INFO, "Selected Staging Custodian Organization");
-     	     }
+  		    if(getEnvironmentValue().contains("diksha")) {
+  		      SikshaLokamClient.get().report().log(Status.INFO, "No org");
+     	     }else if(getEnvironmentValue().contains("preprod")) {
+     	    	SikshaLokamClient.get().gestures().click(programDashboardObjects.preprodcustodianorg);
+                SikshaLokamClient.get().report().log(Status.INFO, "Selected Pre-Prod Custodian Organization");
+     	     } else {
+                	SikshaLokamClient.get().gestures().click(programDashboardObjects.stagingcustodianorg);
+                    SikshaLokamClient.get().report().log(Status.INFO, "Selected Staging Custodian Organization");
+                }
+  		    }
+     	     
 		 
    	     public void verifyProjectReports() throws Exception {
+   	    	 Thread.sleep(2000);
 			 SikshaLokamClient.get().gestures().click(programDashboardObjects.selectReportDropdown);
 			 Thread.sleep(2000);
-			  Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.taskReport),"Task Report type is not Present.");
-	    		Logger.logAndReportInfo("Task Report type  is Present .");
-	    		  Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.statusReport),"Status Report type is not Present.");
-		    		Logger.logAndReportInfo("Status Report type is Present .");
-		    		  Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.filteredtaskReport),"Filtered Task Report type is not Present.");
-			    		Logger.logAndReportInfo("Filtered Task Report type  is Present .");
+			 Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.taskReport),"Task Report type is not Present.");
+	    	 Logger.logAndReportInfo("Task Report type  is Present .");
+	         Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.statusReport),"Status Report type is not Present.");
+		     Logger.logAndReportInfo("Status Report type is Present .");
+		     Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.filteredtaskReport),"Filtered Task Report type is not Present.");
+			 Logger.logAndReportInfo("Filtered Task Report type  is Present .");
+			 SikshaLokamClient.get().gestures().click(programDashboardObjects.taskReport);
+			 Assert.assertTrue(SikshaLokamClient.get().gestures().isEnabled(programDashboardObjects.requestReport),"Request Report button is not Enabled.");
+			 Logger.logAndReportPass("Request Report button is Enabled.");
+			 SikshaLokamClient.get().gestures().click(programDashboardObjects.requestReport);
+			 Logger.logAndReportInfo("Clicked on Request Report.");
+			 Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.requestReportPasswordPopup),"Request Report Password Pop-up is not Displayed");
+			 Logger.logAndReportPass("Request Report Password Pop-up is Displayed");
+			 SikshaLokamClient.get().gestures().sendValueToTextBox(programDashboardObjects.enterPassword,"Test1234");
+			 Logger.logAndReportInfo("Entered password as : Test1234");
 			 
 	    }
 		 
