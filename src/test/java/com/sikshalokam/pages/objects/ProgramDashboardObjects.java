@@ -76,8 +76,8 @@ public class ProgramDashboardObjects {
      public  WebElement preprodcustodianorg;
    //span[normalize-space()='Pre-prod Custodian Organization']
      
-     @FindBy(xpath="//span[.='Select report']")
-     public  WebElement selectReportDropdown;
+     @FindBy(xpath="//div[@id='mat-select-value-3']")         //(//div[@class='mat-select-arrow-wrapper'])[6]   //span[.='Select report']
+     public  WebElement selectReportDropdown;                               //div[@id='mat-select-value-3'] //(//div[@class='mat-select-arrow-wrapper'])[6]
      
      @FindBy(xpath="//span[@class='mat-option-text'][normalize-space()='Task Report']")
      public  WebElement taskReport;
@@ -96,7 +96,75 @@ public class ProgramDashboardObjects {
      
      @FindBy(xpath="//input[@placeholder='Enter a password to request Report']")
      public  WebElement enterPassword;
+   
+     @FindBy(xpath="(//button[@aria-label='Open calendar'])[1]")
+     public  WebElement startdate;
      
+     @FindBy(xpath="(//button[@aria-label='Open calendar'])[2]")
+     public  WebElement enddate;
+     
+     @FindBy(xpath="//button[@class='mat-calendar-previous-button mat-focus-indicator mat-icon-button mat-button-base']")
+     public  WebElement Previousmonth;
+     
+     @FindBy(xpath="//div[normalize-space()='15']")
+     public  WebElement date15;
+     
+     @FindBy(xpath="//div[normalize-space()='16']")
+     public  WebElement date16;
+     
+     @FindBy(xpath="(//input[@data-placeholder='dd/mm/yyyy'])[1]")
+     public  WebElement dateinput;
+     
+     @FindBy(xpath="//button[normalize-space()='Yes']")
+     public  WebElement yesbutton;
+     
+     @FindBy(xpath="//button[normalize-space()='No']")
+     public  WebElement nobutton;
+   //button[normalize-space()='No']
+   
+     @FindBy(xpath="(//div[normalize-space()='Are you sure you want to request this report?'])[2]")
+     public  WebElement requestReportYesNoPopup;
+                    //span[@class='mat-select-placeholder mat-select-min-line ng-tns-c47-92 ng-star-inserted']
+     @FindBy(xpath="//span[.='Select status']")
+     public  WebElement selectstatusDropdown;
+    
+   //span[@class='mat-select-placeholder mat-select-min-line ng-tns-c47-92 ng-star-inserted']
+     @FindBy(xpath="//span[normalize-space()='Started']")
+     public  WebElement startedStatus;
+     
+     @FindBy(xpath="//span[normalize-space()='Submitted']")
+     public  WebElement submittedStatus;
+     
+     @FindBy(xpath="//span[normalize-space()='Inprogress']")
+     public  WebElement inprogressStatus;
+     
+     @FindBy(xpath="//label[normalize-space()='Minimum no. of tasks in the project']")
+     public  WebElement mintasksinProject;
+     
+     @FindBy(xpath="//label[normalize-space()='Minimum no. of task evidence']")
+     public  WebElement mintaskEvidence;
+     
+     @FindBy(xpath="//label[normalize-space()='Minimum no. of project evidence']")
+     public  WebElement minprojectEvidence;
+     
+     
+     
+   //div[@id='mat-select-value-3']
+   //label[normalize-space()='Minimum no. of tasks in the project']
+   //label[normalize-space()='Minimum no. of task evidence']
+   //label[normalize-space()='Minimum no. of project evidence']
+
+   //span[normalize-space()='Started']
+   //span[normalize-space()='Submitted']
+   //span[normalize-space()='Inprogress']
+ 
+   //span[@class='mat-select-placeholder mat-select-min-line ng-tns-c47-67 ng-star-inserted']
+     //(//div[normalize-space()='Are you sure you want to request this report?'])[2]
+     //button[normalize-space()='Yes']
+     //(//input[@data-placeholder='dd/mm/yyyy'])[1]
+   //div[.=' 15 ']
+   //button[@class='mat-calendar-previous-button mat-focus-indicator mat-icon-button mat-button-base']
+    //(//button[@aria-label='Open calendar'])[1]
    //input[@placeholder='Enter a password to request Report']
      
    //div[normalize-space()='Are you sure you want to request this report?']

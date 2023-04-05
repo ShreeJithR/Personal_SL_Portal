@@ -46,6 +46,7 @@ public class ProgramDashboardTest {
         	getLoginPageActions().clickOnExploreDiksha();
         }
         getLoginPageActions().BMCLSelection();
+        
        /* getLoginPageActions().selectRoleHTAndOffical();
         getLoginPageActions().clickOnContinue();
         getLoginPageActions().clickOnBoardDropDown();
@@ -62,7 +63,7 @@ public class ProgramDashboardTest {
         getLoginPageActions().enterPassword(loginTestData.get("password"));
         //Thread.sleep(2000);
         getLoginPageActions().clickOnLoginButton();
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         getProgramDashboardActions().clickOnProfileIcon();
    
         getProgramDashboardActions().clickOnprogramdashboard();
@@ -70,7 +71,7 @@ public class ProgramDashboardTest {
         getProgramDashboardActions().selectProgram();
         Thread.sleep(2000);
         getProgramDashboardActions().selectResource();
-        Thread.sleep(5000);
+       // Thread.sleep(5000);
        /* getProgramDashboardActions().clickOnSelectProgramDropdown();
         getProgramDashboardActions().scrollandclickOnTesting4point4staging();
         getProgramDashboardActions().clickOnSelectResourceDropdown();
@@ -79,5 +80,11 @@ public class ProgramDashboardTest {
         getProgramDashboardActions().verifyandclickConfirmbuttEnabledonProgramResourcePopup();
         getProgramDashboardActions().verifyTabsOnProgramdashboardPage();
         getProgramDashboardActions().selectDistrictandOrgPD();
+        getProgramDashboardActions().selectdate();
         getProgramDashboardActions().verifyProjectReports();  
-}}
+        getProgramDashboardActions().requestTaskreport();
+        Thread.sleep(2000);
+        getProgramDashboardActions().requestStatusreport();
+        getProgramDashboardActions().requestFilteredTaskDetailreport();
+    }
+}

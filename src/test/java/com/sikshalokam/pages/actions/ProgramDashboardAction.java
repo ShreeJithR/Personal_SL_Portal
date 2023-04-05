@@ -1,6 +1,7 @@
 package com.sikshalokam.pages.actions;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
@@ -123,6 +124,7 @@ public class ProgramDashboardAction {
 	
 		 //to verify tabs on Progamdashboard page
 		 public void verifyTabsOnProgramdashboardPage() throws Exception {
+			 Thread.sleep(2000);
 			 VerifyProgradDataset();
 			 VerifyGraphs();
 			 VerifyTables();
@@ -186,7 +188,21 @@ public class ProgramDashboardAction {
                     SikshaLokamClient.get().report().log(Status.INFO, "Selected Staging Custodian Organization");
                 }
   		    }
-     	     
+   	    	
+
+   	    	public void selectdate() throws Exception {
+   	    	
+     	          SikshaLokamClient.get().gestures().click(programDashboardObjects.startdate);
+     	         SikshaLokamClient.get().report().log(Status.INFO, "Clicked On Start Date picker");
+     	        SikshaLokamClient.get().gestures().click(programDashboardObjects.Previousmonth);
+     	       SikshaLokamClient.get().gestures().click(programDashboardObjects.date15);
+     	      SikshaLokamClient.get().gestures().click(programDashboardObjects.enddate);
+  	         SikshaLokamClient.get().report().log(Status.INFO, "Clicked On Start Date picker");
+  	        SikshaLokamClient.get().gestures().click(programDashboardObjects.Previousmonth);
+  	       SikshaLokamClient.get().gestures().click(programDashboardObjects.date16); 
+
+   	    	}
+   	    	//dateinput 
 		 
    	     public void verifyProjectReports() throws Exception {
    	    	 Thread.sleep(2000);
@@ -198,18 +214,81 @@ public class ProgramDashboardAction {
 		     Logger.logAndReportInfo("Status Report type is Present .");
 		     Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.filteredtaskReport),"Filtered Task Report type is not Present.");
 			 Logger.logAndReportInfo("Filtered Task Report type  is Present .");
-			 SikshaLokamClient.get().gestures().click(programDashboardObjects.taskReport);
-			 Assert.assertTrue(SikshaLokamClient.get().gestures().isEnabled(programDashboardObjects.requestReport),"Request Report button is not Enabled.");
-			 Logger.logAndReportPass("Request Report button is Enabled.");
-			 SikshaLokamClient.get().gestures().click(programDashboardObjects.requestReport);
-			 Logger.logAndReportInfo("Clicked on Request Report.");
-			 Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.requestReportPasswordPopup),"Request Report Password Pop-up is not Displayed");
-			 Logger.logAndReportPass("Request Report Password Pop-up is Displayed");
-			 SikshaLokamClient.get().gestures().sendValueToTextBox(programDashboardObjects.enterPassword,"Test1234");
-			 Logger.logAndReportInfo("Entered password as : Test1234");
-			 
+			
 	    }
+   	     
+   	  public void requestTaskreport() throws Exception {
+   		 SikshaLokamClient.get().gestures().click(programDashboardObjects.taskReport);
+		 Assert.assertTrue(SikshaLokamClient.get().gestures().isEnabled(programDashboardObjects.requestReport),"Request Report button is not Enabled.");
+		 Logger.logAndReportPass("Request Report button is Enabled.");
+		
+		 SikshaLokamClient.get().gestures().click(programDashboardObjects.requestReport);
+		 Logger.logAndReportInfo("Clicked on Request Report.");
+		 Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.requestReportPasswordPopup),"Request Report Password Pop-up is not Displayed");
+		 Logger.logAndReportPass("Request Report Password Pop-up is Displayed");
+		 SikshaLokamClient.get().gestures().sendValueToTextBox(programDashboardObjects.enterPassword,"Test1234");
+		 Logger.logAndReportInfo("Entered password as : Test1234");
+		 Assert.assertTrue(SikshaLokamClient.get().gestures().isEnabled(programDashboardObjects.yesbutton),"Yes button is not Enabled.");
+		 Logger.logAndReportPass("Yes button is Enabled.");
+		 //********
+		 SikshaLokamClient.get().gestures().click(programDashboardObjects.nobutton);
+   	  } 
+   	  
+   	public void requestStatusreport() throws Exception {
+   		
+   	 SikshaLokamClient.get().gestures().click(programDashboardObjects.selectReportDropdown);
+	 
+   		SikshaLokamClient.get().gestures().click(programDashboardObjects.statusReport);
+   		Assert.assertTrue(SikshaLokamClient.get().gestures().isEnabled(programDashboardObjects.requestReport),"Request Report button is not Enabled.");
+		 Logger.logAndReportPass("Request Report button is Enabled.");
+		 
+		 Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.selectstatusDropdown),"Select Status Dropdown is not Displayed");
+		 Logger.logAndReportPass("Select Status Dropdown is Displayed");
+		 SikshaLokamClient.get().gestures().click(programDashboardObjects.selectstatusDropdown);
+		 
+		 //*****************@#$%^&@#$%^
+		 Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.startedStatus),"Started Status is not Present.");
+    	 Logger.logAndReportInfo("Started Status is Present.");
+         Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.submittedStatus),"Submitted Status is not Present.");
+	     Logger.logAndReportInfo("Submitted Status is Present.");
+	     Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.inprogressStatus),"Inprogress Status is not Present.");
+		 Logger.logAndReportInfo("Inprogress Status is Present.");
+		 Thread.sleep(2000);
+		 SikshaLokamClient.get().gestures().PressEsc(); 
 		 
 		 
+		 SikshaLokamClient.get().gestures().click(programDashboardObjects.requestReport);
+		 Logger.logAndReportInfo("Clicked on Request Report.");
+		 Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.requestReportYesNoPopup),"Request Report Yes No Pop-up is not Displayed");
+		 Logger.logAndReportPass("Request Report Yes No Pop-up is Displayed");
+		 //***********
+		 SikshaLokamClient.get().gestures().click(programDashboardObjects.nobutton);
+     	 
+     	  } 
+    public void requestFilteredTaskDetailreport() throws Exception {
+    	 SikshaLokamClient.get().gestures().click(programDashboardObjects.selectReportDropdown);
+    	 SikshaLokamClient.get().gestures().click(programDashboardObjects.filteredtaskReport);
+		 Assert.assertTrue(SikshaLokamClient.get().gestures().isEnabled(programDashboardObjects.requestReport),"Request Report button is not Enabled.");
+		 Logger.logAndReportPass("Request Report button is Enabled.");
 		 
+		 Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.mintasksinProject),"Minimum no. of tasks in the project textfield is not Present.");
+    	 Logger.logAndReportInfo("Minimum no. of tasks in the project textfield is Present.");
+         Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.mintaskEvidence),"Minimum no. of task evidence textfield is not Present.");
+	     Logger.logAndReportInfo("Minimum no. of task evidence textfield is Present.");
+	     Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.minprojectEvidence),"Minimum no. of project evidence textfield is not Present.");
+		 Logger.logAndReportInfo("Minimum no. of project evidence textfield is Present.");
+		 
+		
+		 SikshaLokamClient.get().gestures().click(programDashboardObjects.requestReport);
+		 Logger.logAndReportInfo("Clicked on Request Report.");
+		 Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.requestReportPasswordPopup),"Request Report Password Pop-up is not Displayed");
+		 Logger.logAndReportPass("Request Report Password Pop-up is Displayed");
+		 SikshaLokamClient.get().gestures().sendValueToTextBox(programDashboardObjects.enterPassword,"Test1234");
+		 Logger.logAndReportInfo("Entered password as : Test1234");
+		 Assert.assertTrue(SikshaLokamClient.get().gestures().isEnabled(programDashboardObjects.yesbutton),"Yes button is not Enabled.");
+		 Logger.logAndReportPass("Yes button is Enabled.");
+		 //********
+		 SikshaLokamClient.get().gestures().click(programDashboardObjects.nobutton);
+  	  } 
+   	
 }

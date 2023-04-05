@@ -244,4 +244,17 @@ public class Gestures {
     	//IWebElement l = driver.FindElement(By.name("txtnam"));
     	a.moveToElement(element).perform(); **/
     }
+    
+    //******new
+    public void PressEsc() throws Exception {
+    	
+    	Robot r = new Robot();
+        r.keyPress(KeyEvent.VK_ESCAPE);  
+         
+        //Release Escape
+         r.keyRelease(KeyEvent.VK_ESCAPE);
+         Thread.sleep(2000);
+         
+       
+}
 }
