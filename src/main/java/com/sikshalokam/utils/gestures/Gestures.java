@@ -6,6 +6,7 @@ import com.sikshalokam.report.SikshaLokamReport;
 import com.sikshalokam.utils.logger.Logger;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -52,6 +53,8 @@ public class Gestures {
     public boolean isEnabled(WebElement element) {
         return element.isEnabled();
     }
+    
+   
 
     public boolean click(WebElement element) throws Exception {
         String identifyBy = "xpath";
@@ -194,7 +197,7 @@ public class Gestures {
             return false;
         }
     }
-    //*****new
+    //to verify there is no element present
 	public boolean verifyNoelement(WebElement element) throws Exception {
         try
         {
@@ -211,7 +214,41 @@ public class Gestures {
             return true;
         }
 	}
-
+	
+	public boolean verifyNoelement1(WebElement locator)  {
+        try
+        {
+           if(locator.isDisplayed())
+         return false;                                                          
+        }
+        catch(Exception e) {
+        }
+         return true;
+        }
+		
+	
+	
+	
+	  public boolean isElementnotPresent(WebElement locator) {
+	        try {
+	            if (locator.isDisplayed())
+	                System.out.println("Element present on screen ***********" + locator);
+	            return false;
+	        } catch (Exception e) {
+	            System.out.println("Element not present on screen **************" + locator);
+	            return true;
+	        }
+	    }
+	/*private boolean isPresent(WebElement element) {
+		try {
+		    element;
+		} catch (NoSuchElementException e) {
+		    return false;
+		}
+		return true;
+		}
+*/
+	
     public WebElement waitForElementToAppear(WebElement id) {
         WebDriverWait wait = new WebDriverWait(this.driver, 25);
         wait.until(ExpectedConditions.visibilityOf(id));
@@ -257,4 +294,25 @@ public class Gestures {
          
        
 }
-}
+
+   /* public void noelement(WebElement observationform, String string) {
+    	Assert.assertNull(observationform);
+    } */
+
+	//public void noelement(WebElement element, String string) {
+	//	Assert.assertNull(element);
+		
+	
+
+	public void noelement(WebElement element, String string) {
+		Assert.assertNull(element);
+		
+	}
+
+	
+	}
+
+		
+	
+    
+

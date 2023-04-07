@@ -1,5 +1,7 @@
 package com.sikshalokam.pages.actions;
 
+import static org.testng.Assert.assertFalse;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -451,23 +453,27 @@ public class ObservationPageAction {
             }
     	}  */
     	
- 	/*   public void verifySchoolentityisnotadded() throws Exception {  
- 		 // Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.observationform),"Entity added by default");
-	    	//Logger.logAndReportInfo("No entity added by default");
-	    	
-	    	Assert.assertTrue(observationPageObjects.observationform.isDisplayed(),"yes");
-	    	Logger.logAndReportPass("No entity added by default");              
-	    } */
+ 	   public void xyz() throws Exception {  
+ 		  Assert.assertNotEquals(observationPageObjects.observationform, null, "Entity added by default");
+	    	Logger.logAndReportInfo("No entity added by default");
+ 	   	
+	    	//Assert.assertTrue(observationPageObjects.observationform.isDisplayed(),"yes");{
+	    	//Logger.logAndReportPass("No entity added by default");              
+ 	   }
+    	
+    
     	
     	public void verifySchoolentityisnotadded() throws Exception {  
     		  Assert.assertTrue(SikshaLokamClient.get().gestures().verifyNoelement(observationPageObjects.observationform),"Entity added by default");
    	    	Logger.logAndReportPass("No School entity added by default");
-    	}
-   	    	
+        }
    	    	public void verifyBlockentityisnotadded() throws Exception {  
       		  Assert.assertTrue(SikshaLokamClient.get().gestures().verifyNoelement(observationPageObjects.observationform),"Entity added by default");
      	    	Logger.logAndReportPass("No Block entity added by default");
-          }
+          }   
+   	    
+   	    	//Assert.assertEquals(0, wd.findElements(By.locator("locator")).size());
+
    	    	//credits and license contents verification
    	    	public void verifyCreditsandLicensecontents() throws Exception {
    	    		VerifyAuthor();
@@ -538,7 +544,7 @@ public class ObservationPageAction {
    	    		Logger.logAndReportInfo("License terms section is Present .");
    	    		
    	    	}
-
+   	  
 }
 
 

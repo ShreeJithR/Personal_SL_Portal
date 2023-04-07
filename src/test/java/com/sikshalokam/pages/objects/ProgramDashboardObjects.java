@@ -17,7 +17,7 @@ public class ProgramDashboardObjects {
      public  WebElement programresourcePopup;
 
      @FindBy(xpath="(//span[.='Select program'])[2]")
-     public  WebElement selectprogramdropdown;
+     public  WebElement selectprogramdropdownonpopup;
   
      @FindBy(xpath="//span[.=' Testing 4.4 ']")
      public  WebElement programTesting4point4;
@@ -28,7 +28,12 @@ public class ProgramDashboardObjects {
    //span[normalize-space()='Testing Program 4.4']
  
      @FindBy(xpath="(//span[.='Select resource'])[2]")
+     public  WebElement selectresoursedropdownonpopup;
+     
+     @FindBy(xpath="(//div[@class='mat-select-arrow-wrapper'])[3]")
      public  WebElement selectresoursedropdown;
+     
+    // (//div[@class='mat-select-arrow-wrapper'])[3]
      
      @FindBy(xpath="//button[normalize-space()='Confirm']")
      public  WebElement confirmbuttonOnprogramresourcePopup;
@@ -76,8 +81,24 @@ public class ProgramDashboardObjects {
      public  WebElement preprodcustodianorg;
    //span[normalize-space()='Pre-prod Custodian Organization']
      
-     @FindBy(xpath="//div[@id='mat-select-value-3']")         //(//div[@class='mat-select-arrow-wrapper'])[6]   //span[.='Select report']
-     public  WebElement selectReportDropdown;                               //div[@id='mat-select-value-3'] //(//div[@class='mat-select-arrow-wrapper'])[6]
+     
+   //  /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-datasets[1]/div[2]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[2]
+     
+     @FindBy(xpath="/html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-datasets[1]/div[2]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[2]")         //(//div[@class='mat-select-arrow-wrapper'])[6]   //span[.='Select report']
+     public  WebElement selectReportDropdown; 		 
+    		 
+    		 
+     @FindBy(xpath="(//div[@class='mat-select-arrow-wrapper'])[6]")         //(//div[@class='mat-select-arrow-wrapper'])[6]   //span[.='Select report']
+     public  WebElement selectReportDropdown1;   
+     
+     @FindBy(xpath="(//div[@class='mat-select-arrow-wrapper'])[7]")         //(//div[@class='mat-select-arrow-wrapper'])[6]   //span[.='Select report']
+     public  WebElement selectReportDropdown2;
+     
+     //(//span[.='Status Report'])[1]
+     //div[@id='mat-select-value-3'] //(//div[@class='mat-select-arrow-wrapper'])[6]
+     
+    // @FindBy(xpath="(//div[@class='mat-select-arrow-wrapper'])[7]")         //(//div[@class='mat-select-arrow-wrapper'])[6]   //span[.='Select report']
+     //public  WebElement selectReportDropdown2;
      
      @FindBy(xpath="//span[@class='mat-option-text'][normalize-space()='Task Report']")
      public  WebElement taskReport;
@@ -138,6 +159,11 @@ public class ProgramDashboardObjects {
      @FindBy(xpath="//span[normalize-space()='Inprogress']")
      public  WebElement inprogressStatus;
      
+     
+     @FindBy(xpath="//span[normalize-space()='Completed']")
+     public  WebElement completedStatus;
+   //span[normalize-space()='Completed']
+     
      @FindBy(xpath="//label[normalize-space()='Minimum no. of tasks in the project']")
      public  WebElement mintasksinProject;
      
@@ -147,8 +173,45 @@ public class ProgramDashboardObjects {
      @FindBy(xpath="//label[normalize-space()='Minimum no. of project evidence']")
      public  WebElement minprojectEvidence;
      
+     @FindBy(xpath="//span[contains(text(),'Observation with Rubrics – FD 98')]")
+     public  WebElement obswithrubricstaging;
+     
+     @FindBy(xpath="//span[contains(text(),' Obs with rubric - FD 137 ')]")
+     public  WebElement obswithrubricpreprod;
+     
+     @FindBy(xpath="//span[@class='mat-option-text'][normalize-space()='Question Report']")
+     public  WebElement questionReport;
      
      
+     @FindBy(xpath="//span[@class='mat-option-text'][normalize-space()='Domain Criteria Report']")
+     public  WebElement domaincriteriaReport;
+     
+     @FindBy(xpath="//span[contains(text(),' Observation without rubric targeted – FD 98 ')]")
+     public  WebElement obswithoutrubricstaging;
+     
+     @FindBy(xpath="//span[contains(text(),' Obs without rubric - FD 137 ')]")
+     public  WebElement obswithoutrubricpreprod;
+     
+     @FindBy(xpath="//span[normalize-space()='Survey 4.4 Reg Test - FD 235']")
+     public  WebElement surveystaging;
+     
+     
+     @FindBy(xpath="//span[normalize-space()='Survey Test Expiry -29/12/2021 -- FD 196']")
+     public  WebElement surveypreprod;
+     
+     
+   //span[normalize-space()='Survey Test Expiry -29/12/2021 -- FD 196']
+    // (//span[normalize-space()='Survey FD-443 expiry - 24/06/2022'])[3]
+   //span[contains(text(),' Obs without rubric - FD 137 ')]
+   //span[contains(text(),' Observation without rubric targeted – FD 98 ')]
+     
+   //span[@class='mat-option-text'][normalize-space()='Question Report']
+   //span[@class='mat-option-text'][normalize-space()='Domain Criteria Report']
+     
+     
+   //span[contains(text(),' Obs with rubric - FD 137 ')]
+   //span[contains(text(),'Observation with Rubrics – FD 98')]
+   //label[normalize-space()='Minimum no. of project evidence']
    //div[@id='mat-select-value-3']
    //label[normalize-space()='Minimum no. of tasks in the project']
    //label[normalize-space()='Minimum no. of task evidence']

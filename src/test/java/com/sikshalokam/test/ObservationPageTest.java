@@ -160,7 +160,7 @@ public class ObservationPageTest {
     //####new tc's
     @Test(description = "To verify school enitity is not added by deafault")
     @Author(name = "SHREEJITH")
-    public void SchoolandBlockEntityNotAddedBydefault() throws Exception {
+    public void schoolandBlockEntityNotAddedBydefault() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!F:G");
         observationPageTestData = TestData.getFullGoogleSheetDataAsMapString("Observation!A:B");
         switchEnvironment();

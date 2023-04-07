@@ -214,6 +214,12 @@ public class LoginPageAction {
         SikshaLokamClient.get().gestures().click(loginPageObjects.edit);
         SikshaLokamClient.get().report().log(Status.INFO, "Clicked on Edit Button");
     }
+    //***********
+    public void clickOnEdit1() throws Exception {
+        loginPageObjects.edit.click();
+        SikshaLokamClient.get().report().log(Status.INFO, "Clicked on Edit Button");
+    }
+    
     public void clickOnClear() throws Exception {
         SikshaLokamClient.get().gestures().click(loginPageObjects.clear);
         SikshaLokamClient.get().report().log(Status.INFO, "Clicked on Clear Button"); 

@@ -1,6 +1,8 @@
 package com.sikshalokam.test;
 
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+
 import java.util.Map;
 
 import org.testng.annotations.Test;
@@ -36,7 +38,7 @@ public class ProgramDashboardTest {
     
     @Test(description = "login and verify observation tile")
     @Author(name = "SHREEJITH R")
-    public void PMD() throws Exception {
+    public void programDashboardPMandPD() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!D:E");
        // observationPageTestData = TestData.getFullGoogleSheetDataAsMapString("Observation!A:B");
         //getLoginPageActions().clickOnExploreDiksha();
@@ -70,21 +72,39 @@ public class ProgramDashboardTest {
         getProgramDashboardActions().verifyProgramResourcePopup();
         getProgramDashboardActions().selectProgram();
         Thread.sleep(2000);
-        getProgramDashboardActions().selectResource();
+        getProgramDashboardActions().selectProjectResource();
        // Thread.sleep(5000);
        /* getProgramDashboardActions().clickOnSelectProgramDropdown();
         getProgramDashboardActions().scrollandclickOnTesting4point4staging();
         getProgramDashboardActions().clickOnSelectResourceDropdown();
        // Thread.sleep(2000);
         getProgramDashboardActions().scrollandclickOnprojectlinkconsumptionfd98staging();   */
+       
         getProgramDashboardActions().verifyandclickConfirmbuttEnabledonProgramResourcePopup();
         getProgramDashboardActions().verifyTabsOnProgramdashboardPage();
         getProgramDashboardActions().selectDistrictandOrgPD();
-        getProgramDashboardActions().selectdate();
+        //getProgramDashboardActions().selectdate();
         getProgramDashboardActions().verifyProjectReports();  
         getProgramDashboardActions().requestTaskreport();
-        Thread.sleep(2000);
-        getProgramDashboardActions().requestStatusreport();
+        //Thread.sleep(2000);
+      getProgramDashboardActions().requestStatusreport();
+        
         getProgramDashboardActions().requestFilteredTaskDetailreport();
+        
+        getProgramDashboardActions(). selectObswithrubrics();
+        getProgramDashboardActions().verifyobswithrubricReports();
+        getProgramDashboardActions().requestQuestionreport();
+       getProgramDashboardActions().requestStatusreport();
+        getProgramDashboardActions().requestDomainCriteriareport();
+        
+        getProgramDashboardActions().selectObswithoutrubrics();
+        getProgramDashboardActions().verifyobswitouthrubricReports();
+        getProgramDashboardActions().requestQuestionreport();
+      getProgramDashboardActions().requestStatusreport();
+        getProgramDashboardActions().selectSurvey();
+        getProgramDashboardActions().verifySurveyReports();
+        getProgramDashboardActions().requestQuestionreport();
+        getProgramDashboardActions().requestStatusreport();
+      
     }
 }
