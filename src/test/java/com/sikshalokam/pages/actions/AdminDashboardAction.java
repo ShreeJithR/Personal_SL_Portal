@@ -47,11 +47,11 @@ public class AdminDashboardAction {
 */	    
 	    
 	    public void verifyReportsandDatasetsTab() throws Exception {
-	        softAssert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(adminDashboardObjects.reportsTab),"Reports tab is not displayed.");
+	        Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(adminDashboardObjects.reportsTab),"Reports tab is not displayed.");
 			Logger.logAndReportPass("Reports tab is displayed.");
-			softAssert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(adminDashboardObjects.datasetsTab),"Datasets tab is not displayed.");
+			Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(adminDashboardObjects.datasetsTab),"Datasets tab is not displayed.");
 			Logger.logAndReportPass("Datasets tab is displayed.");
-			softAssert.assertAll();
+		
 		}
 	    
 	   /* public void verifyDatasetstab() throws Exception {
@@ -61,8 +61,9 @@ public class AdminDashboardAction {
 
 		
 	    public void verifyGlobalSearchfilter() throws Exception {
-	        Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(adminDashboardObjects.globalSearchFilter),"Global Search Filter is not displayed.");
+	       Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(adminDashboardObjects.globalSearchFilter),"Global Search Filter is not displayed.");
 			Logger.logAndReportPass("Global Search Filter is displayed.");
+			
 		}
 	    
 
@@ -97,17 +98,18 @@ public class AdminDashboardAction {
 	    }
 	    
 	    public void verifySelectedReportInTableFormat() throws Exception {
-	        softAssert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(adminDashboardObjects.serialNoColumn),"Serial.No Column is not displayed.");
+	        Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(adminDashboardObjects.serialNoColumn),"Serial.No Column is not displayed.");
 			Logger.logAndReportInfo("Serial.No Column is displayed.");
-			softAssert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(adminDashboardObjects.parameterColumn),"Parameter Column is not displayed.");
+			Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(adminDashboardObjects.parameterColumn),"Parameter Column is not displayed.");
 			Logger.logAndReportInfo("ParameterColumn is displayed.");
-			softAssert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(adminDashboardObjects.StatusColumn),"Status Column is not displayed.");
+			Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(adminDashboardObjects.StatusColumn),"Status Column is not displayed.");
 			Logger.logAndReportInfo("Status Column is displayed.");
-			softAssert.assertAll();
+			
 		}
 	    public void verifyLocalSearchfilter() throws Exception {
 	        Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(adminDashboardObjects.localSearchFilter),"Local Search Filter is not displayed.");
 			Logger.logAndReportPass("Local Search Filter is displayed.");
+			
 		}
 	    
 	    
@@ -122,6 +124,7 @@ public class AdminDashboardAction {
 	    public void verifyGraphsTab() throws Exception {
 	        Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(adminDashboardObjects.graphsTab),"Graphs tab is not displayed.");
 			Logger.logAndReportPass("Graphs tab is is displayed.");
+		
 		}
 
 	    
