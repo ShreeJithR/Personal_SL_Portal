@@ -1,11 +1,10 @@
 package com.sikshalokam.test;
 
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
+
 
 import java.util.Map;
 
-import org.testng.annotations.Test;
 
 import com.sikshalokam.annotation.Author;
 import com.sikshalokam.pages.actions.LoginPageAction;
@@ -36,7 +35,16 @@ public class ProgramDashboardTest {
     	return new ReportPageAction();
     }
     
-    @Test(description = "login and verify observation tile")
+    public String getEnvironmentValue() throws Exception {
+    	return appUrl = PropUtlis.readConfig("webAppConfig", "appUrl");
+    }
+    
+    public void switchEnvironment() throws Exception {
+    	if(getEnvironmentValue().contains("preprod") || getEnvironmentValue().contains("prod")) {
+        	getLoginPageActions().clickOnExploreDiksha();
+        }}
+    
+    @Test(description = "login as Program manager and verify types of reports")
     @Author(name = "SHREEJITH R")
     public void programDashboardPMandPD() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!D:E");
