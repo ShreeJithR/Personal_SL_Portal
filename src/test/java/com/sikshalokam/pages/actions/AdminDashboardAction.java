@@ -91,13 +91,11 @@ public class AdminDashboardAction {
 		        } else {
 		        	
 		        	 SikshaLokamClient.get().gestures().sendValueToTextBox(adminDashboardObjects.globalSearchFilter,"test improve report");
-		        	 System.out.println(Clock.SYSTEM);
-		    
-		 	    	
+		        	 //System.out.println(Clock.SYSTEM);
 		 	        Logger.logAndReportInfo("Searched for test improve report ");
 		 	        Thread.sleep(2000);
 		 	        SikshaLokamClient.get().gestures().click(adminDashboardObjects.impProjectReportStaging);
-		 	       System.out.println(Clock.SYSTEM);
+		 	       //System.out.println(Clock.SYSTEM);
 		 	        Logger.logAndReportInfo("Clicked on Improvement Project Report"); 
 		        }
 	    }
@@ -123,6 +121,32 @@ public class AdminDashboardAction {
 			 	        Logger.logAndReportInfo("Clicked on Unique User Observation Report"); 
 			        }
 		    }
+	        
+	        
+	        public void searchAndSelectSurveyReports() throws Exception {
+	   	         
+		   	      if(getEnvironmentValue().contains("diksha")) {
+			            SikshaLokamClient.get().report().log(Status.INFO, "NO ");	
+			        } else if(getEnvironmentValue().contains("preprod")) {
+			        	 SikshaLokamClient.get().gestures().sendValueToTextBox(adminDashboardObjects.globalSearchFilter,"Unique User Survey Report");
+			 	    	
+			 	        Logger.logAndReportInfo("Searched for Unique User Survey Report ");
+			 	        //Thread.sleep(2000);
+			 	        SikshaLokamClient.get().gestures().click(adminDashboardObjects.surveyReport);
+			 	        Logger.logAndReportInfo("Clicked on Unique User Survey Report"); 
+			        } else {
+                        SikshaLokamClient.get().gestures().sendValueToTextBox(adminDashboardObjects.globalSearchFilter,"Unique User Survey Report");
+			 	    	
+			 	        Logger.logAndReportInfo("Searched for Unique User Survey Report");
+			 	        //Thread.sleep(2000);
+			 	        SikshaLokamClient.get().gestures().click(adminDashboardObjects.surveyReport);
+			 	        Logger.logAndReportInfo("Clicked on Unique User Survey Report"); 
+			        }
+		    }
+	        
+	        
+	        
+	        
 	    public void verifySelectedReportInTableFormat() throws Exception {
 	        Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(adminDashboardObjects.serialNoColumn),"Serial.No Column is not displayed.");
 			Logger.logAndReportInfo("Serial.No Column is displayed.");
@@ -179,7 +203,7 @@ public class AdminDashboardAction {
      SikshaLokamClient.get().report().log(Status.INFO, "Clicked on Select Organisation Filter"); 
      //Thread.sleep(2000);
      SikshaLokamClient.get().gestures().click(adminDashboardObjects.filterCheckBox1);
-     SikshaLokamClient.get().gestures().click(adminDashboardObjects.filterCheckBox2);
+    // SikshaLokamClient.get().gestures().click(adminDashboardObjects.filterCheckBox2);
      SikshaLokamClient.get().report().log(Status.INFO, "Clicked on Selected multiple filters");
      
 	    }

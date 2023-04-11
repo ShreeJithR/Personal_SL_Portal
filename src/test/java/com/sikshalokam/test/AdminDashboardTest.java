@@ -74,8 +74,10 @@ public class AdminDashboardTest {
 	    	   
 	    	        getAdminDashboardActions().clickOnadmindashboard();
 	    	       getAdminDashboardActions().verifyReportsandDatasetsTab();
+	    	       getAdminDashboardActions().verifyGlobalSearchfilter();
 	    	        getAdminDashboardActions().searchAndSelectProjectReports();
 	    	        getAdminDashboardActions().verifySelectedReportInTableFormat();
+	    	        getAdminDashboardActions().verifyLocalSearchfilter();
 	    	        getAdminDashboardActions().searchAndSelectParameter();
 	    	         getAdminDashboardActions().verifyGraphsTab();
 	    	        getAdminDashboardActions().selectProjectFilters();
@@ -83,11 +85,21 @@ public class AdminDashboardTest {
 	    	        getAdminDashboardActions().clickOnBackButton();
 	    	        
 	    	        
-	    	        getAdminDashboardActions().xyz();
-	    	        //getAdminDashboardActions().searchAndSelectObservationReports();
+	    	       
+	    	        getAdminDashboardActions().searchAndSelectObservationReports();
 	    	        getAdminDashboardActions().verifySelectedReportInTableFormat();
 	    	        getAdminDashboardActions().searchAndSelectParameter();
 	    	        getAdminDashboardActions().verifyGraphsTab();
 	    	        getAdminDashboardActions().selectObservationFilters();
 	    	        getAdminDashboardActions().ExportAs();
+	    	        getAdminDashboardActions().clickOnBackButton();
+	    	        
+	    	        getAdminDashboardActions().searchAndSelectSurveyReports();
+	    	        getAdminDashboardActions().verifySelectedReportInTableFormat();
+	    	        getAdminDashboardActions().searchAndSelectParameter();
+	    	        getAdminDashboardActions().verifyGraphsTab();
+	    	        getAdminDashboardActions().selectObservationFilters();
+	    	        getAdminDashboardActions().ExportAs();
+	    	       
+	    	        
 	    	  }}

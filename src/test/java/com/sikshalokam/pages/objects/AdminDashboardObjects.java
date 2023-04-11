@@ -14,7 +14,7 @@ public class AdminDashboardObjects {
 	 @FindBy(xpath="//div[contains(text(),'Datasets')]")
      public  WebElement datasetsTab;
 
-	 @FindBy(xpath="//input[@type='search']")
+	 @FindBy(xpath="(//input[@type='search'])[1]")
      public  WebElement globalSearchFilter;
 
 	 
@@ -27,6 +27,8 @@ public class AdminDashboardObjects {
 	 @FindBy(xpath="//tbody//i[1]")
      public  WebElement observationReport;
 	 
+	 @FindBy(xpath="//tbody//i[1]")
+     public  WebElement surveyReport;
 	//tbody//i[1]
 	//tbody//i[1]
 	 

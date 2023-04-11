@@ -327,5 +327,10 @@ public class LoginPageObjects {
     @FindBy(xpath = "//span[.='AGALI']")
     public WebElement AgaliBlock;
     
+    
+  
+ 
+    
+    ///html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/ng-component[1]/div[2]/div[1]/div[1]/section[2]/div[1]/div[4]/button[1]
 }//span[.='AGALI']
 
