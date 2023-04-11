@@ -62,7 +62,7 @@ public class AdminDashboardTest {
 	    	        
 	    	        switchEnvironment();
 	    	        getLoginPageActions().BMCLSelection();
-	    	        Thread.sleep(3000);
+	    	        Thread.sleep(2000);
 	    	        getLoginPageActions().clickOnGuest();
 	    	        getLoginPageActions().clickOnLogin();
 	    	        getLoginPageActions().enterUserName(loginTestData.get("userName"));
@@ -73,9 +73,21 @@ public class AdminDashboardTest {
 	    	        getProgramDashboardActions().clickOnProfileIcon();
 	    	   
 	    	        getAdminDashboardActions().clickOnadmindashboard();
-	    	        getAdminDashboardActions().verifyReportsandDatasetsTab();
+	    	       getAdminDashboardActions().verifyReportsandDatasetsTab();
 	    	        getAdminDashboardActions().searchAndSelectProjectReports();
 	    	        getAdminDashboardActions().verifySelectedReportInTableFormat();
 	    	        getAdminDashboardActions().searchAndSelectParameter();
+	    	         getAdminDashboardActions().verifyGraphsTab();
+	    	        getAdminDashboardActions().selectProjectFilters();
+	    	        getAdminDashboardActions().ExportAs();
+	    	        getAdminDashboardActions().clickOnBackButton();
+	    	        
+	    	        
+	    	        getAdminDashboardActions().xyz();
+	    	        //getAdminDashboardActions().searchAndSelectObservationReports();
+	    	        getAdminDashboardActions().verifySelectedReportInTableFormat();
+	    	        getAdminDashboardActions().searchAndSelectParameter();
 	    	        getAdminDashboardActions().verifyGraphsTab();
+	    	        getAdminDashboardActions().selectObservationFilters();
+	    	        getAdminDashboardActions().ExportAs();
 	    	  }}

@@ -23,6 +23,11 @@ public class AdminDashboardObjects {
 	 
 	 @FindBy(xpath="//tbody//i[1]")
      public  WebElement impProjectReportPreprod;
+	 
+	 @FindBy(xpath="//tbody//i[1]")
+     public  WebElement observationReport;
+	 
+	//tbody//i[1]
 	//tbody//i[1]
 	 
 	 @FindBy(xpath="//th[@class='sorting_asc']")  
@@ -59,6 +64,29 @@ public class AdminDashboardObjects {
 	 @FindBy(xpath="/html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-report[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[2]/div[1]/app-filter[1]/form[1]/div[1]/div[1]/div[1]/div[4]/div[1]/app-material-auto-complete[1]/div[1]/mat-form-field[1]/div[1]/div[1]")
      public  WebElement selectOrganisationFilter;
 	
+	 @FindBy(xpath="(//span[@class='mat-checkbox-label'])[1]")     // (//span[@class='mat-checkbox-ripple mat-focus-indicator mat-ripple'])[2]
+     public  WebElement filterCheckBox1;                             //  (//span[@class='mat-checkbox-frame'])[1]   
+	 
+	 @FindBy(xpath="(//span[@class='mat-checkbox-label'])[2]")             //(//li[@class='ng-star-inserted'])[2]
+     public  WebElement filterCheckBox2;
+	 
+	 
+	 @FindBy(xpath="/html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-report[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[1]/div[3]/div[1]/label[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]/span[1]")             //(//li[@class='ng-star-inserted'])[2]
+     public  WebElement exportAs;
+	 
+	 
+	 @FindBy(xpath="//span[normalize-space()='Pdf']")             //(//li[@class='ng-star-inserted'])[2]
+     public  WebElement pdf;
+	 
+	 @FindBy(xpath="//span[normalize-space()='Img']")             //(//li[@class='ng-star-inserted'])[2]
+     public  WebElement img;
+	 
+	 @FindBy(xpath="//button[@aria-label='back-button']")             //(//li[@class='ng-star-inserted'])[2]
+     public  WebElement backButton;
+	//button[@aria-label='back-button']
+	 
+	//span[normalize-space()='Img']
+	//span[normalize-space()='Pdf']
 	 
 	 
 	 
