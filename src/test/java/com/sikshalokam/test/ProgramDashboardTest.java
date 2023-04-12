@@ -46,16 +46,17 @@ public class ProgramDashboardTest {
     
     @Test(description = "login as Program manager and verify types of reports")
     @Author(name = "SHREEJITH R")
-    public void programDashboardPMandPD() throws Exception {
+    public void programDashboardPM() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!D:E");
        // observationPageTestData = TestData.getFullGoogleSheetDataAsMapString("Observation!A:B");
         //getLoginPageActions().clickOnExploreDiksha();
-        appUrl = PropUtlis.readConfig("webAppConfig", "appUrl");
+      /*  appUrl = PropUtlis.readConfig("webAppConfig", "appUrl");
         if(appUrl.contentEquals("https://preprod.ntp.net.in/"))
         {
         	getLoginPageActions().clickOnExploreDiksha();
-        }
-        getLoginPageActions().BMCLSelection();
+        }  */
+        switchEnvironment();
+        getLoginPageActions().BMCLSelection();  
         
        /* getLoginPageActions().selectRoleHTAndOffical();
         getLoginPageActions().clickOnContinue();
@@ -69,8 +70,8 @@ public class ProgramDashboardTest {
         Thread.sleep(3000);
         getLoginPageActions().clickOnGuest();
         getLoginPageActions().clickOnLogin();
-        getLoginPageActions().enterUserName(loginTestData.get("userName"));
-        getLoginPageActions().enterPassword(loginTestData.get("password"));
+        getLoginPageActions().enterUserName(loginTestData.get("userNamePM"));
+        getLoginPageActions().enterPassword(loginTestData.get("passwordPM"));
         //Thread.sleep(2000);
         getLoginPageActions().clickOnLoginButton();
         Thread.sleep(3000);

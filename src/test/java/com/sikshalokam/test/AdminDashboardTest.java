@@ -29,15 +29,7 @@ public class AdminDashboardTest {
 	    public AdminDashboardAction getAdminDashboardActions() throws Exception {
 	        return new AdminDashboardAction();
 	    }
-	    
-	    public ObservationPageAction getObservationPageActions() throws Exception {
-	        return new ObservationPageAction();
-	    }
-	    
-	    public ReportPageAction getReportPageActions() throws Exception {
-	    	return new ReportPageAction();
-	    }
-	    
+	   
 	    public String getEnvironmentValue() throws Exception {
 	    	return appUrl = PropUtlis.readConfig("webAppConfig", "appUrl");
 	    }
@@ -75,7 +67,8 @@ public class AdminDashboardTest {
 	    	        getAdminDashboardActions().clickOnadmindashboard();
 	    	       getAdminDashboardActions().verifyReportsandDatasetsTab();
 	    	       getAdminDashboardActions().verifyGlobalSearchfilter();
-	    	        getAdminDashboardActions().searchAndSelectProjectReports();
+	    	       
+	    	       getAdminDashboardActions().searchAndSelectProjectReports();
 	    	        getAdminDashboardActions().verifySelectedReportInTableFormat();
 	    	        getAdminDashboardActions().verifyLocalSearchfilter();
 	    	        getAdminDashboardActions().searchAndSelectParameter();
@@ -84,8 +77,6 @@ public class AdminDashboardTest {
 	    	        getAdminDashboardActions().ExportAs();
 	    	        getAdminDashboardActions().clickOnBackButton();
 	    	        
-	    	        
-	    	       
 	    	        getAdminDashboardActions().searchAndSelectObservationReports();
 	    	        getAdminDashboardActions().verifySelectedReportInTableFormat();
 	    	        getAdminDashboardActions().searchAndSelectParameter();

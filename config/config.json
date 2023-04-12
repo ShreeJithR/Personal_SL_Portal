@@ -4,6 +4,6 @@
     "headLess": "false"
   },
   "webAppConfig": {
-    "appUrl": "https://preprod.ntp.net.in/"
+    "appUrl": "https://staging.sunbirded.org/"
   }
 }

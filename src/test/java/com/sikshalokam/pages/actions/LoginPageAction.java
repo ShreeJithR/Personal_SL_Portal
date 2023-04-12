@@ -494,8 +494,17 @@ public class LoginPageAction {
 	
 	   public void verifySubmitButtonEnabled() throws Exception {
 		   SikshaLokamClient.get().gestures().waitTillTheElementIsVisibleAndClickable(loginPageObjects.courseWindowSubmitButton);
-		   Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(loginPageObjects.courseWindowSubmitButton),"Submit button not Enabled on BMC selection window.");
+		   Assert.assertTrue(SikshaLokamClient.get().gestures().isEnabled(loginPageObjects.courseWindowSubmitButton),"Submit button not Enabled on BMC selection window.");
 		   Logger.logAndReportInfo("Submit button is Enabled on BMC selection window.");
+	    	SikshaLokamClient.get().gestures().click(loginPageObjects.courseWindowSubmitButton);
+	    	
+	    }
+	  
+	   
+	   public void verifySubmitButtonEnabled1() throws Exception {
+		   SikshaLokamClient.get().gestures().waitTillTheElementIsVisibleAndClickable(loginPageObjects.courseWindowSubmitButton);
+		   Assert.assertFalse(SikshaLokamClient.get().gestures().isEnabled(loginPageObjects.courseWindowSubmitButton),"Submit button Enabled on BMC selection window.");
+		   Logger.logAndReportInfo("Submit button not Enabled on BMC selection window.");
 	    	SikshaLokamClient.get().gestures().click(loginPageObjects.courseWindowSubmitButton);
 	    	
 	    }

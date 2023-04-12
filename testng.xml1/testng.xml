@@ -15,6 +15,7 @@
       <class name="com.sikshalokam.test.LoginPageTest"/>
       <class name="com.sikshalokam.test.observationTestcaseStaging.ObservationPageTest"/>
       <class name="com.sikshalokam.test.AdminDashboardTest"/>
+      <class name="com.sikshalokam.test.CoursePageTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

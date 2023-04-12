@@ -235,9 +235,12 @@ public class LoginPageTest {
         
         //NEW TC'S login
     }
-    @Test(description = "Board is mandatory field in BMC Pop-up for HTofficial role")
+    
+    
+    
+    @Test(description = "Only Board is mandatory field in BMC Pop-up for HTofficial role")
     @Author(name = "SHREEJITH")
-    public void HTofficialsAndSubmit() throws Exception {
+    public void htofficialsAndSubmit() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!A:B");
         //getLoginPageActions().clickOnExploreDiksha();
         if(getEnvironmentValue().contains("preprod")) {
@@ -253,11 +256,32 @@ public class LoginPageTest {
         getLoginPageActions().verifySubmitButtonEnabled();
         getLoginPageActions().verifyYourLocationPopUp();
 }
+    
+    @Test(description = "Only Board is mandatory field in BMC Pop-up for HTofficial role.")
+    @Author(name = "SHREEJITH")
+    public void htofficialsAndSubmitfail() throws Exception {
+        loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!A:B");
+        //getLoginPageActions().clickOnExploreDiksha();
+        if(getEnvironmentValue().contains("preprod")) {
+        	getLoginPageActions().clickOnExploreDiksha();
+        }
+        getLoginPageActions().verifyWelcomeTitle();
+        getLoginPageActions().selectRoleHTAndOffical();
+        getLoginPageActions().clickOnContinue();
+        getLoginPageActions().clickOnBoardDropDown();
+        getLoginPageActions().selectcbseOrNcertBoardOption();
+        Thread.sleep(5000);
+        System.out.println("5 Seconds wait is over");
+        getLoginPageActions().verifySubmitButtonEnabled1();
+        getLoginPageActions().verifyYourLocationPopUp();
+}
   
+    
+    
    
     @Test(description = "Board Medium Grade are mandatory fields in BMC Pop-up for Teacher role")
     @Author(name = "SHREEJITH")
-    public void TeacherAndSubmit() throws Exception {
+    public void teacherAndSubmit() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!A:B");
         //getLoginPageActions().clickOnExploreDiksha();
         if(getEnvironmentValue().contains("preprod")) {
@@ -282,7 +306,7 @@ public class LoginPageTest {
     
     @Test(description = "Board Medium Grade are mandatory fields in BMC Pop-up for Student role")
     @Author(name = "SHREEJITH")
-    public void StudentAndSubmit() throws Exception {
+    public void studentAndSubmit() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!A:B");
         //getLoginPageActions().clickOnExploreDiksha();
         if(getEnvironmentValue().contains("preprod")) {
@@ -305,7 +329,7 @@ public class LoginPageTest {
 }
     @Test(description = "Board Medium Grade are mandatory fields in BMC Pop-up for Parent role")
     @Author(name = "SHREEJITH")
-    public void ParentAndSubmit() throws Exception {
+    public void parentAndSubmit() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!A:B");
         //getLoginPageActions().clickOnExploreDiksha();
         if(getEnvironmentValue().contains("preprod")) {
