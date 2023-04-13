@@ -16,6 +16,7 @@ import com.sikshalokam.utils.prop.PropUtlis;
 
 public class CoursePageTest {
 	Map<String, String> loginTestData;
+	Map<String, String> courseTestData;
 	String appUrl;
 	
 	 public LoginPageAction getLoginPageActions() throws Exception {
@@ -49,7 +50,7 @@ public class CoursePageTest {
   	  @Test(description = "Join Course")
   	    @Author(name = "SHREEJITH R")
   	    public void joinCourse() throws Exception {
-  	        loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!H:I");
+  	        loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!J:K");
   	    
   	        
   	        switchEnvironment();
@@ -64,6 +65,46 @@ public class CoursePageTest {
   	        Thread.sleep(3000);
   	      getCoursePageActions().verifyCourseButton();
   	      getCoursePageActions().clickOnCoursesButton();
-  	    getProgramDashboardActions().clickOnProfileIcon();
-  	  getCoursePageActions().clickOnWorkspace();
-}}
+  	   // getProgramDashboardActions().clickOnProfileIcon();
+  	 // getCoursePageActions().clickOnWorkspace();
+  	    getCoursePageActions().searchForOngoinCourse();
+  	  getCoursePageActions().verifyJoinCourseButtonisEnabled();
+}
+  	 
+  	@Test(description = "Create and Publish Course")
+	    @Author(name = "SHREEJITH R")
+	    public void createCourseandPublish() throws Exception {
+	        loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!J:K");
+	        courseTestData = TestData.getFullGoogleSheetDataAsMapString("CourseTestData!A:B");
+	    
+	        
+	        switchEnvironment();
+	        getLoginPageActions().BMCLSelection();
+	        Thread.sleep(2000);
+	        getLoginPageActions().clickOnGuest();
+	        getLoginPageActions().clickOnLogin();
+	        getLoginPageActions().enterUserName(loginTestData.get("contentCreatorUser"));
+	        getLoginPageActions().enterPassword(loginTestData.get("contentCreatorPwd"));
+	        //Thread.sleep(2000);
+	        getLoginPageActions().clickOnLoginButton();
+	        getProgramDashboardActions().clickOnProfileIcon();
+	     	getCoursePageActions().clickOnWorkspace();
+	     	getCoursePageActions().clickCreateCourse();
+	     	Thread.sleep(5000);
+	     	getCoursePageActions().enterCourseTitle(courseTestData.get("courseTitle"));
+	     	//Thread.sleep(20000);
+	     	getCoursePageActions().fillMandatoryFields();
+	     	Thread.sleep(20000);
+
+
+
+  	}
+
+
+
+
+
+
+
+
+}

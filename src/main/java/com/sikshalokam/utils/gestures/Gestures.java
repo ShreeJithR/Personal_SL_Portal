@@ -294,6 +294,21 @@ public class Gestures {
          
        
 }
+    
+ public void selectAllandDelete() throws Exception {
+    	
+    	Robot r = new Robot();
+        r.keyPress(KeyEvent.VK_CONTROL);  
+        r.keyPress(KeyEvent.VK_A); 
+        //Release Escape
+         r.keyRelease(KeyEvent.VK_CONTROL);
+         r.keyRelease(KeyEvent.VK_A);
+         
+         Thread.sleep(2000);
+         r.keyPress(KeyEvent.VK_BACK_SPACE); 
+         r.keyRelease(KeyEvent.VK_BACK_SPACE);
+       
+}
 
    /* public void noelement(WebElement observationform, String string) {
     	Assert.assertNull(observationform);
