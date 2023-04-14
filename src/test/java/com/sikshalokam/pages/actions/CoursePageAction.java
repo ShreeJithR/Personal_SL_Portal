@@ -1,6 +1,7 @@
 package com.sikshalokam.pages.actions;
 
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
@@ -74,12 +75,119 @@ public class CoursePageAction {
 	    public void fillMandatoryFields() throws Exception {
 	    	//SikshaLokamClient.get().gestures().click(coursepageObjects.coursetitle);
 	    	SikshaLokamClient.get().gestures().sendValueToTextBox(coursepageObjects.enterKeywords, "AutomationIsKeyToSuccess");
-	    	Logger.logAndReportInfo("Entered AutomationIsKeyToSuccess ");
-    		SikshaLokamClient.get().gestures().click(coursepageObjects.courseTypeDropdown);
+	    	//Logger.logAndReportInfo("Entered : AutomationIsKeyToSuccess ");
+    		//Thread.sleep(2000);	
+	    	SikshaLokamClient.get().gestures().click(coursepageObjects.courseTypeDropdown);
     		Logger.logAndReportInfo("Clicked on coursetype ");
-    		//Thread.sleep(5000);
     		SikshaLokamClient.get().gestures().click(coursepageObjects.courseTypeTamilNadu);
-    		Logger.logAndReportInfo("Selected TamilNadu Course Type ");
+    		//Logger.logAndReportInfo("Selected TamilNadu Course Type ");
     		SikshaLokamClient.get().gestures().PressEsc();
+    		//Thread.sleep(2000);	
+    		SikshaLokamClient.get().gestures().click(coursepageObjects.selectSubjectDropdown);
+    		Logger.logAndReportInfo("Clicked on SelectSubject ");
+    		 SikshaLokamClient.get().gestures().click(coursepageObjects.selectSubjectAccountancy);
+    		//Logger.logAndReportInfo("Selected Accountancy Subject " );
+    		SikshaLokamClient.get().gestures().PressEsc();
+    		
+    		js.executeScript("arguments[0].scrollIntoView(true);", coursepageObjects.selectSyllabusDropdown);
+    		SikshaLokamClient.get().gestures().click(coursepageObjects.selectSyllabusDropdown);
+    		Logger.logAndReportInfo("Clicked on SelectSubject ");
+    		 SikshaLokamClient.get().gestures().click(coursepageObjects.selectSyllabusTamilNadu);
+    		SikshaLokamClient.get().gestures().PressEsc();
+    		
+    		js.executeScript("arguments[0].scrollIntoView(true);", coursepageObjects.selectMediumDropdown);
+    		SikshaLokamClient.get().gestures().click(coursepageObjects.selectMediumDropdown);
+    		Logger.logAndReportInfo("Clicked on SelectSubject ");
+    		 SikshaLokamClient.get().gestures().click(coursepageObjects.selectMediumEnglish);
+    		//SikshaLokamClient.get().gestures().PressEsc();
+    		
+     		js.executeScript("arguments[0].scrollIntoView(true);", coursepageObjects.selectClassDropdown);
+    		 SikshaLokamClient.get().gestures().click(coursepageObjects.selectClassDropdown);
+     		Logger.logAndReportInfo("Clicked on SelectSubject ");
+     		 SikshaLokamClient.get().gestures().click(coursepageObjects.selectClass1);
+    		
+      		js.executeScript("arguments[0].scrollIntoView(true);", coursepageObjects.selectSubject1Dropdown);
+     		 SikshaLokamClient.get().gestures().click(coursepageObjects.selectSubject1Dropdown);
+      		Logger.logAndReportInfo("Clicked on SelectSubject ");
+      		 SikshaLokamClient.get().gestures().click(coursepageObjects.selectSubjectEnglish1);
+      		 
+       		js.executeScript("arguments[0].scrollIntoView(true);", coursepageObjects.copyrightYear);
+      		 SikshaLokamClient.get().gestures().sendValueToTextBox(coursepageObjects.copyrightYear, "2022");
+	         SikshaLokamClient.get().report().log(Status.INFO, "Entered 2022 " );
+    		
 	    }
+	    
+	    public void clickAddChild() throws Exception {
+    		SikshaLokamClient.get().gestures().click(coursepageObjects.addChild);
+    		Logger.logAndReportInfo("Clicked on Add Child Button ");
+    	}
+	    
+	    public void clickaddfromLibrary() throws Exception {
+    		SikshaLokamClient.get().gestures().click(coursepageObjects.addfromLibrary);
+    		Logger.logAndReportInfo("Clicked on Add from Library ");
+    		Thread.sleep(2000);
+    	}
+	    
+	    public void selectContentfromLibrary() throws Exception {
+	    	js.executeScript("arguments[0].scrollIntoView(true);", coursepageObjects.selectContent1);
+    		SikshaLokamClient.get().gestures().click(coursepageObjects.selectContent1);
+    		Logger.logAndReportInfo("Selected content from Library ");
+    		SikshaLokamClient.get().gestures().click(coursepageObjects.selectContentButton);
+    		Logger.logAndReportInfo("Clicked on Select Content Button ");
+    		Thread.sleep(2000);
+
+    	}
+	    
+	    public void verifyWhereDoYouWantToAddThisContentPopup() throws Exception {
+	    	SikshaLokamClient.get().gestures().waitTillTheElementIsVisibleAndClickable(coursepageObjects.contentPopup);
+	        Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(coursepageObjects.contentPopup),"Where Do You Want To Add This Content Popup Pop-up is not displayed.");
+			Logger.logAndReportPass("Where Do You Want To Add This Content Popup Pop-up  is displayed.");
+			SikshaLokamClient.get().gestures().click(coursepageObjects.addContentButtonOnPopup);
+    		Logger.logAndReportInfo("Clicked on Add Content On Popup ");
+    		Thread.sleep(2000);
+
+		}
+	    
+	    public void clickOnBackButton() throws Exception {
+	    	js.executeScript("arguments[0].scrollIntoView(true);", coursepageObjects.backButton);
+	    	SikshaLokamClient.get().gestures().waitTillTheElementIsVisibleAndClickable(coursepageObjects.backButton);
+    		SikshaLokamClient.get().gestures().click(coursepageObjects.backButton);
+    		Logger.logAndReportInfo("Clicked on Back Button ");
+    	}
+	    
+	    public void verifyandClickOnSendForReviewButton() throws Exception {
+	    	SikshaLokamClient.get().gestures().waitTillTheElementIsVisibleAndClickable(coursepageObjects.sendforReview);
+	        Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(coursepageObjects.sendforReview),"Send For Review Button  is not displayed.");
+			Logger.logAndReportPass("Send For Review Button is displayed.");
+			SikshaLokamClient.get().gestures().click(coursepageObjects.sendforReview);
+			Logger.logAndReportPass("Clicked On Send For Review Button.");
+	    }
+	    
+	    public void verifyTandCPopupandClickOnAgreeandSubmit() throws Exception {
+	    	SikshaLokamClient.get().gestures().waitTillTheElementIsVisibleAndClickable(coursepageObjects.tAndcPopup);
+	        Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(coursepageObjects.tAndcPopup),"Terms and Condition Pop-up is not displayed.");
+			Logger.logAndReportPass("Terms and Condition Pop-up  is displayed.");
+			SikshaLokamClient.get().gestures().click(coursepageObjects.agreeTandC);
+    		Logger.logAndReportInfo("Clicked on Agree TandC ");
+    		
+    		SikshaLokamClient.get().gestures().waitTillTheElementIsVisibleAndClickable(coursepageObjects.submitButtonOnTandCPopup);
+	        Assert.assertTrue(SikshaLokamClient.get().gestures().isEnabled(coursepageObjects.submitButtonOnTandCPopup),"Submit Button On Terms and Condition Pop up is not Enabled");
+			Logger.logAndReportPass("Submit Button On Terms and Condition Pop up is Enabled");
+    		Thread.sleep(2000);
+    		SikshaLokamClient.get().gestures().click(coursepageObjects.submitButtonOnTandCPopup);
+    		Logger.logAndReportInfo("Clicked on Submit Button on TandC Popup ");
+    		Thread.sleep(2000);
+
+		}
+	    public void clickOnProfileiconAndLogout() throws Exception {
+	    	SikshaLokamClient.get().gestures().waitTillTheElementIsVisibleAndClickable(coursepageObjects.profileicon); 
+	    	SikshaLokamClient.get().gestures().click(coursepageObjects.profileicon);
+	    	Logger.logAndReportInfo("Clicked on Profile Icon ");
+	    	Thread.sleep(2000);
+	    	SikshaLokamClient.get().gestures().click(coursepageObjects.logout);
+	    	Logger.logAndReportInfo("Clicked on Logout");
+	    	Thread.sleep(2000);
+	    	
+	    	
+    	}
 }

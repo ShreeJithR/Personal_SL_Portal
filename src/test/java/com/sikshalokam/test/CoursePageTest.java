@@ -94,17 +94,43 @@ public class CoursePageTest {
 	     	getCoursePageActions().enterCourseTitle(courseTestData.get("courseTitle"));
 	     	//Thread.sleep(20000);
 	     	getCoursePageActions().fillMandatoryFields();
-	     	Thread.sleep(20000);
+	     	getCoursePageActions().clickAddChild();
+	     	getCoursePageActions().clickaddfromLibrary();
+	     	getCoursePageActions().selectContentfromLibrary();
+	     	getCoursePageActions().verifyWhereDoYouWantToAddThisContentPopup();
+	     	getCoursePageActions().clickOnBackButton();
+	     	getCoursePageActions().verifyandClickOnSendForReviewButton();
+	     	getCoursePageActions().verifyTandCPopupandClickOnAgreeandSubmit();
+	     
+	     	getCoursePageActions().clickOnProfileiconAndLogout();
+	     	getLoginPageActions().clickOnGuest();
+		    getLoginPageActions().clickOnLogin();
+		    getLoginPageActions().enterUserName(loginTestData.get("contentReviewerUser"));
+	        getLoginPageActions().enterPassword(loginTestData.get("contentReviewerPwd"));
 
 
 
   	}
+  	
+	@Test(description = "Create and Publish Course")
+    @Author(name = "SHREEJITH R")
+    public void coursePublish() throws Exception {
+        loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!J:K");
+        courseTestData = TestData.getFullGoogleSheetDataAsMapString("CourseTestData!A:B");
+    
+        
+        switchEnvironment();
+        getLoginPageActions().BMCLSelection();
+        Thread.sleep(2000);
+        getLoginPageActions().clickOnGuest();
+        getLoginPageActions().clickOnLogin();
+        getLoginPageActions().enterUserName(loginTestData.get("contentReviewerUser"));
+        getLoginPageActions().enterPassword(loginTestData.get("contentReviewerPwd"));
 
 
 
 
-
-
+	}
 
 
 }
