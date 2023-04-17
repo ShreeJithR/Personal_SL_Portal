@@ -113,6 +113,35 @@ public class CoursePageObjects {
 	
 	@FindBy(xpath = "//li[normalize-space()='Logout']")
 	public WebElement logout;
+	
+	@FindBy(xpath = "//a[normalize-space()='Up For Review']")
+	public WebElement upforReview;
+	
+	@FindBy(xpath = "//input[@placeholder='Search content']")
+	public WebElement upforReviewSearchBox;
+	
+	@FindBy(xpath = "//button[normalize-space()='Publish']")
+	public WebElement publishButton;
+	
+	@FindBy(xpath = "//td[1]")
+	public WebElement firstSeacrhResult;
+	
+	@FindBy(xpath = "//span[normalize-space()='Are you sure you want to publish this Collection?']")
+	public WebElement publishCollectionPopUp;
+	
+	@FindBy(xpath = "//button[normalize-space()='No']")
+	public WebElement noButtonOnCollectionPopUp;
+	//button[normalize-space()='No']
+	
+	//span[normalize-space()='Are you sure you want to publish this Collection?']
+	
+	
+	//td[1]
+	
+	
+	
+	//input[@class='upForReviewSearchBox ng-pristine ng-valid ng-touched']
+	//a[normalize-space()='Up For Review']
 	//li[normalize-space()='Logout']
 	
 	//(//div[@class='ui dropdown right top pointing'])[2]

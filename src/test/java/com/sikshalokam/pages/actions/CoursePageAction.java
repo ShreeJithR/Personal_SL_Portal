@@ -43,7 +43,22 @@ public class CoursePageAction {
     		SikshaLokamClient.get().gestures().click(coursepageObjects.workspace);
     		Logger.logAndReportInfo("Clicked on the Workspace");
     	}
+	    
 	    public void searchForOngoinCourse() throws Exception {
+	    	if(getEnvironmentValue().contains("diksha")) {
+	    		 SikshaLokamClient.get().report().log(Status.INFO, "NO ");
+	    	}
+	    	 else if(getEnvironmentValue().contains("preprod")) {
+	    		 SikshaLokamClient.get().gestures().sendValueToTextBox(coursepageObjects.searchfield, "do_2137765795439984641158");
+	   	    		SikshaLokamClient.get().gestures().click(coursepageObjects.searchbutton);
+	  	    		Logger.logAndReportInfo("Searched for Automation testing course");
+	   	    		//Thread.sleep(2000);
+    	    		 SikshaLokamClient.get().gestures().waitTillTheElementIsVisibleAndClickable(coursepageObjects.ongoingCourse);	    	    		
+    	    		 SikshaLokamClient.get().gestures().click(coursepageObjects.ongoingCourse);
+	    	    		Logger.logAndReportInfo("Selected Automation testing course");
+	    	    		Thread.sleep(2000);
+	    	}
+	    		 else {
     		SikshaLokamClient.get().gestures().sendValueToTextBox(coursepageObjects.searchfield, "do_2137730803486720001382");
     		SikshaLokamClient.get().gestures().click(coursepageObjects.searchbutton);
     		Logger.logAndReportInfo("Searched for Automation testing course");
@@ -52,7 +67,9 @@ public class CoursePageAction {
     		SikshaLokamClient.get().gestures().click(coursepageObjects.ongoingCourse);
     		Logger.logAndReportInfo("Selected Automation testing course");
     		Thread.sleep(2000);
-    	}
+    	}}
+	    
+	    
 	    public void verifyJoinCourseButtonisEnabled() throws Exception {
 	    	SikshaLokamClient.get().gestures().waitTillTheElementIsVisibleAndClickable(coursepageObjects.joinCourseButton);
 	    	Assert.assertTrue(SikshaLokamClient.get().gestures().isEnabled(coursepageObjects.joinCourseButton),"Join Button not Enabled for Ongoin Course.");
@@ -186,8 +203,42 @@ public class CoursePageAction {
 	    	Thread.sleep(2000);
 	    	SikshaLokamClient.get().gestures().click(coursepageObjects.logout);
 	    	Logger.logAndReportInfo("Clicked on Logout");
-	    	Thread.sleep(2000);
-	    	
-	    	
+	    	Thread.sleep(2000);	
     	}
+	    public void clickOnUpforReview() throws Exception {
+    		SikshaLokamClient.get().gestures().click(coursepageObjects.upforReview);
+    		Logger.logAndReportInfo("Clicked on Up for Review ");
+    		Thread.sleep(2000);
+	    }
+	    
+	    public void searchUpforReviewCourse(String courseName) throws Exception {
+	    SikshaLokamClient.get().gestures().sendValueToTextBox(coursepageObjects.upforReviewSearchBox, courseName);
+        SikshaLokamClient.get().report().log(Status.INFO, "Searched for course name : " + courseName );
+        Thread.sleep(3000);
+        }
+	    
+	    public void verifyandClickOnPublishButton() throws Exception {
+	    	SikshaLokamClient.get().gestures().waitTillTheElementIsVisibleAndClickable(coursepageObjects.publishButton);
+	        Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(coursepageObjects.publishButton),"Publish Button is not displayed.");
+			Logger.logAndReportPass("Publish Button is displayed.");
+			SikshaLokamClient.get().gestures().click(coursepageObjects.publishButton);
+			Logger.logAndReportPass("Clicked On Publish Button.");
+	    }
+	    
+	    public void selectFirstSearchResult() throws Exception {
+	    	SikshaLokamClient.get().gestures().waitTillTheElementIsVisibleAndClickable(coursepageObjects.firstSeacrhResult);
+	        Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(coursepageObjects.firstSeacrhResult),"Searched Result Not Found");
+    		SikshaLokamClient.get().gestures().click(coursepageObjects.firstSeacrhResult);
+    		Logger.logAndReportInfo("Clicked on first Search Result ");
+    		Thread.sleep(2000);
+	    }
+	    public void verifyPublishCollectionPopUp() throws Exception {
+	    SikshaLokamClient.get().gestures().waitTillTheElementIsVisibleAndClickable(coursepageObjects.publishCollectionPopUp);
+        Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(coursepageObjects.publishCollectionPopUp),"Publish Collection Pop-up is not displayed.");
+		Logger.logAndReportPass("Publish Collection Pop-up is displayed.");
+		SikshaLokamClient.get().gestures().click(coursepageObjects.noButtonOnCollectionPopUp);
+		//Logger.logAndReportInfo("Clicked on Agree TandC ");
+	    }
+		
+
 }

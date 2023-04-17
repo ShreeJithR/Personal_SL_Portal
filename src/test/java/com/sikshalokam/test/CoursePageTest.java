@@ -103,10 +103,21 @@ public class CoursePageTest {
 	     	getCoursePageActions().verifyTandCPopupandClickOnAgreeandSubmit();
 	     
 	     	getCoursePageActions().clickOnProfileiconAndLogout();
+	     	  switchEnvironment();
+	     	
 	     	getLoginPageActions().clickOnGuest();
 		    getLoginPageActions().clickOnLogin();
 		    getLoginPageActions().enterUserName(loginTestData.get("contentReviewerUser"));
 	        getLoginPageActions().enterPassword(loginTestData.get("contentReviewerPwd"));
+	        getLoginPageActions().clickOnLoginButton();
+	        getProgramDashboardActions().clickOnProfileIcon();
+	     	getCoursePageActions().clickOnWorkspace();
+	     	getCoursePageActions().clickOnUpforReview();
+	     	getCoursePageActions().searchUpforReviewCourse(courseTestData.get("courseTitle"));
+	     	getCoursePageActions().selectFirstSearchResult();
+	     	getCoursePageActions().verifyandClickOnPublishButton();
+	     	getCoursePageActions().verifyPublishCollectionPopUp();
+	     
 
 
 
@@ -114,7 +125,7 @@ public class CoursePageTest {
   	
 	@Test(description = "Create and Publish Course")
     @Author(name = "SHREEJITH R")
-    public void coursePublish() throws Exception {
+    public void coursePublishdemo() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!J:K");
         courseTestData = TestData.getFullGoogleSheetDataAsMapString("CourseTestData!A:B");
     
@@ -126,7 +137,13 @@ public class CoursePageTest {
         getLoginPageActions().clickOnLogin();
         getLoginPageActions().enterUserName(loginTestData.get("contentReviewerUser"));
         getLoginPageActions().enterPassword(loginTestData.get("contentReviewerPwd"));
-
+        getLoginPageActions().clickOnLoginButton();
+        getProgramDashboardActions().clickOnProfileIcon();
+     	getCoursePageActions().clickOnWorkspace();
+     	getCoursePageActions().clickOnUpforReview();
+     	getCoursePageActions().searchUpforReviewCourse(courseTestData.get("courseTitle"));
+     	getCoursePageActions().verifyandClickOnPublishButton();
+       
 
 
 
