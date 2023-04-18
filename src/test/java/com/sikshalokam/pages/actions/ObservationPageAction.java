@@ -52,6 +52,7 @@ public class ObservationPageAction {
     	}
     	
     	public void clickOnObservationWithRub_SliderWithScore() throws Exception {
+    		//js.executeScript("arguments[0].scrollIntoView(true);", observationPageObjects.observationWithRubic);
     		SikshaLokamClient.get().gestures().click(observationPageObjects.observationWithRubic);
     		Logger.logAndReportInfo("Clicked on the observation with rub only slider with score.");
     	}
@@ -343,6 +344,7 @@ public class ObservationPageAction {
     	public void verifyObservation1Title() throws Exception {
             Assert.assertTrue(SikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.observation1Title),"Observation 1 title is not displayed.");
     		Logger.logAndReportPass("Observation 1 title is displayed succesfully.");
+    		Thread.sleep(2000);
     	}
     	
     	public void verifyStartButtonFromObservation() throws Exception {

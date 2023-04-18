@@ -72,8 +72,9 @@ public class ObservationPageTest {
         Thread.sleep(5000);
         getLoginPageActions().clickOnSerachButton();
         getObservationPageActions().clickOnObservationButton();
-        getLoginPageActions().clickOnSearchedObservationTitle();
-        //getObservationPageActions().clickOnObservationWithRub_SliderWithScore();
+        
+      //  getLoginPageActions().clickOnSearchedObservationTitle();
+        getObservationPageActions().clickOnObservationWithRub_SliderWithScore();
         getObservationPageActions().clickOnEntityDeleteOption();
         getObservationPageActions().clickOnEntityDeleteConfirmationYes();
         getObservationPageActions().clickOnAddSchoolButton();

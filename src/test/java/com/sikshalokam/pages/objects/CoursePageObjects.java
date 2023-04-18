@@ -29,7 +29,7 @@ public class CoursePageObjects {
 	@FindBy(xpath = "//input[@placeholder='Title']")
 	public WebElement coursetitle;
 	
-	@FindBy(xpath = "//input[@placeholder='Enter Keywords']")
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-new-collection-editor[1]/lib-editor[1]/div[1]/div[1]/div[1]/div[1]/div[3]/lib-meta-form[1]/sb-dynamic-form[1]/div[1]/div[1]/sb-keywords[1]/div[1]/tag-input[1]/div[1]/div[1]/tag-input-form[1]/form[1]/input[1]")
 	public WebElement enterKeywords;
 	
 	@FindBy(xpath = "//div[@class='sb-dropdown']//select[@id='sb-dropdown']")

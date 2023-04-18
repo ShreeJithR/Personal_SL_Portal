@@ -17,7 +17,7 @@ public class ObservationPageObjects {
 	@FindBy(xpath = "(//h4[contains(@class,'title') ])[1]")
 	public WebElement observationTitle;
 	
-	@FindBy(xpath = "//h4//bdi[text()='Obs with Rub � Only slider with score']")
+	@FindBy(xpath = "//h4[@title='Obs with Rub – Only slider with score']")
 	public WebElement observationWithRubic;
 	
 	@FindBy(xpath = "//h4[text()='Observation Details ']")
@@ -38,7 +38,7 @@ public class ObservationPageObjects {
 	@FindBy(xpath="//button[text()=' No ']")
 	public WebElement noConfirmationForEntityDelete;
 	
-	@FindBy(xpath="(//label)[4]")
+	@FindBy(xpath="/html[1]/body[1]/div[2]/div[2]/div[1]/mat-dialog-container[1]/div[1]/mat-dialog-content[2]/div[1]/div[1]/div[1]/div[1]/div[1]/label[1]")                //(//label)[4]
 	public WebElement firstEntity;
 	
 	@FindBy(xpath="//label[contains(text(),'MPPS HANUMANNAHALLI')]")

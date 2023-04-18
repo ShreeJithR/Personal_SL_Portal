@@ -95,42 +95,42 @@ public class CoursePageAction {
 	    	//Logger.logAndReportInfo("Entered : AutomationIsKeyToSuccess ");
     		//Thread.sleep(2000);	
 	    	SikshaLokamClient.get().gestures().click(coursepageObjects.courseTypeDropdown);
-    		Logger.logAndReportInfo("Clicked on coursetype ");
+    	//Logger.logAndReportInfo("Clicked on coursetype ");
     		SikshaLokamClient.get().gestures().click(coursepageObjects.courseTypeTamilNadu);
     		//Logger.logAndReportInfo("Selected TamilNadu Course Type ");
     		SikshaLokamClient.get().gestures().PressEsc();
     		//Thread.sleep(2000);	
     		SikshaLokamClient.get().gestures().click(coursepageObjects.selectSubjectDropdown);
-    		Logger.logAndReportInfo("Clicked on SelectSubject ");
+    	//Logger.logAndReportInfo("Clicked on SelectSubject ");
     		 SikshaLokamClient.get().gestures().click(coursepageObjects.selectSubjectAccountancy);
     		//Logger.logAndReportInfo("Selected Accountancy Subject " );
     		SikshaLokamClient.get().gestures().PressEsc();
     		
     		js.executeScript("arguments[0].scrollIntoView(true);", coursepageObjects.selectSyllabusDropdown);
     		SikshaLokamClient.get().gestures().click(coursepageObjects.selectSyllabusDropdown);
-    		Logger.logAndReportInfo("Clicked on SelectSubject ");
+    	//Logger.logAndReportInfo("Clicked on SelectSubject ");
     		 SikshaLokamClient.get().gestures().click(coursepageObjects.selectSyllabusTamilNadu);
     		SikshaLokamClient.get().gestures().PressEsc();
     		
     		js.executeScript("arguments[0].scrollIntoView(true);", coursepageObjects.selectMediumDropdown);
     		SikshaLokamClient.get().gestures().click(coursepageObjects.selectMediumDropdown);
-    		Logger.logAndReportInfo("Clicked on SelectSubject ");
+    	//Logger.logAndReportInfo("Clicked on SelectSubject ");
     		 SikshaLokamClient.get().gestures().click(coursepageObjects.selectMediumEnglish);
     		//SikshaLokamClient.get().gestures().PressEsc();
     		
      		js.executeScript("arguments[0].scrollIntoView(true);", coursepageObjects.selectClassDropdown);
     		 SikshaLokamClient.get().gestures().click(coursepageObjects.selectClassDropdown);
-     		Logger.logAndReportInfo("Clicked on SelectSubject ");
+     	//Logger.logAndReportInfo("Clicked on SelectSubject ");
      		 SikshaLokamClient.get().gestures().click(coursepageObjects.selectClass1);
     		
       		js.executeScript("arguments[0].scrollIntoView(true);", coursepageObjects.selectSubject1Dropdown);
      		 SikshaLokamClient.get().gestures().click(coursepageObjects.selectSubject1Dropdown);
-      		Logger.logAndReportInfo("Clicked on SelectSubject ");
+      	//Logger.logAndReportInfo("Clicked on SelectSubject ");
       		 SikshaLokamClient.get().gestures().click(coursepageObjects.selectSubjectEnglish1);
       		 
        		js.executeScript("arguments[0].scrollIntoView(true);", coursepageObjects.copyrightYear);
       		 SikshaLokamClient.get().gestures().sendValueToTextBox(coursepageObjects.copyrightYear, "2022");
-	         SikshaLokamClient.get().report().log(Status.INFO, "Entered 2022 " );
+	      //  SikshaLokamClient.get().report().log(Status.INFO, "Entered 2022 " );
     		
 	    }
 	    
@@ -146,9 +146,10 @@ public class CoursePageAction {
     	}
 	    
 	    public void selectContentfromLibrary() throws Exception {
-	    	js.executeScript("arguments[0].scrollIntoView(true);", coursepageObjects.selectContent1);
-    		SikshaLokamClient.get().gestures().click(coursepageObjects.selectContent1);
-    		Logger.logAndReportInfo("Selected content from Library ");
+	    	//js.executeScript("arguments[0].scrollIntoView(true);", coursepageObjects.selectContent1);
+    		//SikshaLokamClient.get().gestures().click(coursepageObjects.selectContent1);
+    		//Logger.logAndReportInfo("Selected content from Library ");
+	    	js.executeScript("arguments[0].scrollIntoView(true);", coursepageObjects.selectContentButton);
     		SikshaLokamClient.get().gestures().click(coursepageObjects.selectContentButton);
     		Logger.logAndReportInfo("Clicked on Select Content Button ");
     		Thread.sleep(2000);
@@ -161,7 +162,7 @@ public class CoursePageAction {
 			Logger.logAndReportPass("Where Do You Want To Add This Content Popup Pop-up  is displayed.");
 			SikshaLokamClient.get().gestures().click(coursepageObjects.addContentButtonOnPopup);
     		Logger.logAndReportInfo("Clicked on Add Content On Popup ");
-    		Thread.sleep(2000);
+    		Thread.sleep(5000);
 
 		}
 	    
