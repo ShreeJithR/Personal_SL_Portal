@@ -1,0 +1,27 @@
+Wed Apr 19 09:58:48 IST 2023 INFO Gestures-click-78 Method: click for locator = Proxy element for: DefaultElementLocator 'By.xpath: (//button[contains(text(),'Explore DIKSHA')])[1]' status = true
+Wed Apr 19 09:58:48 IST 2023 INFO Logger-logAndReportPass-110 Welcome title is displayed succesfully.
+Wed Apr 19 09:58:48 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (929f67e4c8d7ce767f65a3a720853792)] -> xpath: (//div[contains(text(),'School head OR Officials')])[1]] status = true
+Wed Apr 19 09:58:48 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the continue button
+Wed Apr 19 09:58:48 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (929f67e4c8d7ce767f65a3a720853792)] -> xpath: //*[@id="board"]] status = true
+Wed Apr 19 09:58:48 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the board drop down
+Wed Apr 19 09:58:48 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (929f67e4c8d7ce767f65a3a720853792)] -> xpath: //span[contains(text(),'CBSE')]] status = true
+Wed Apr 19 09:58:48 IST 2023 INFO Logger-logAndReportInfo-95 Selected the option cbse or ncert.
+Wed Apr 19 09:58:51 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (929f67e4c8d7ce767f65a3a720853792)] -> xpath: //button[contains(.,'Submit')]] status = true
+Wed Apr 19 09:58:51 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the submit button on BMC selection window.
+Wed Apr 19 09:58:51 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (929f67e4c8d7ce767f65a3a720853792)] -> xpath: //div[contains(@aria-label, 'Select State')]] status = true
+Wed Apr 19 09:58:51 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (929f67e4c8d7ce767f65a3a720853792)] -> xpath:  (//span[contains(text(),'Uttar Pradesh')])] status = true
+Wed Apr 19 09:58:51 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (929f67e4c8d7ce767f65a3a720853792)] -> xpath: //div[contains(@aria-label, 'Select District')]] status = true
+Wed Apr 19 09:58:52 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (929f67e4c8d7ce767f65a3a720853792)] -> xpath: //div[@tabindex='0']//span[text()='AGRA']] status = true
+Wed Apr 19 09:58:52 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the submit button on location selection window.
+Wed Apr 19 09:58:52 IST 2023 INFO Logger-logAndReportPass-110 Home button is displayed succesfully
+Wed Apr 19 09:59:37 IST 2023 INFO Gestures-click-78 Method: click for locator = Proxy element for: DefaultElementLocator 'By.xpath: //a[contains(.,'Login')]' status = true
+Wed Apr 19 09:59:38 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (929f67e4c8d7ce767f65a3a720853792)] -> xpath: //button[@id='login']] status = true
+Wed Apr 19 09:59:42 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (929f67e4c8d7ce767f65a3a720853792)] -> xpath: //a[text()=' Observation ']] status = true
+Wed Apr 19 09:59:43 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the observation button
+Wed Apr 19 09:59:43 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the user profile icon
+Wed Apr 19 10:00:23 IST 2023 INFO Gestures-click-78 Method: click for locator = Proxy element for: DefaultElementLocator 'By.xpath: //li[text()=' My Reports ']' status = true
+Wed Apr 19 10:00:23 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the my reports tab .
+Wed Apr 19 10:00:23 IST 2023 INFO Logger-logAndReportPass-110 My reports title is displayed succesfully. 
+Wed Apr 19 10:00:23 IST 2023 INFO Logger-logAndReportPass-110 Entity Filter for report is displayed succesfully.
+Wed Apr 19 10:01:03 IST 2023 INFO Gestures-click-78 Method: click for locator = Proxy element for: DefaultElementLocator 'By.xpath: //table//tr//td[text()='1']' status = true
+Wed Apr 19 10:01:03 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the 1st report from my report section.
