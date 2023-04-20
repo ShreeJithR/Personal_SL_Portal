@@ -116,11 +116,11 @@ public class CoursePageTest {
 	     	getCoursePageActions().selectFirstSearchResult();
 	     	getCoursePageActions().verifyandClickOnPublishButton();
 	     	getCoursePageActions().verifyPublishCollectionPopUp();
-	     
-
-
-
   	}
+
+
+
+  	
   	
 	@Test(description = "Create and Publish Course")
     @Author(name = "SHREEJITH R")
