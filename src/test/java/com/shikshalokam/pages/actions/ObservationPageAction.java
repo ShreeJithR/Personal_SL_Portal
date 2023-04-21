@@ -2,6 +2,8 @@ package com.shikshalokam.pages.actions;
 
 import static org.testng.Assert.assertFalse;
 
+import java.io.File;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -555,6 +557,51 @@ public class ObservationPageAction {
    	    		
    	    	}
    	  
+   	 	public void verifyBrowseOtherCategories() throws Exception {
+            Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.browseOtherCategories),"Browse Other Categories is not displayed.");
+    		Logger.logAndReportPass("Browse Other Categories is displayed succesfully");
+    	}
+    
+    	public void verifyObservationTileunderBrowseOtherCategories() throws Exception {
+    		ShikshaLokamClient.get().gestures().waitForElementToAppear(observationPageObjects.observationTileunderBrowseOtherCategories);
+            Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.observationTileunderBrowseOtherCategories),"Observation Tile under Browse Other Categories is not displayed.");
+    		Logger.logAndReportPass("Observation Tile under Browse Other Categories is displayed succesfully.");
+    	}
+    	
+    	public void clickOnObservationTileunderBrowseOtherCategories() throws Exception {
+    		ShikshaLokamClient.get().gestures().click(observationPageObjects.observationTileunderBrowseOtherCategories);
+    		Thread.sleep(1000);
+    		Logger.logAndReportInfo("Clicked on the observation Tile");
+    	}
+    	
+    	//.....@#$%^&demo file upload
+    		
+    		public void upload() throws Exception {
+        		ShikshaLokamClient.get().gestures().click(observationPageObjects.demoobs);
+        		Thread.sleep(1000);
+        		ShikshaLokamClient.get().gestures().click(observationPageObjects.startButtonForObservation);
+        		js.executeScript("arguments[0].scrollIntoView(true);", observationPageObjects.demoq9);
+        		//Thread.sleep(5000);
+        		//observationPageObjects.fileUpload.sendKeys("//home//navadhiti//SL automation !!!!//Test-Automation-Portalll//image.png");
+        	
+}
+    		
+    		//file upload from google sheet ---NA as user dir path differs from each system
+    		 public void fileupload1(String filepath) throws Exception {
+    	    	 
+    	         ShikshaLokamClient.get().gestures().sendValueToTextBox(observationPageObjects.fileUpload, filepath);
+    	         ShikshaLokamClient.get().report().log(Status.INFO, "File Path : " + filepath );
+    	         ShikshaLokamClient.get().gestures().click(observationPageObjects.okOnevidenceUplodedPopup);
+    		}
+    		 
+
+    		 
+               public void fileupload2() throws Exception {
+                    String filepath = System.getProperty("user.dir");
+                    System.out.println(filepath);	
+    	    	    observationPageObjects.fileUpload.sendKeys(filepath+"//Fileupload_files//Shikshalokam.jpg");
+    	            ShikshaLokamClient.get().gestures().click(observationPageObjects.okOnevidenceUplodedPopup);
+    		}
 }
 
 

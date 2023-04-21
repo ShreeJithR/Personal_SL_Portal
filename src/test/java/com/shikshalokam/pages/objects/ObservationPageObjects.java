@@ -222,6 +222,37 @@ public class ObservationPageObjects {
     @FindBy(xpath = "//div[.=' License terms']")
     public WebElement licenseterms;
     
+    @FindBy(xpath = "//div[contains(text(),'Browse Other Categories')]")
+    public WebElement browseOtherCategories;
+    
+    @FindBy(xpath = "//label[normalize-space()='Observation']")
+    public WebElement observationTileunderBrowseOtherCategories;
+
+    
+    
+    //................  demo file upload
+    @FindBy(xpath = "//h4//bdi[normalize-space()='Teacher Obs Form']")
+    public WebElement demoobs;
+    
+    @FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-questionnaire[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/form[1]/sl-input[1]/div[1]/div[1]/div[1]/div[2]/sl-page-questions[1]/sl-input[1]/div[8]/div[1]/div[1]/div[1]/div[1]/div[1]")
+    public WebElement demoq9;
+    
+    @FindBy(xpath = "(//input[@type='file'])[1]")
+    public WebElement fileUpload;
+    //(//input[@type='file'])[1]
+  
+    @FindBy(xpath = "(//div[.=' Evidence uploaded '])[1]")
+    public WebElement evidenceUplodedPopup;
+    
+    @FindBy(xpath = "//button[normalize-space()='OK']")
+    public WebElement okOnevidenceUplodedPopup;
+  //button[normalize-space()='OK']
+   // (//div[.=' Evidence uploaded '])[1]
+    //(//input[@type='file'])[1]
+  //h4//bdi[normalize-space()='Teacher Obs Form']
+  //label[normalize-space()='Observation']
+  //div[contains(text(),'Browse Other Categories')]
+    
     
   //mat-panel-title[@aria-label='Credits & license info accordion']   
 }//h4[@title='Infrastructure Assessment- Furniture']

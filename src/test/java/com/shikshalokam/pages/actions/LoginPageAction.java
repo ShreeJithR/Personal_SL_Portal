@@ -432,6 +432,11 @@ public class LoginPageAction {
     	Logger.logAndReportInfo("Clicked on the submit button on state login");
     }
     
+    public void clickOnHomeButton() throws Exception {
+    	ShikshaLokamClient.get().gestures().click(loginPageObjects.homeButton);
+    	Logger.logAndReportInfo("Clicked on Home button");
+    }
+    
     //************** Verify Actions *************************************//
     public void verifyObservationTile() throws Exception {
         Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(loginPageObjects.observations),"Observation title is not displayed.");

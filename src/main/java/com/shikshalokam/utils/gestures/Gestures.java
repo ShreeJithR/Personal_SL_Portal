@@ -310,19 +310,16 @@ public class Gestures {
        
 }
 
-   /* public void noelement(WebElement observationform, String string) {
-    	Assert.assertNull(observationform);
-    } */
-
-	//public void noelement(WebElement element, String string) {
-	//	Assert.assertNull(element);
-		
+ 
 	
 
 	public void noelement(WebElement element, String string) {
 		Assert.assertNull(element);
 		
 	}
+	  public void getuserdir() {
+		 System.getProperty("user.dir");
+	    }
 
 	
 	}

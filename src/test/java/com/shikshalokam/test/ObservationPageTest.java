@@ -42,7 +42,12 @@ public class ObservationPageTest {
     public void switchEnvironment() throws Exception {
     	if(getEnvironmentValue().contains("preprod") || getEnvironmentValue().contains("prod")) {
         	getLoginPageActions().clickOnExploreDiksha();
-        }
+        }}
+    	
+    	public void switchEnvironmentforHomeButton() throws Exception {
+        	if(getEnvironmentValue().contains("preprod") || getEnvironmentValue().contains("prod")) {
+            	getLoginPageActions().clickOnHomeButton();
+            }
     }
   
     
@@ -238,31 +243,45 @@ public class ObservationPageTest {
         getObservationPageActions().clickOnCreditAndLicencedropdown();
         getObservationPageActions().verifyCreditsandLicensecontents();
         
-     /*   getObservationPageActions().clickOnSchoolEntityobsevation();  
-        getObservationPageActions().verifySchoolentityisnotadded();
-        getLoginPageActions().clickOnBackbutton();
-        getObservationPageActions().clickOnBlockEntityobsevation();
-        getObservationPageActions().verifyBlockentityisnotadded();
+     
+}
+    
+
+    @Test(description = "Login as Teacher and Verify Observation Tile")
+    @Author(name = "SHREEJITH")
+    public void verifyObservationTileForTeacherRole() throws Exception {
+        loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!A:B");
+        observationPageTestData = TestData.getFullGoogleSheetDataAsMapString("Observation!A:B");
+        switchEnvironment();
+        getLoginPageActions().BMCLSelection();
+        Thread.sleep(3000);
+        getLoginPageActions().clickOnGuest();
+        getLoginPageActions().clickOnLogin();
+        getLoginPageActions().enterUserName(loginTestData.get("TeacheruserName"));
+        getLoginPageActions().enterPassword(loginTestData.get("Teacherpassword"));
+        getLoginPageActions().clickOnLoginButton();
+        switchEnvironmentforHomeButton();
         
-        getProgramDashboardActions().clickOnProfileIcon();
-        getLoginPageActions().selectProfile();
-        getLoginPageActions().clickOnEdit();
-        Thread.sleep(5000);
-        getLoginPageActions().selectBlock();
+        getObservationPageActions().verifyBrowseOtherCategories();
+        getObservationPageActions().verifyObservationTileunderBrowseOtherCategories();
+        getObservationPageActions().clickOnObservationTileunderBrowseOtherCategories();
+      
         
-        getLoginPageActions().verifySubmitButtonEnabledonPersonaldetailspage();
-        getLoginPageActions().clickOnBackbutton();
+        getObservationPageActions().upload();
+        getObservationPageActions().fileupload2();
+    Thread.sleep(10000);
         
-        getObservationPageActions().verifyObservationButton();
-        getObservationPageActions().clickOnObservationButton();
-        
-        Thread.sleep(2000);
-        getObservationPageActions().clickOnSchoolEntityobsevation();  
-        getObservationPageActions().verifySchoolentityisnotadded();
-     //verifying credits and license
-        getLoginPageActions().clickOnBackbutton();
-        getObservationPageActions().clickOnCreditAndLicenceobservation();
-        Thread.sleep(2000);
-        getObservationPageActions().clickOnCreditAndLicencedropdown();
-        getObservationPageActions().verifyCreditsandLicensecontents();    */
-}}
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+}
