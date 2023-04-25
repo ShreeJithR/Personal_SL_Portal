@@ -93,12 +93,10 @@ public class ProgramDashboardTest {
         getProgramDashboardActions().verifyTabsOnProgramdashboardPage();
         getProgramDashboardActions().selectDistrictandOrgPD();
         //getProgramDashboardActions().selectdate();
-        getProgramDashboardActions().verifyProjectReports();  
+       getProgramDashboardActions().verifyProjectReports();  
         getProgramDashboardActions().requestTaskreport();
-        //Thread.sleep(2000);
       getProgramDashboardActions().requestStatusreport();
-        
-        getProgramDashboardActions().requestFilteredTaskDetailreport();
+      getProgramDashboardActions().requestFilteredTaskDetailreport();
         
         getProgramDashboardActions(). selectObswithrubrics();
         getProgramDashboardActions().verifyobswithrubricReports();
@@ -109,11 +107,15 @@ public class ProgramDashboardTest {
         getProgramDashboardActions().selectObswithoutrubrics();
         getProgramDashboardActions().verifyobswitouthrubricReports();
         getProgramDashboardActions().requestQuestionreport();
-      getProgramDashboardActions().requestStatusreport();
+      getProgramDashboardActions().requestStatusreport();    
+      
         getProgramDashboardActions().selectSurvey();
         getProgramDashboardActions().verifySurveyReports();
         getProgramDashboardActions().requestQuestionreport();
-        getProgramDashboardActions().requestStatusreport();
+        getProgramDashboardActions().requestStatusreport();   //here we are clicking on No on confirmation Popup
+        
+        //To verify user is able request report by clicking Yes on confirmation popup
+        //getProgramDashboardActions().requestStatusreportYES();
       
     }
 }

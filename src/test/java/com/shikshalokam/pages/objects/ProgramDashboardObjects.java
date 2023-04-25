@@ -142,6 +142,15 @@ public class ProgramDashboardObjects {
      @FindBy(xpath="//button[normalize-space()='No']")
      public  WebElement nobutton;
    //button[normalize-space()='No']
+     @FindBy(xpath="//div[.=' Your report has been requested and will be available to download after 24 hours ']")
+     public  WebElement reportRequestedPopup;
+     
+     @FindBy(xpath="//button[normalize-space()='OK']")
+     public  WebElement okButtonOnReportRequestedPopup;
+     
+     
+   //button[normalize-space()='OK']
+   //div[.=' Your report has been requested and will be available to download after 24 hours ']
    
      @FindBy(xpath="(//div[normalize-space()='Are you sure you want to request this report?'])[2]")
      public  WebElement requestReportYesNoPopup;
