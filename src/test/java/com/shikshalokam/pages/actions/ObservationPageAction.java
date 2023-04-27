@@ -3,6 +3,7 @@ package com.shikshalokam.pages.actions;
 import static org.testng.Assert.assertFalse;
 
 import java.io.File;
+import java.util.Map;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.PageFactory;
@@ -13,11 +14,14 @@ import com.aventstack.extentreports.Status;
 import com.shikshalokam.client.ShikshaLokamClient;
 import com.shikshalokam.pages.objects.LoginPageObjects;
 import com.shikshalokam.pages.objects.ObservationPageObjects;
+import com.shikshalokam.utils.gSheet.TestData;
 import com.shikshalokam.utils.logger.Logger;
 import com.shikshalokam.utils.prop.PropUtlis;
 
 public class ObservationPageAction {
-
+	
+	 Map<String, String> observationPageTestData;
+	 
 	LoginPageObjects loginPageObjects = new LoginPageObjects();
     ObservationPageObjects observationPageObjects = new ObservationPageObjects();
 
@@ -326,6 +330,91 @@ public class ObservationPageAction {
     		 ShikshaLokamClient.get().gestures().click(observationPageObjects.CerditsAndLicenceDroapdown);
     	        ShikshaLokamClient.get().report().log(Status.INFO, "Clicked on Credits And License Dropdown");
     	 }
+    	 
+    	 public void clickOnObservationTileunderBrowseOtherCategories() throws Exception {
+     		ShikshaLokamClient.get().gestures().click(observationPageObjects.observationTileunderBrowseOtherCategories);
+     		Thread.sleep(1000);
+     		Logger.logAndReportInfo("Clicked on the observation Tile");
+     	}
+    	 
+    	 public void clickOnObservationWithRubricMultipleSubmission() throws Exception {
+     		//js.executeScript("arguments[0].scrollIntoView(true);", observationPageObjects.observationWithRubic);
+     		ShikshaLokamClient.get().gestures().click(observationPageObjects.observationWithRubricMultipleSubmission);
+     		Logger.logAndReportInfo("Clicked on Automation rubric with multiple submission - Teacher");
+     	}
+    	 
+    	 
+    	 public void verifyObservationWithRubricMultipleSubmissionObservationDetailsPage() throws Exception {
+    		 clickOnEntityDeleteOption();
+    		 clickOnEntityDeleteConfirmationYes();
+    		 clickOnAddSchoolButton();
+    		 selectFirstEntityAsSchool();
+    		 clickOnSubmitButtonOnAddEntityWindow();
+    		 selectAddedEntity();   
+    		 clickOnObserveAgainButton();
+             clickOnObserveAgainYesConfirmation();
+		     verifyObservation1Title();
+   	         clickOnObservation1();
+   		     verifyStartButtonFromObservation();
+  		     clickOnThreeDotEllipseOnObservation();
+   	         clickOnDeleteOptionFromThreeDotObservation();
+             clickOnYesConfirmationForObservationDelete();
+    		 
+      	}
+    	 
+    	 public void saveAndSubmitObservationWithRubricMultipleSubmission() throws Exception {
+    		 observationPageTestData = TestData.getFullGoogleSheetDataAsMapString("Observation!A:B");
+    		 ShikshaLokamClient.get().gestures().click(observationPageObjects.fifthEntity);
+    		 Logger.logAndReportInfo("Clicked on fifth added entity");
+    		 clickOnObserveAgainButton();
+    		 clickOnObserveAgainYesConfirmation();
+    		 Thread.sleep(3000);
+    		 ShikshaLokamClient.get().gestures().click(observationPageObjects.addedInstance);
+    		 Logger.logAndReportInfo("Clicked on Added instance");
+    		 
+    		 Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.domain1),"Domain 1 section is not displayed.");
+     		Logger.logAndReportPass("Domain 1 section is displayed succesfully");
+     		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.domain1StartButton),"Start Button is not displayed.");
+     		Logger.logAndReportPass("Start Button is displayed succesfully");
+     		 Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.domain2),"Domain 2 section is not displayed.");
+      		Logger.logAndReportPass("Domain 2 section is displayed succesfully");
+      		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.domain2StartButton),"Start Button is not displayed.");
+     		Logger.logAndReportPass("Start Button is displayed succesfully");
+     		
+     		ShikshaLokamClient.get().gestures().click(observationPageObjects.domain1StartButton);
+     		Logger.logAndReportInfo("Clicked on Domain 1 Start Button");
+     		
+     		observationPageObjects.domain1Answer1.sendKeys("Hardwork");
+    		Logger.logAndReportInfo("Answered first Question");
+    		observationPageObjects.domain1Answer2.sendKeys("25");
+    		Logger.logAndReportInfo("Answered second Question");
+    		Thread.sleep(2000);
+    		
+    		js.executeScript("arguments[0].click();", observationPageObjects.domain1Answer3);
+    		//ShikshaLokamClient.get().gestures().click(observationPageObjects.domain1Answer3);
+     		Logger.logAndReportInfo("Answered third Question");
+     		
+     		clickOnSaveObservationForm();
+     		clickOnSaveFormConirmationYes();
+     		verifyFormSaveSuccessMsg(observationPageTestData.get("observationFormSaveSuccessMsg"));
+     		Logger.logAndReportInfo("Saved Partially filled form");
+     		clickOnContinueButtonOnSaveObservationForm();
+     		
+     		js.executeScript("arguments[0].click();", observationPageObjects.domain1Answer4);
+     		//ShikshaLokamClient.get().gestures().click(observationPageObjects.domain1Answer4);
+     		Logger.logAndReportInfo("Answered fourth Question");
+     		
+     		clickOnSubmitButtonOnObservationSaveForm();
+     		clickOnYesForSubmitFormConfirmation();
+     		verifyFormSubmitSuccessMsg(observationPageTestData.get("observationFormSubmitSuccessMsg"));  
+     		
+     		//ShikshaLokamClient.get().gestures().click(observationPageObjects.domain1Answer4);
+     		//Logger.logAndReportInfo("Answered fourth Question");
+     		
+    		 
+    		 
+    		
+      	}
     		
     	 
     	 
@@ -567,12 +656,7 @@ public class ObservationPageAction {
             Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.observationTileunderBrowseOtherCategories),"Observation Tile under Browse Other Categories is not displayed.");
     		Logger.logAndReportPass("Observation Tile under Browse Other Categories is displayed succesfully.");
     	}
-    	
-    	public void clickOnObservationTileunderBrowseOtherCategories() throws Exception {
-    		ShikshaLokamClient.get().gestures().click(observationPageObjects.observationTileunderBrowseOtherCategories);
-    		Thread.sleep(1000);
-    		Logger.logAndReportInfo("Clicked on the observation Tile");
-    	}
+   
     	
     	//.....@#$%^&demo file upload
     		

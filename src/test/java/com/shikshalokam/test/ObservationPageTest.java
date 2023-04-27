@@ -247,7 +247,7 @@ public class ObservationPageTest {
 }
     
 
-    @Test(description = "Login as Teacher and Verify Observation Tile")
+    @Test(description = "Login as Teacher, Verify Observation Tile and Observation Details page")
     @Author(name = "SHREEJITH")
     public void verifyObservationTileForTeacherRole() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!A:B");
@@ -265,11 +265,13 @@ public class ObservationPageTest {
         getObservationPageActions().verifyBrowseOtherCategories();
         getObservationPageActions().verifyObservationTileunderBrowseOtherCategories();
         getObservationPageActions().clickOnObservationTileunderBrowseOtherCategories();
-      
         
-        getObservationPageActions().upload();
+        getObservationPageActions().clickOnObservationWithRubricMultipleSubmission();
+       // getObservationPageActions().verifyObservationWithRubricMultipleSubmissionObservationDetailsPage();
+        getObservationPageActions().saveAndSubmitObservationWithRubricMultipleSubmission();
+       /* getObservationPageActions().upload();
         getObservationPageActions().fileupload2();
-    Thread.sleep(10000);
+    Thread.sleep(10000); */
         
 
     }

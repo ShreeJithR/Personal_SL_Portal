@@ -31,6 +31,15 @@ public class ReportPageTest {
     public ReportPageAction getReportPageActions() throws Exception {
     	return new ReportPageAction();
     }
+    public String getEnvironmentValue() throws Exception {
+    	return appUrl = PropUtlis.readConfig("webAppConfig", "appUrl");
+    }
+    
+    public void switchEnvironment() throws Exception {
+    	if(getEnvironmentValue().contains("preprod") || getEnvironmentValue().contains("prod")) {
+        	getLoginPageActions().clickOnExploreDiksha();
+        }
+    	}
     
     @Test(description = "observation with rubric - fill q and a and submit .")
     @Author(name = "Manjunatha K")
@@ -110,4 +119,29 @@ public class ReportPageTest {
         getReportPageActions().verifyPdfButtonInReport();
         //getReportPageActions().verifyPdfButtonInReportBoolean();
     }
+    
+    @Test(description = "visit my report section and verify features available in it")
+    @Author(name = "SHREEJITH")
+    public void visitMyReportsAndVerifyFeaturesAsTeacherRole() throws Exception {
+        loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!A:B");
+        switchEnvironment();
+        getLoginPageActions().BMCLSelection();
+        getLoginPageActions().clickOnGuest();
+        getLoginPageActions().clickOnLogin();
+        getLoginPageActions().enterUserName(loginTestData.get("TeacheruserName"));
+        getLoginPageActions().enterPassword(loginTestData.get("Teacherpassword"));
+        getLoginPageActions().clickOnLoginButton();
+      
+        getLoginPageActions().clickOnProfileIcon1();
+        getReportPageActions().clickOnMyReportsTab();
+        getReportPageActions().verifyMyReportsTitle();
+        getReportPageActions().verifyEntityFilterOption();
+        getReportPageActions().clickOn1stReport();
+        getReportPageActions().verifyQuestionTabInReport();
+        getReportPageActions().verifyCriteriaTabInReport();
+        getReportPageActions().verifyExportAsButtonInReport();
+        //getReportPageActions().clickOnExportAsButton();
+        getReportPageActions().moveonExportAsButton();
+        getReportPageActions().verifyPdfButtonInReport();
+}
 }

@@ -227,8 +227,66 @@ public class ObservationPageObjects {
     
     @FindBy(xpath = "//label[normalize-space()='Observation']")
     public WebElement observationTileunderBrowseOtherCategories;
-
     
+    @FindBy(xpath = "//h4//bdi[normalize-space()='Automation rubric with multiple submission - Teacher']")
+    public WebElement observationWithRubricMultipleSubmission;
+    
+    @FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-observation-details[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/entity-list[1]/div[5]/div[1]/div[1]/label[1]")
+    public WebElement fifthEntity;
+    
+    @FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-observation-details[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/submission[1]/sui-accordion[1]/sui-accordion-panel[1]/div[1]")
+    public WebElement addedInstance;
+   
+    @FindBy(xpath = "//div[normalize-space()='Domain 1']")
+    public WebElement domain1;
+
+    @FindBy(xpath = " //div[normalize-space()='Domain 2']")
+    public WebElement domain2;
+    
+    @FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-observation-details[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/submission[1]/sui-accordion[1]/sui-accordion-panel[1]/div[2]/div[1]/div[1]/div[1]/div[2]/button[1]")
+    public WebElement domain1StartButton;
+    
+    @FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-observation-details[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/submission[1]/sui-accordion[1]/sui-accordion-panel[1]/div[2]/div[1]/div[1]/div[2]/div[2]/button[1]")
+    public WebElement domain2StartButton;
+    
+    @FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-questionnaire[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/form[1]/sl-input[1]/div[1]/div[1]/div[1]/div[2]/sl-page-questions[1]/sl-input[1]/div[1]/div[2]/div[1]/div[2]/sl-text-input[1]/div[1]/input[1]")
+    public WebElement domain1Answer1;
+    
+    @FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-questionnaire[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/form[1]/sl-input[1]/div[1]/div[1]/div[1]/div[2]/sl-page-questions[1]/sl-input[1]/div[2]/div[2]/div[1]/div[2]/sl-number-input[1]/div[1]/input[1]")
+    public WebElement domain1Answer2;
+    
+    @FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-questionnaire[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/form[1]/sl-input[1]/div[1]/div[1]/div[1]/div[2]/sl-page-questions[1]/sl-input[1]/div[3]/div[2]/div[1]/div[3]/sl-radio-input[1]/div[1]/div[2]/label[1]")
+    public WebElement domain1Answer3;
+    
+    @FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-questionnaire[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/form[1]/sl-input[1]/div[1]/div[1]/div[1]/div[2]/sl-page-questions[1]/sl-input[1]/div[4]/div[2]/div[1]/div[3]/sl-radio-input[1]/div[1]/div[3]/input[1]")
+    public WebElement domain1Answer4;
+    
+  //  /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-questionnaire[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/form[1]/sl-input[1]/div[1]/div[1]/div[1]/div[2]/sl-page-questions[1]/sl-input[1]/div[4]/div[2]/div[1]/div[3]/sl-radio-input[1]/div[1]/div[3]/input[1]
+   // /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-questionnaire[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/form[1]/sl-input[1]/div[1]/div[1]/div[1]/div[2]/sl-page-questions[1]/sl-input[1]/div[3]/div[2]/div[1]/div[3]/sl-radio-input[1]/div[1]/div[3]/input[1]
+  //  /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-questionnaire[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/form[1]/sl-input[1]/div[1]/div[1]/div[1]/div[2]/sl-page-questions[1]/sl-input[1]/div[2]/div[2]/div[1]/div[2]/sl-number-input[1]/div[1]/input[1]
+   // /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-questionnaire[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/form[1]/sl-input[1]/div[1]/div[1]/div[1]/div[2]/sl-page-questions[1]/sl-input[1]/div[1]/div[2]/div[1]/div[2]/sl-text-input[1]/div[1]/input[1]
+    
+    
+ 
+    		
+    		
+    		//  /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-observation-details[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/submission[1]/sui-accordion[1]/sui-accordion-panel[1]/div[2]/div[1]/div[1]/div[2]/div[2]/button[1]
+    //  /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-observation-details[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/submission[1]/sui-accordion[1]/sui-accordion-panel[1]/div[2]/div[1]/div[1]/div[1]/div[2]/button[1]
+  //div[normalize-space()='Domain 1']
+  //div[normalize-space()='Domain 2']
+    // /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-observation-details[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/submission[1]/sui-accordion[1]/sui-accordion-panel[1]/div[1]
+    
+  //  /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-observation-details[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/entity-list[1]/div[5]/div[1]/div[1]/label[1]
+    
+    @FindBy(xpath = "//h4//bdi[normalize-space()='Automation rubric without submission - Teacher']")
+    public WebElement observationWithoutRubric;
+    
+    @FindBy(xpath = "//h4//bdi[normalize-space()='Automation rubric with single submission - Teacher']")
+    public WebElement observationWithRubricSingleSubmission;
+    
+    
+    
+ 
     
     //................  demo file upload
     @FindBy(xpath = "//h4//bdi[normalize-space()='Teacher Obs Form']")
