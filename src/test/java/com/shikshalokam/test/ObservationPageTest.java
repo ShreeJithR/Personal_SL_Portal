@@ -267,9 +267,17 @@ public class ObservationPageTest {
         getObservationPageActions().clickOnObservationTileunderBrowseOtherCategories();
         
         getObservationPageActions().clickOnObservationWithRubricMultipleSubmission();
-       // getObservationPageActions().verifyObservationWithRubricMultipleSubmissionObservationDetailsPage();
+        getObservationPageActions().verifyObservationWithRubricMultipleSubmissionObservationDetailsPage();
         getObservationPageActions().saveAndSubmitObservationWithRubricMultipleSubmission();
-       /* getObservationPageActions().upload();
+        //Thread.sleep(3000);
+        getObservationPageActions().clickOnBackButtonOnObservationPage();
+        
+        
+        
+        
+        
+        
+        /* getObservationPageActions().upload();
         getObservationPageActions().fileupload2();
     Thread.sleep(10000); */
         

@@ -24,6 +24,8 @@ public class ObservationPageAction {
 	 
 	LoginPageObjects loginPageObjects = new LoginPageObjects();
     ObservationPageObjects observationPageObjects = new ObservationPageObjects();
+    
+    String filepath = System.getProperty("user.dir");
 
     JavascriptExecutor js = (JavascriptExecutor) ShikshaLokamClient.get().driver();
 //    js.executeScript("window.scrollBy(0,250)", "");
@@ -261,7 +263,12 @@ public class ObservationPageAction {
     		Logger.logAndReportInfo("Clicked on the serached observation title.");
     	}
     	
-  /*  	public void clickOnSearchedObsworubric2() throws Exception {
+    	public void clickOnOkButtonOnEvidenceUploadedPopup() throws Exception {
+    	 ShikshaLokamClient.get().gestures().click(observationPageObjects.okOnevidenceUplodedPopup);
+    	 Logger.logAndReportInfo("Clicked on the Ok button on Evidence Uploaded Popup"); 
+    	}
+  
+    	/*  	public void clickOnSearchedObsworubric2() throws Exception {
     		ShikshaLokamClient.get().gestures().click(observationPageObjects.Obsworubric2);
     		Logger.logAndReportInfo("Clicked on the obsworubric2."); 
     	} */
@@ -364,6 +371,7 @@ public class ObservationPageAction {
     	 
     	 public void saveAndSubmitObservationWithRubricMultipleSubmission() throws Exception {
     		 observationPageTestData = TestData.getFullGoogleSheetDataAsMapString("Observation!A:B");
+    		 
     		 ShikshaLokamClient.get().gestures().click(observationPageObjects.fifthEntity);
     		 Logger.logAndReportInfo("Clicked on fifth added entity");
     		 clickOnObserveAgainButton();
@@ -372,16 +380,16 @@ public class ObservationPageAction {
     		 ShikshaLokamClient.get().gestures().click(observationPageObjects.addedInstance);
     		 Logger.logAndReportInfo("Clicked on Added instance");
     		 
-    		 Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.domain1),"Domain 1 section is not displayed.");
+    		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.domain1),"Domain 1 section is not displayed.");
      		Logger.logAndReportPass("Domain 1 section is displayed succesfully");
      		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.domain1StartButton),"Start Button is not displayed.");
      		Logger.logAndReportPass("Start Button is displayed succesfully");
-     		 Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.domain2),"Domain 2 section is not displayed.");
+     		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.domain2),"Domain 2 section is not displayed.");
       		Logger.logAndReportPass("Domain 2 section is displayed succesfully");
       		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.domain2StartButton),"Start Button is not displayed.");
      		Logger.logAndReportPass("Start Button is displayed succesfully");
      		
-     		ShikshaLokamClient.get().gestures().click(observationPageObjects.domain1StartButton);
+        	ShikshaLokamClient.get().gestures().click(observationPageObjects.domain1StartButton);
      		Logger.logAndReportInfo("Clicked on Domain 1 Start Button");
      		
      		observationPageObjects.domain1Answer1.sendKeys("Hardwork");
@@ -407,12 +415,52 @@ public class ObservationPageAction {
      		clickOnSubmitButtonOnObservationSaveForm();
      		clickOnYesForSubmitFormConfirmation();
      		verifyFormSubmitSuccessMsg(observationPageTestData.get("observationFormSubmitSuccessMsg"));  
+     		clickOnOkButtonOnSubmitFormSuccess();
      		
-     		//ShikshaLokamClient.get().gestures().click(observationPageObjects.domain1Answer4);
-     		//Logger.logAndReportInfo("Answered fourth Question");
+     		ShikshaLokamClient.get().gestures().waitForElementToAppear(observationPageObjects.fifthEntity);
+     		ShikshaLokamClient.get().gestures().click(observationPageObjects.fifthEntity);
+   		    Logger.logAndReportInfo("Clicked on fifth added entity");
+   		    Thread.sleep(3000);
+		    ShikshaLokamClient.get().gestures().click(observationPageObjects.addedInstance);
+		    Logger.logAndReportInfo("Clicked on Added instance");
+		     
+  
+		    ShikshaLokamClient.get().gestures().click(observationPageObjects.domain2StartButton);
+     		Logger.logAndReportInfo("Clicked on Domain 2 Start Button");
      		
-    		 
-    		 
+     		//js.executeScript("arguments[0].click();", observationPageObjects.domain2Answer5);
+     		ShikshaLokamClient.get().gestures().click(observationPageObjects.domain2Answer5);
+     		Logger.logAndReportInfo("Answered fifth Question");
+     		
+	    	observationPageObjects.fileUpload1.sendKeys(filepath+"//Fileupload_files//Shikshalokam.jpg");
+	    	 
+	    	 verifyEvidenceUploadedPopup();
+	    	 clickOnOkButtonOnEvidenceUploadedPopup();
+	    	 
+     		js.executeScript("arguments[0].click();", observationPageObjects.domain2Answer6);
+     		Logger.logAndReportInfo("Answered sixth Question");
+     		
+     		observationPageObjects.fileUpload2.sendKeys(filepath+"//Fileupload_files//videoupload.mp4");
+     		Thread.sleep(3000);
+     	    verifyEvidenceUploadedPopup();
+	        clickOnOkButtonOnEvidenceUploadedPopup();
+	       
+	    	clickOnSaveObservationForm();
+	   		clickOnSaveFormConirmationYes();
+	   		verifyFormSaveSuccessMsg(observationPageTestData.get("observationFormSaveSuccessMsg"));
+	   		Logger.logAndReportInfo("Saved Partially filled form");
+	   		clickOnContinueButtonOnSaveObservationForm();
+	    	 
+	    	js.executeScript("arguments[0].click();", observationPageObjects.domain2Answer7);
+	    	observationPageObjects.domain2Answer7.sendKeys("15 August 2023");
+	    	ShikshaLokamClient.get().gestures().PressEsc();
+	    	Logger.logAndReportInfo("Answered seventh Question");
+	    	
+	    	clickOnSubmitButtonOnObservationSaveForm();
+     		clickOnYesForSubmitFormConfirmation();
+     		verifyFormSubmitSuccessMsg(observationPageTestData.get("observationFormSubmitSuccessMsg"));   
+     		clickOnOkButtonOnSubmitFormSuccess(); 
+     		Thread.sleep(3000);
     		
       	}
     		
@@ -538,6 +586,8 @@ public class ObservationPageAction {
     		Logger.logAndReportPass("Observation name is matched and displayed succesfully.");
     	}
     	
+    	
+    	
     /*	public boolean verifyNoelement() throws Exception {
             try
             {
@@ -656,6 +706,12 @@ public class ObservationPageAction {
             Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.observationTileunderBrowseOtherCategories),"Observation Tile under Browse Other Categories is not displayed.");
     		Logger.logAndReportPass("Observation Tile under Browse Other Categories is displayed succesfully.");
     	}
+    	
+    	public void verifyEvidenceUploadedPopup() throws Exception {
+    		ShikshaLokamClient.get().gestures().waitForElementToAppear(observationPageObjects.evidenceUplodedPopup);
+            Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.evidenceUplodedPopup),"Evidence Uploaded Pop-up is not displayed.");
+    		Logger.logAndReportPass("Evidence Uploaded Pop-up is displayed succesfully.");
+    	}
    
     	
     	//.....@#$%^&demo file upload
@@ -673,7 +729,7 @@ public class ObservationPageAction {
     		//file upload from google sheet ---NA as user dir path differs from each system
     		 public void fileupload1(String filepath) throws Exception {
     	    	 
-    	         ShikshaLokamClient.get().gestures().sendValueToTextBox(observationPageObjects.fileUpload, filepath);
+    	         ShikshaLokamClient.get().gestures().sendValueToTextBox(observationPageObjects.fileUpload1, filepath);
     	         ShikshaLokamClient.get().report().log(Status.INFO, "File Path : " + filepath );
     	         ShikshaLokamClient.get().gestures().click(observationPageObjects.okOnevidenceUplodedPopup);
     		}
@@ -683,7 +739,7 @@ public class ObservationPageAction {
                public void fileupload2() throws Exception {
                     String filepath = System.getProperty("user.dir");
                     System.out.println(filepath);	
-    	    	    observationPageObjects.fileUpload.sendKeys(filepath+"//Fileupload_files//Shikshalokam.jpg");
+    	    	    observationPageObjects.fileUpload1.sendKeys(filepath+"//Fileupload_files//Shikshalokam.jpg");
     	            ShikshaLokamClient.get().gestures().click(observationPageObjects.okOnevidenceUplodedPopup);
     		}
 }

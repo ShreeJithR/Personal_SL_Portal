@@ -261,6 +261,34 @@ public class ObservationPageObjects {
     @FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-questionnaire[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/form[1]/sl-input[1]/div[1]/div[1]/div[1]/div[2]/sl-page-questions[1]/sl-input[1]/div[4]/div[2]/div[1]/div[3]/sl-radio-input[1]/div[1]/div[3]/input[1]")
     public WebElement domain1Answer4;
     
+    @FindBy(xpath = "//label[contains(text(),'Orient principals, teachers with data of training ')]")
+    public WebElement domain2Answer5;
+    
+    @FindBy(xpath = "//label[.='Grade 1']")
+    public WebElement domain2Answer6;
+  //label[.='Grade 1']
+    
+    @FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-questionnaire[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/form[1]/sl-input[1]/div[2]/div[1]/div[1]/div[2]/sl-page-questions[1]/sl-input[1]/div[1]/div[2]/div[1]/div[2]/sl-date-input[1]/div[1]/div[1]/input[1]")
+    public WebElement domain2Answer7;
+  //input[@class='question-date-input ng-dirty ng-touched ng-invalid']
+  //input[@class='question-date-input ng-pristine ng-invalid ng-touched']
+    
+    @FindBy(xpath = "(//input[@type='file'])[1]")
+    public WebElement fileUpload1;
+    
+    @FindBy(xpath = "(//input[@type='file'])[2]")
+    public WebElement fileUpload2;
+    
+    @FindBy(xpath = "(//div[.=' Evidence uploaded '])[1]")
+    public WebElement evidenceUplodedPopup;
+    
+    @FindBy(xpath = "//button[normalize-space()='OK']")
+    public WebElement okOnevidenceUplodedPopup;
+    
+   
+    
+  //  (//div[.=' Evidence uploaded '])[2]
+  //label[contains(text(),'Orient principals, teachers with data of training ')]
   //  /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-questionnaire[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/form[1]/sl-input[1]/div[1]/div[1]/div[1]/div[2]/sl-page-questions[1]/sl-input[1]/div[4]/div[2]/div[1]/div[3]/sl-radio-input[1]/div[1]/div[3]/input[1]
    // /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-questionnaire[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/form[1]/sl-input[1]/div[1]/div[1]/div[1]/div[2]/sl-page-questions[1]/sl-input[1]/div[3]/div[2]/div[1]/div[3]/sl-radio-input[1]/div[1]/div[3]/input[1]
   //  /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-questionnaire[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/form[1]/sl-input[1]/div[1]/div[1]/div[1]/div[2]/sl-page-questions[1]/sl-input[1]/div[2]/div[2]/div[1]/div[2]/sl-number-input[1]/div[1]/input[1]
@@ -295,15 +323,10 @@ public class ObservationPageObjects {
     @FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-questionnaire[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/form[1]/sl-input[1]/div[1]/div[1]/div[1]/div[2]/sl-page-questions[1]/sl-input[1]/div[8]/div[1]/div[1]/div[1]/div[1]/div[1]")
     public WebElement demoq9;
     
-    @FindBy(xpath = "(//input[@type='file'])[1]")
-    public WebElement fileUpload;
+   
     //(//input[@type='file'])[1]
   
-    @FindBy(xpath = "(//div[.=' Evidence uploaded '])[1]")
-    public WebElement evidenceUplodedPopup;
-    
-    @FindBy(xpath = "//button[normalize-space()='OK']")
-    public WebElement okOnevidenceUplodedPopup;
+   
   //button[normalize-space()='OK']
    // (//div[.=' Evidence uploaded '])[1]
     //(//input[@type='file'])[1]
