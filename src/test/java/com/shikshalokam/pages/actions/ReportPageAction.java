@@ -33,6 +33,15 @@ public class ReportPageAction {
     		Logger.logAndReportInfo("Clicked on the 1st report from my report section.");
     	}
     	
+    	public void clickOnObsWithRubricReport() throws Exception {
+    		ShikshaLokamClient.get().gestures().click(reportPageObjects.obsWithRubricReport);
+    		Logger.logAndReportInfo("Clicked on Automation rubric with single submission - Teacher from my report section.");
+    	}
+    	
+    	public void clickOnObsWithoutRubricReport() throws Exception {
+    		ShikshaLokamClient.get().gestures().click(reportPageObjects.obsWithoutRubricReport);
+    		Logger.logAndReportInfo("Clicked on Automation rubric without submission - Teacher from my report section.");
+    	}
     	public void clickOnExportAsButton() throws Exception {
     		ShikshaLokamClient.get().gestures().click(reportPageObjects.exportAsButtonInReport);
     		Logger.logAndReportInfo("Clicked on the export as button in report.");
@@ -86,5 +95,10 @@ public class ReportPageAction {
     	public void verifyPdfButtonInReportBoolean() throws Exception {
     		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(reportPageObjects.pdfButton));
     		Logger.logAndReportPass("Pdf button is displayed.");
+    	}
+    	public void verifyDescriptiveViewSection() throws Exception {
+    		js.executeScript("arguments[0].scrollIntoView(true);", reportPageObjects.descriptiveViewSection);
+            Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(reportPageObjects.descriptiveViewSection),"Descriptive View Section is not displayed.");
+    		Logger.logAndReportPass("Descriptive View Section is displayed.");
     	}
 }

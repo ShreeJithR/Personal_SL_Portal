@@ -91,8 +91,8 @@ public class ObservationPageTest {
         
         getObservationPageActions().clickOnObserveAgainButton();
         getObservationPageActions().clickOnObserveAgainYesConfirmation();
-        getObservationPageActions().verifyObservation1Title();
-        getObservationPageActions().clickOnObservation1();
+        getObservationPageActions().verifyObservation1TitleWithRubric();
+        getObservationPageActions().clickOnObservation1TitleWithRubric();
         getObservationPageActions().verifyStartButtonFromObservation();
         getObservationPageActions().clickOnThreeDotEllipseOnObservation();
         getObservationPageActions().clickOnDeleteOptionFromThreeDotObservation();
@@ -265,14 +265,21 @@ public class ObservationPageTest {
         getObservationPageActions().verifyBrowseOtherCategories();
         getObservationPageActions().verifyObservationTileunderBrowseOtherCategories();
         getObservationPageActions().clickOnObservationTileunderBrowseOtherCategories();
-        
-        getObservationPageActions().clickOnObservationWithRubricMultipleSubmission();
-        getObservationPageActions().verifyObservationWithRubricMultipleSubmissionObservationDetailsPage();
+        //verifying Observation With Rubric Multiple Submission
+       getObservationPageActions().clickOnObservationWithRubricMultipleSubmission();
+        getObservationPageActions().verifyObservationDetailsPageForWithRubricmultipleSubmission();
         getObservationPageActions().saveAndSubmitObservationWithRubricMultipleSubmission();
-        //Thread.sleep(3000);
-        getObservationPageActions().clickOnBackButtonOnObservationPage();
-        
-        
+     
+        getObservationPageActions().clickOnBackButtonOnObservationPage();   
+      //verifying Observation Without Rubric 
+        getObservationPageActions().clickOnObservationWithoutRubric();
+       getObservationPageActions().verifyObservationDetailsPageForWithoutRubricmultipleSubmission();
+        getObservationPageActions().saveAndSubmitObservationWithoutRubric();
+       
+        getObservationPageActions().clickOnBackButtonOnObservationPage(); 
+        //verifying Observation With Rubric Single Submission
+        getObservationPageActions().clickOnObservationWithRubricSingleSubmission();
+        getObservationPageActions().verifyObservationDetailsPageForSingleSubmission();
         
         
         

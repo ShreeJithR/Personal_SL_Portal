@@ -111,10 +111,16 @@ public class ObservationPageAction {
     		Logger.logAndReportInfo("Clicked on the observe again button.");
     	}
     	
-    	public void clickOnObservation1() throws Exception {
-    		ShikshaLokamClient.get().gestures().click(observationPageObjects.observation1Title);
+    	public void clickOnObservation1TitleWithRubric() throws Exception {
+    		ShikshaLokamClient.get().gestures().click(observationPageObjects.observation1TitleWithRubric);
     		Logger.logAndReportInfo("Clicked on the observation 1 Title.");
     	}
+    	
+    	public void clickOnObservation1TitleWithoutRubric() throws Exception {
+    		ShikshaLokamClient.get().gestures().click(observationPageObjects.observation1TitleObsWithoutRubric);
+    		Logger.logAndReportInfo("Clicked on the observation 1 Title.");
+    	}
+    	
     	public void clickOnObserveAgainYesConfirmation() throws Exception {
     		ShikshaLokamClient.get().gestures().click(observationPageObjects.yesConfirmationObserveAgain);
     		js.executeScript("arguments[0].scrollIntoView(true);", observationPageObjects.observeAgainButton);
@@ -338,6 +344,22 @@ public class ObservationPageAction {
     	        ShikshaLokamClient.get().report().log(Status.INFO, "Clicked on Credits And License Dropdown");
     	 }
     	 
+    	 public void savePartiallyFilledObservationForm() throws Exception {
+    		 clickOnSaveObservationForm();
+  	   		clickOnSaveFormConirmationYes();
+  	   		verifyFormSaveSuccessMsg(observationPageTestData.get("observationFormSaveSuccessMsg"));
+  	   		Logger.logAndReportInfo("Saved Partially filled form");
+  	   		clickOnContinueButtonOnSaveObservationForm();
+    	 }
+    	 
+    	 public void submitObservationForm() throws Exception {
+    	  clickOnSubmitButtonOnObservationSaveForm();
+  		  clickOnYesForSubmitFormConfirmation();
+  		  verifyFormSubmitSuccessMsg(observationPageTestData.get("observationFormSubmitSuccessMsg"));   
+  		  clickOnOkButtonOnSubmitFormSuccess(); 
+  		  Thread.sleep(3000);
+    	 }
+    	 
     	 public void clickOnObservationTileunderBrowseOtherCategories() throws Exception {
      		ShikshaLokamClient.get().gestures().click(observationPageObjects.observationTileunderBrowseOtherCategories);
      		Thread.sleep(1000);
@@ -351,7 +373,7 @@ public class ObservationPageAction {
      	}
     	 
     	 
-    	 public void verifyObservationWithRubricMultipleSubmissionObservationDetailsPage() throws Exception {
+    	 public void verifyObservationDetailsPageForWithRubricmultipleSubmission() throws Exception {
     		 clickOnEntityDeleteOption();
     		 clickOnEntityDeleteConfirmationYes();
     		 clickOnAddSchoolButton();
@@ -360,8 +382,8 @@ public class ObservationPageAction {
     		 selectAddedEntity();   
     		 clickOnObserveAgainButton();
              clickOnObserveAgainYesConfirmation();
-		     verifyObservation1Title();
-   	         clickOnObservation1();
+             verifyObservation1TitleWithRubric();
+             clickOnObservation1TitleWithRubric();
    		     verifyStartButtonFromObservation();
   		     clickOnThreeDotEllipseOnObservation();
    	         clickOnDeleteOptionFromThreeDotObservation();
@@ -445,29 +467,98 @@ public class ObservationPageAction {
      	    verifyEvidenceUploadedPopup();
 	        clickOnOkButtonOnEvidenceUploadedPopup();
 	       
-	    	clickOnSaveObservationForm();
-	   		clickOnSaveFormConirmationYes();
-	   		verifyFormSaveSuccessMsg(observationPageTestData.get("observationFormSaveSuccessMsg"));
-	   		Logger.logAndReportInfo("Saved Partially filled form");
-	   		clickOnContinueButtonOnSaveObservationForm();
+	        savePartiallyFilledObservationForm();
 	    	 
 	    	js.executeScript("arguments[0].click();", observationPageObjects.domain2Answer7);
 	    	observationPageObjects.domain2Answer7.sendKeys("15 August 2023");
 	    	ShikshaLokamClient.get().gestures().PressEsc();
 	    	Logger.logAndReportInfo("Answered seventh Question");
 	    	
-	    	clickOnSubmitButtonOnObservationSaveForm();
-     		clickOnYesForSubmitFormConfirmation();
-     		verifyFormSubmitSuccessMsg(observationPageTestData.get("observationFormSubmitSuccessMsg"));   
-     		clickOnOkButtonOnSubmitFormSuccess(); 
-     		Thread.sleep(3000);
+	    	submitObservationForm();
     		
       	}
-    		
     	 
+    	 public void clickOnObservationWithoutRubric() throws Exception {
+      		//js.executeScript("arguments[0].scrollIntoView(true);", observationPageObjects.observationWithRubic);
+      		ShikshaLokamClient.get().gestures().click(observationPageObjects.observationWithoutRubric);
+      		Logger.logAndReportInfo("Clicked on Automation rubric without submission - Teacher");
+      		
+      	}
+    	 
+    	 public void verifyObservationDetailsPageForWithoutRubricmultipleSubmission() throws Exception {
+    		 clickOnEntityDeleteOption();
+    		 clickOnEntityDeleteConfirmationYes();
+    		 clickOnAddSchoolButton();
+    		 selectFirstEntityAsSchool();
+    		 clickOnSubmitButtonOnAddEntityWindow();
+    		 selectAddedEntity();   
+    		 clickOnObserveAgainButton();
+             clickOnObserveAgainYesConfirmation();
+             verifyObservation1TitleWithOutRubric();
+             clickOnObservation1TitleWithoutRubric();
+   		     verifyStartButtonFromObservation();
+  		     clickOnThreeDotEllipseOnObservation();
+   	         clickOnDeleteOptionFromThreeDotObservation();
+             clickOnYesConfirmationForObservationDelete();
+    		 
+      	}
+    	 
+    	 public void saveAndSubmitObservationWithoutRubric() throws Exception {
+    		 observationPageTestData = TestData.getFullGoogleSheetDataAsMapString("Observation!A:B");
+    		 
+    		 ShikshaLokamClient.get().gestures().click(observationPageObjects.fifthEntity);
+    		 Logger.logAndReportInfo("Clicked on fifth added entity");
+    		 clickOnObserveAgainButton();
+    		 clickOnObserveAgainYesConfirmation();
+    		 Thread.sleep(3000);
+    		 //ShikshaLokamClient.get().gestures().click(observationPageObjects.addedInstance);
+    		 //Logger.logAndReportInfo("Clicked on Added instance");
+    		 verifyStartButtonFromObservation();
+    		 clickOnStartButtonOnObservation();
+    		 
+    		 ShikshaLokamClient.get().gestures().click(observationPageObjects.withOutRubricAnswer1);
+    		 Logger.logAndReportInfo("Answered first Question");
+             observationPageObjects.fileUpload1.sendKeys(filepath+"//Fileupload_files//Shikshalokam.jpg"); 
+	    	 verifyEvidenceUploadedPopup();
+	    	 clickOnOkButtonOnEvidenceUploadedPopup();
+    		
+    		 ShikshaLokamClient.get().gestures().click(observationPageObjects.withOutRubricAnswer2);
+    		 Logger.logAndReportInfo("Answered second Question");
+             observationPageObjects.fileUpload2.sendKeys(filepath+"//Fileupload_files//videoupload.mp4"); 
+	    	 verifyEvidenceUploadedPopup();
+	    	 clickOnOkButtonOnEvidenceUploadedPopup();
+    		
+    		 savePartiallyFilledObservationForm();
+    		 
+    		 js.executeScript("arguments[0].click();", observationPageObjects.withOutRubricAnswer3);
+         	 Logger.logAndReportInfo("Answered third Question");
+         	
+         	 submitObservationForm();
+    	 }
+    	 
+    	 
+    	 public void clickOnObservationWithRubricSingleSubmission() throws Exception {
+      		ShikshaLokamClient.get().gestures().click(observationPageObjects.observationWithRubricSingleSubmission);
+      		Logger.logAndReportInfo("Clicked on Automation rubric with single submission - Teacher");
+    		
+    	 }
+    	 
+    	 public void verifyObservationDetailsPageForSingleSubmission() throws Exception {
+    		 verifyObservation1instanceisAddedByDefault();
+    		 verifyObserveAgainButtonisNotPresent();
+      	}
     	 
     	//******************Verify*********************************************************//
-    	
+    	 public void verifyObservation1instanceisAddedByDefault() throws Exception {
+             Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.observation1TitleWithRubric),"Observation1 instance is not added by Default.");
+     		Logger.logAndReportPass("Observation1 instance is added by Default.");
+     	}
+    	 
+    	 public void verifyObserveAgainButtonisNotPresent() throws Exception {  
+   		  Assert.assertTrue(ShikshaLokamClient.get().gestures().verifyNoelement(observationPageObjects.observeAgainButton),"Observe Again Button is Present");
+  	    	Logger.logAndReportPass("Observe Again Button is not Present");
+       }
+    	 
     	public void verifyObservationButton() throws Exception {
             Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.observationButton),"Observation button is not displayed.");
     		Logger.logAndReportPass("Observation button is displayed succesfully");
@@ -488,8 +579,14 @@ public class ObservationPageAction {
             Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.observeAgainTitle),"Observe again title is not displayed.");
     		Logger.logAndReportPass("Observe again title is displayed succesfully.");
     	}
-    	public void verifyObservation1Title() throws Exception {
-            Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.observation1Title),"Observation 1 title is not displayed.");
+    	public void verifyObservation1TitleWithRubric() throws Exception {
+            Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.observation1TitleWithRubric),"Observation 1 title is not displayed.");
+    		Logger.logAndReportPass("Observation 1 title is displayed succesfully.");
+    		Thread.sleep(2000);
+    	}
+    	
+    	public void verifyObservation1TitleWithOutRubric() throws Exception {
+            Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.observation1TitleObsWithoutRubric),"Observation 1 title is not displayed.");
     		Logger.logAndReportPass("Observation 1 title is displayed succesfully.");
     		Thread.sleep(2000);
     	}

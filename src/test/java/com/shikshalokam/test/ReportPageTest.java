@@ -136,8 +136,16 @@ public class ReportPageTest {
         getReportPageActions().clickOnMyReportsTab();
         getReportPageActions().verifyMyReportsTitle();
         getReportPageActions().verifyEntityFilterOption();
-        getReportPageActions().clickOn1stReport();
+       
+        getReportPageActions().clickOnObsWithRubricReport();
         getReportPageActions().verifyQuestionTabInReport();
+        getReportPageActions().verifyDescriptiveViewSection();
+        getReportPageActions().verifyExportAsButtonInReport();
+        getReportPageActions().moveonExportAsButton();
+        getReportPageActions().verifyPdfButtonInReport();
+        
+        //multiple submission selectsubmission dropdown
+        
         getReportPageActions().verifyCriteriaTabInReport();
         getReportPageActions().verifyExportAsButtonInReport();
         //getReportPageActions().clickOnExportAsButton();

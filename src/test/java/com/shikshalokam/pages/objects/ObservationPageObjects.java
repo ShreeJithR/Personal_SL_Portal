@@ -61,7 +61,11 @@ public class ObservationPageObjects {
 	public WebElement noConfirmationForObserveAgain;
 	
 	@FindBy(xpath = "//div//span[text()='Observation 1']")
-	public WebElement observation1Title;
+	public WebElement observation1TitleWithRubric;
+	
+	@FindBy(xpath = "//div[.='Observation 1 ']")
+	public WebElement observation1TitleObsWithoutRubric;
+	//div[.='Observation 1 ']
 	
 	@FindBy(xpath = "//i[contains(@class,'ellipsis vertical icon')]")
 	public WebElement threeDotOnObservation;
@@ -270,8 +274,6 @@ public class ObservationPageObjects {
     
     @FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-questionnaire[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/form[1]/sl-input[1]/div[2]/div[1]/div[1]/div[2]/sl-page-questions[1]/sl-input[1]/div[1]/div[2]/div[1]/div[2]/sl-date-input[1]/div[1]/div[1]/input[1]")
     public WebElement domain2Answer7;
-  //input[@class='question-date-input ng-dirty ng-touched ng-invalid']
-  //input[@class='question-date-input ng-pristine ng-invalid ng-touched']
     
     @FindBy(xpath = "(//input[@type='file'])[1]")
     public WebElement fileUpload1;
@@ -285,29 +287,26 @@ public class ObservationPageObjects {
     @FindBy(xpath = "//button[normalize-space()='OK']")
     public WebElement okOnevidenceUplodedPopup;
     
-   
-    
-  //  (//div[.=' Evidence uploaded '])[2]
-  //label[contains(text(),'Orient principals, teachers with data of training ')]
-  //  /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-questionnaire[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/form[1]/sl-input[1]/div[1]/div[1]/div[1]/div[2]/sl-page-questions[1]/sl-input[1]/div[4]/div[2]/div[1]/div[3]/sl-radio-input[1]/div[1]/div[3]/input[1]
-   // /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-questionnaire[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/form[1]/sl-input[1]/div[1]/div[1]/div[1]/div[2]/sl-page-questions[1]/sl-input[1]/div[3]/div[2]/div[1]/div[3]/sl-radio-input[1]/div[1]/div[3]/input[1]
-  //  /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-questionnaire[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/form[1]/sl-input[1]/div[1]/div[1]/div[1]/div[2]/sl-page-questions[1]/sl-input[1]/div[2]/div[2]/div[1]/div[2]/sl-number-input[1]/div[1]/input[1]
-   // /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-questionnaire[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/form[1]/sl-input[1]/div[1]/div[1]/div[1]/div[2]/sl-page-questions[1]/sl-input[1]/div[1]/div[2]/div[1]/div[2]/sl-text-input[1]/div[1]/input[1]
-    
-    
- 
-    		
-    		
-    		//  /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-observation-details[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/submission[1]/sui-accordion[1]/sui-accordion-panel[1]/div[2]/div[1]/div[1]/div[2]/div[2]/button[1]
-    //  /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-observation-details[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/submission[1]/sui-accordion[1]/sui-accordion-panel[1]/div[2]/div[1]/div[1]/div[1]/div[2]/button[1]
-  //div[normalize-space()='Domain 1']
-  //div[normalize-space()='Domain 2']
-    // /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-observation-details[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[4]/div[1]/submission[1]/sui-accordion[1]/sui-accordion-panel[1]/div[1]
-    
-  //  /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-observation-details[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/entity-list[1]/div[5]/div[1]/div[1]/label[1]
+   //.......
     
     @FindBy(xpath = "//h4//bdi[normalize-space()='Automation rubric without submission - Teacher']")
     public WebElement observationWithoutRubric;
+    
+    
+    @FindBy(xpath = "//button[normalize-space()='Auto Capture']")
+    public WebElement withOutRubricAnswer1;
+    
+    @FindBy(xpath = "//label[normalize-space()='abc']")
+    public WebElement withOutRubricAnswer2;
+    
+    @FindBy(xpath = "//label[normalize-space()='Yes']")
+    public WebElement withOutRubricAnswer3;
+    
+    
+  //label[normalize-space()='Yes']
+  //button[normalize-space()='Auto Capture']
+    
+    
     
     @FindBy(xpath = "//h4//bdi[normalize-space()='Automation rubric with single submission - Teacher']")
     public WebElement observationWithRubricSingleSubmission;

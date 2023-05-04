@@ -32,5 +32,16 @@ public class ReportPageObjects {
 	@FindBy(xpath = "//button[text()=' Filters ']")
 	public WebElement filterButtonInReport;
 	
+	@FindBy(xpath = "//h6[normalize-space()='Automation rubric with single submission - Teacher']")
+	public WebElement obsWithRubricReport;
+	//h6[normalize-space()='Automation rubric with single submission - Teacher']
+	
+	@FindBy(xpath = "//h6[normalize-space()='Automation rubric without submission - Teacher']")
+	public WebElement obsWithoutRubricReport;
+	//h6[normalize-space()='Automation rubric without submission - Teacher']
+	
+	//strong[normalize-space()='Descriptive view']
+	@FindBy(xpath = "//strong[normalize-space()='Descriptive view']")
+	public WebElement descriptiveViewSection;
 	
 }
