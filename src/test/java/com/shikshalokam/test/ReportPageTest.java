@@ -137,7 +137,7 @@ public class ReportPageTest {
         getReportPageActions().verifyMyReportsTitle();
         getReportPageActions().verifyEntityFilterOption();
        
-        getReportPageActions().clickOnObsWithRubricReport();
+        getReportPageActions().clickOnObsWithRubricSingleSubmissionReport();
         getReportPageActions().verifyQuestionTabInReport();
         getReportPageActions().verifyDescriptiveViewSection();
         getReportPageActions().verifyExportAsButtonInReport();

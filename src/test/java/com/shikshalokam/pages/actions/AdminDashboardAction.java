@@ -182,28 +182,28 @@ public class AdminDashboardAction {
     // Thread.sleep(2000);
      ShikshaLokamClient.get().gestures().click(adminDashboardObjects.filterCheckBox1);
      ShikshaLokamClient.get().gestures().click(adminDashboardObjects.filterCheckBox2);
-     ShikshaLokamClient.get().report().log(Status.INFO, "Clicked on Selected multiple filters"); 
+     ShikshaLokamClient.get().report().log(Status.INFO, " Selected multiple filters"); 
      //Thread.sleep(2000);
      ShikshaLokamClient.get().gestures().click(adminDashboardObjects.selectImprovementProjectsFilter);
      ShikshaLokamClient.get().report().log(Status.INFO, "Clicked on Select Improvement Projects Filter"); 
     // Thread.sleep(2000);
      ShikshaLokamClient.get().gestures().click(adminDashboardObjects.filterCheckBox1);
      ShikshaLokamClient.get().gestures().click(adminDashboardObjects.filterCheckBox2);
-     ShikshaLokamClient.get().report().log(Status.INFO, "Clicked on Selected multiple filters");
+     ShikshaLokamClient.get().report().log(Status.INFO, "Selected multiple filters");
      //Thread.sleep(2000);
      ShikshaLokamClient.get().gestures().click(adminDashboardObjects.selectDistrictFilter);
      ShikshaLokamClient.get().report().log(Status.INFO, "Clicked on Select District Filter"); 
      //Thread.sleep(2000);
      ShikshaLokamClient.get().gestures().click(adminDashboardObjects.filterCheckBox1);
      ShikshaLokamClient.get().gestures().click(adminDashboardObjects.filterCheckBox2);
-     ShikshaLokamClient.get().report().log(Status.INFO, "Clicked on Selected multiple filters");
+     ShikshaLokamClient.get().report().log(Status.INFO, "Selected multiple filters");
      //Thread.sleep(2000);
      ShikshaLokamClient.get().gestures().click(adminDashboardObjects.selectOrganisationFilter);
      ShikshaLokamClient.get().report().log(Status.INFO, "Clicked on Select Organisation Filter"); 
      //Thread.sleep(2000);
      ShikshaLokamClient.get().gestures().click(adminDashboardObjects.filterCheckBox1);
     // ShikshaLokamClient.get().gestures().click(adminDashboardObjects.filterCheckBox2);
-     ShikshaLokamClient.get().report().log(Status.INFO, "Clicked on Selected multiple filters");
+     ShikshaLokamClient.get().report().log(Status.INFO,  "Selected multiple filters");
      
 	    }
 	    
@@ -213,21 +213,21 @@ public class AdminDashboardAction {
     // Thread.sleep(2000);
      ShikshaLokamClient.get().gestures().click(adminDashboardObjects.filterCheckBox1);
      ShikshaLokamClient.get().gestures().click(adminDashboardObjects.filterCheckBox2);
-     ShikshaLokamClient.get().report().log(Status.INFO, "Clicked on Selected multiple filters"); 
+     ShikshaLokamClient.get().report().log(Status.INFO, "Selected multiple filters"); 
      //Thread.sleep(2000);
      ShikshaLokamClient.get().gestures().click(adminDashboardObjects.selectImprovementProjectsFilter);
      ShikshaLokamClient.get().report().log(Status.INFO, "Clicked on Select Improvement Projects Filter"); 
     // Thread.sleep(2000);
      ShikshaLokamClient.get().gestures().click(adminDashboardObjects.filterCheckBox1);
      ShikshaLokamClient.get().gestures().click(adminDashboardObjects.filterCheckBox2);
-     ShikshaLokamClient.get().report().log(Status.INFO, "Clicked on Selected multiple filters");
+     ShikshaLokamClient.get().report().log(Status.INFO, "Selected multiple filters");
      //Thread.sleep(2000);
      ShikshaLokamClient.get().gestures().click(adminDashboardObjects.selectDistrictFilter);
      ShikshaLokamClient.get().report().log(Status.INFO, "Clicked on Select District Filter"); 
      //Thread.sleep(2000);
      ShikshaLokamClient.get().gestures().click(adminDashboardObjects.filterCheckBox1);
-     ShikshaLokamClient.get().gestures().click(adminDashboardObjects.filterCheckBox2);
-     ShikshaLokamClient.get().report().log(Status.INFO, "Clicked on Selected multiple filters");
+    // ShikshaLokamClient.get().gestures().click(adminDashboardObjects.filterCheckBox2);
+     ShikshaLokamClient.get().report().log(Status.INFO, "Selected multiple filters");
      //Thread.sleep(2000);
      
      

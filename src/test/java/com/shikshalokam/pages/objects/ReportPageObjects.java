@@ -33,7 +33,7 @@ public class ReportPageObjects {
 	public WebElement filterButtonInReport;
 	
 	@FindBy(xpath = "//h6[normalize-space()='Automation rubric with single submission - Teacher']")
-	public WebElement obsWithRubricReport;
+	public WebElement obsWithRubricSingleSubmissionReport;
 	//h6[normalize-space()='Automation rubric with single submission - Teacher']
 	
 	@FindBy(xpath = "//h6[normalize-space()='Automation rubric without submission - Teacher']")
@@ -43,5 +43,10 @@ public class ReportPageObjects {
 	//strong[normalize-space()='Descriptive view']
 	@FindBy(xpath = "//strong[normalize-space()='Descriptive view']")
 	public WebElement descriptiveViewSection;
+	
+	@FindBy(xpath = "//mat-select[@aria-label='Select Submission']")
+	public WebElement selectSubmissionDropdown;
+	
+	//mat-select[@aria-label='Select Submission']
 	
 }

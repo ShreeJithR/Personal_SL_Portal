@@ -33,8 +33,8 @@ public class ReportPageAction {
     		Logger.logAndReportInfo("Clicked on the 1st report from my report section.");
     	}
     	
-    	public void clickOnObsWithRubricReport() throws Exception {
-    		ShikshaLokamClient.get().gestures().click(reportPageObjects.obsWithRubricReport);
+    	public void clickOnObsWithRubricSingleSubmissionReport() throws Exception {
+    		ShikshaLokamClient.get().gestures().click(reportPageObjects.obsWithRubricSingleSubmissionReport);
     		Logger.logAndReportInfo("Clicked on Automation rubric with single submission - Teacher from my report section.");
     	}
     	
