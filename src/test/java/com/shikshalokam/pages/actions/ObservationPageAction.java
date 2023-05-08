@@ -147,8 +147,10 @@ public class ObservationPageAction {
     		Logger.logAndReportInfo("Clicked on the yes confirmation for deleting observation.");
     		Thread.sleep(3000);
     	}
-    	public void clickOnBackButtonOnObservationPage() throws Exception {
-    		ShikshaLokamClient.get().gestures().click(observationPageObjects.backButton);
+    	public void clickOnBackButton() throws Exception {
+    		js.executeScript("arguments[0].click();", observationPageObjects.backButton);
+    		//js.executeScript("arguments[0].scrollIntoView(true);", observationPageObjects.backButton);
+    		//ShikshaLokamClient.get().gestures().click(observationPageObjects.backButton);
     		Logger.logAndReportInfo("Clicked on the back button on the observation page.");
     	}
     	
@@ -596,10 +598,12 @@ public class ObservationPageAction {
     		Logger.logAndReportPass("Start button for the observation is displayed succesfully.");
     	}
     	
-    	public void verifyThrashSymbolForEntityDelete() throws Exception {
+    /*	public void verifyThrashSymbolForEntityDelete() throws Exception {
     		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.backButton), "Back button is not available on page");
-    		Logger.logAndReportPass("Back symbol on observation is displayed succesfully.");
-    	}
+    		Logger.logAndReportPass("Back symbol on observation is displayed succesfully.");  
+    	}  */
+    	
+    	
     	/**
     	//parent child verify
     	public void oldverifyParent1QuestionTitle() throws Exception {

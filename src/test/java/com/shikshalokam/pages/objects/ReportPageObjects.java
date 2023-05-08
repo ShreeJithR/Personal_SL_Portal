@@ -27,7 +27,10 @@ public class ReportPageObjects {
 	public WebElement exportAsButtonInReport;
 	
 	@FindBy(xpath = "(//div//button[text()=' Pdf '])[2]")
-	public WebElement pdfButton;
+	public WebElement pdfButtonWithoutRubric;
+	
+	@FindBy(xpath = "//div//button[text()=' Pdf ']")
+	public WebElement pdfButtonWithRubric;
 	
 	@FindBy(xpath = "//button[text()=' Filters ']")
 	public WebElement filterButtonInReport;
@@ -36,8 +39,14 @@ public class ReportPageObjects {
 	public WebElement obsWithRubricSingleSubmissionReport;
 	//h6[normalize-space()='Automation rubric with single submission - Teacher']
 	
+	@FindBy(xpath = "//h6[contains(text(),'Automation rubric with multiple submission - Teach')]")
+	public WebElement obsWithRubricMultipleSubmissionReport;
+
 	@FindBy(xpath = "//h6[normalize-space()='Automation rubric without submission - Teacher']")
 	public WebElement obsWithoutRubricReport;
+	
+	
+	//h6[contains(text(),'Automation rubric with multiple submission - Teach')]
 	//h6[normalize-space()='Automation rubric without submission - Teacher']
 	
 	//strong[normalize-space()='Descriptive view']

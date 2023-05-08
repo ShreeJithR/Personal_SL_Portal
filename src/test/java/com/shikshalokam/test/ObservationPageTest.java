@@ -53,9 +53,9 @@ public class ObservationPageTest {
     
     
     
-    @Test(description = "login and verify observation tile")
+    @Test(description = "login as HT official and verify observation tile")
     @Author(name = "Manjunatha K")
-    public void loginAndVerifyObservationTile() throws Exception {
+    public void htLoginAndVerifyObservationTile() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!A:B");
         observationPageTestData = TestData.getFullGoogleSheetDataAsMapString("Observation!A:B");
         //getLoginPageActions().clickOnExploreDiksha();
@@ -97,7 +97,10 @@ public class ObservationPageTest {
         getObservationPageActions().clickOnThreeDotEllipseOnObservation();
         getObservationPageActions().clickOnDeleteOptionFromThreeDotObservation();
         getObservationPageActions().clickOnYesConfirmationForObservationDelete();
-       /* getObservationPageActions().clickOnBackButtonOnObservationPage();
+        getObservationPageActions().clickOnBackButton();
+        Thread.sleep(3000);
+        getObservationPageActions().verifyObservationTitle();
+        /*
         getObservationPageActions().clickOnObservationWithRub_SliderWithScore();
         getObservationPageActions().verifyThrashSymbolForEntityDelete(); */
         
@@ -105,7 +108,7 @@ public class ObservationPageTest {
     
     @Test(description = "save and submit observation")
     @Author(name = "Manjunatha K")
-    public void saveAndSubmitObservation() throws Exception {
+    public void htLoginSaveAndSubmitObsForm() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!A:B");
         observationPageTestData = TestData.getFullGoogleSheetDataAsMapString("Observation!A:B");
         //getLoginPageActions().clickOnExploreDiksha();
@@ -247,9 +250,9 @@ public class ObservationPageTest {
 }
     
 
-    @Test(description = "Login as Teacher, Verify Observation Tile and Observation Details page")
+    @Test(description = "Login as Teacher and Verify Observation Tile and Observation Details page")
     @Author(name = "SHREEJITH")
-    public void verifyObservationTileForTeacherRole() throws Exception {
+    public void teacherLoginVerifyObservationTileAndSaveSubmitObsForm() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!A:B");
         observationPageTestData = TestData.getFullGoogleSheetDataAsMapString("Observation!A:B");
         switchEnvironment();
@@ -270,13 +273,13 @@ public class ObservationPageTest {
         getObservationPageActions().verifyObservationDetailsPageForWithRubricmultipleSubmission();
         getObservationPageActions().saveAndSubmitObservationWithRubricMultipleSubmission();
      
-        getObservationPageActions().clickOnBackButtonOnObservationPage();   
+        getObservationPageActions().clickOnBackButton();   
       //verifying Observation Without Rubric 
         getObservationPageActions().clickOnObservationWithoutRubric();
        getObservationPageActions().verifyObservationDetailsPageForWithoutRubricmultipleSubmission();
         getObservationPageActions().saveAndSubmitObservationWithoutRubric();
        
-        getObservationPageActions().clickOnBackButtonOnObservationPage(); 
+        getObservationPageActions().clickOnBackButton(); 
         //verifying Observation With Rubric Single Submission
         getObservationPageActions().clickOnObservationWithRubricSingleSubmission();
         getObservationPageActions().verifyObservationDetailsPageForSingleSubmission();

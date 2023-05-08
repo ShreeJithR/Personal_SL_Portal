@@ -116,13 +116,13 @@ public class ReportPageTest {
         getReportPageActions().verifyExportAsButtonInReport();
         //getReportPageActions().clickOnExportAsButton();
         getReportPageActions().moveonExportAsButton();
-        getReportPageActions().verifyPdfButtonInReport();
+        getReportPageActions().verifyPdfButtonInReportWithoutRubric();
         //getReportPageActions().verifyPdfButtonInReportBoolean();
     }
     
     @Test(description = "visit my report section and verify features available in it")
     @Author(name = "SHREEJITH")
-    public void visitMyReportsAndVerifyFeaturesAsTeacherRole() throws Exception {
+    public void teacherRoleVisitMyReportsAndVerifyFeatures() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!A:B");
         switchEnvironment();
         getLoginPageActions().BMCLSelection();
@@ -142,14 +142,25 @@ public class ReportPageTest {
         getReportPageActions().verifyDescriptiveViewSection();
         getReportPageActions().verifyExportAsButtonInReport();
         getReportPageActions().moveonExportAsButton();
-        getReportPageActions().verifyPdfButtonInReport();
+        getReportPageActions().verifyPdfButtonInReportWithRubric();
         
-        //multiple submission selectsubmission dropdown
+        getObservationPageActions().clickOnBackButton();
         
+        getReportPageActions().clickOnObsWithRubricMultipleSubmissionReport();
+        getReportPageActions().verifyQuestionTabInReport();
+        getReportPageActions().verifyDescriptiveViewSection();
+        getReportPageActions().verifyExportAsButtonInReport();
+        getReportPageActions().moveonExportAsButton();
+        getReportPageActions().verifyPdfButtonInReportWithRubric();
+        
+        getObservationPageActions().clickOnBackButton();
+        
+       
+        getReportPageActions().clickOnObsWithoutRubricReport();
+        getReportPageActions().verifyQuestionTabInReport();
         getReportPageActions().verifyCriteriaTabInReport();
         getReportPageActions().verifyExportAsButtonInReport();
-        //getReportPageActions().clickOnExportAsButton();
         getReportPageActions().moveonExportAsButton();
-        getReportPageActions().verifyPdfButtonInReport();
+        getReportPageActions().verifyPdfButtonInReportWithoutRubric();
 }
 }

@@ -38,6 +38,12 @@ public class ReportPageAction {
     		Logger.logAndReportInfo("Clicked on Automation rubric with single submission - Teacher from my report section.");
     	}
     	
+    	public void clickOnObsWithRubricMultipleSubmissionReport() throws Exception {
+    		ShikshaLokamClient.get().gestures().click(reportPageObjects.obsWithRubricMultipleSubmissionReport);
+    		Logger.logAndReportInfo("Clicked on Automation rubric with Multiple submission - Teacher from my report section.");
+    	}
+    	
+    	
     	public void clickOnObsWithoutRubricReport() throws Exception {
     		ShikshaLokamClient.get().gestures().click(reportPageObjects.obsWithoutRubricReport);
     		Logger.logAndReportInfo("Clicked on Automation rubric without submission - Teacher from my report section.");
@@ -53,7 +59,7 @@ public class ReportPageAction {
     		Logger.logAndReportInfo("Moved on to the export as button.");
     	}
     	public void clickOnPDFButton() throws Exception {
-    		ShikshaLokamClient.get().gestures().click(reportPageObjects.pdfButton);
+    		ShikshaLokamClient.get().gestures().click(reportPageObjects.pdfButtonWithoutRubric);
     		Logger.logAndReportInfo("Clicked on the pdf button.");
     	}
     
@@ -85,15 +91,22 @@ public class ReportPageAction {
     		Logger.logAndReportPass("Export button is displayed succesfully.");
     	}
     	
-    	public void verifyPdfButtonInReport() throws Exception {
+    	public void verifyPdfButtonInReportWithoutRubric() throws Exception {
     		//ShikshaLokamClient.get().gestures().moveToElement(reportPageObjects.pdfButton);
     		//Assert.assertTrue(ShikshaLokamClient.get().gestures().isDisplayed(reportPageObjects.pdfButton));
-            Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(reportPageObjects.pdfButton),"PDF Button is not displayed.");
+            Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(reportPageObjects.pdfButtonWithoutRubric),"PDF Button is not displayed.");
     		Logger.logAndReportPass("PDF Button is displayed succesfully.");
     	}
     	
+
+    	public void verifyPdfButtonInReportWithRubric() throws Exception {
+    		//ShikshaLokamClient.get().gestures().moveToElement(reportPageObjects.pdfButton);
+    		//Assert.assertTrue(ShikshaLokamClient.get().gestures().isDisplayed(reportPageObjects.pdfButton));
+            Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(reportPageObjects.pdfButtonWithRubric),"PDF Button is not displayed.");
+    		Logger.logAndReportPass("PDF Button is displayed succesfully.");
+    	}
     	public void verifyPdfButtonInReportBoolean() throws Exception {
-    		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(reportPageObjects.pdfButton));
+    		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(reportPageObjects.pdfButtonWithoutRubric));
     		Logger.logAndReportPass("Pdf button is displayed.");
     	}
     	public void verifyDescriptiveViewSection() throws Exception {
