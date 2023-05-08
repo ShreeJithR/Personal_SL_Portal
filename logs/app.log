@@ -1,100 +1,56 @@
-Sun May 07 21:10:39 IST 2023 INFO Logger-logAndReportPass-110 Welcome title is displayed succesfully.
-Sun May 07 21:10:39 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: (//div[contains(text(),'School head OR Officials')])[1]] status = true
-Sun May 07 21:10:40 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the continue button
-Sun May 07 21:10:40 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: //*[@id="board"]] status = true
-Sun May 07 21:10:40 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the board drop down
-Sun May 07 21:10:40 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: //span[contains(text(),'CBSE')]] status = true
-Sun May 07 21:10:40 IST 2023 INFO Logger-logAndReportInfo-95 Selected the option cbse or ncert.
-Sun May 07 21:10:42 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: //button[contains(.,'Submit')]] status = true
-Sun May 07 21:10:42 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the submit button on BMC selection window.
-Sun May 07 21:10:42 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: //div[contains(@aria-label, 'Select State')]] status = true
-Sun May 07 21:10:43 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: (//span[contains(text(),'Andhra Pradesh')])] status = true
-Sun May 07 21:10:43 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: //div[contains(@aria-label, 'Select District')]] status = true
-Sun May 07 21:10:43 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: //div[@tabindex='0']//span[text()='Anantapur']] status = true
-Sun May 07 21:10:43 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the submit button on location selection window.
-Sun May 07 21:10:43 IST 2023 INFO Logger-logAndReportPass-110 Home button is displayed succesfully
-Sun May 07 21:11:31 IST 2023 INFO Gestures-click-78 Method: click for locator = Proxy element for: DefaultElementLocator 'By.xpath: //a[contains(.,'Login')]' status = true
-Sun May 07 21:11:31 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: //button[@id='login']] status = true
-Sun May 07 21:11:35 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: (//div[@class='avatar-content'])[2]] status = true
-Sun May 07 21:12:15 IST 2023 INFO Gestures-click-78 Method: click for locator = Proxy element for: DefaultElementLocator 'By.xpath: //li[normalize-space()='Admin dashboard']' status = true
-Sun May 07 21:12:15 IST 2023 INFO Logger-logAndReportPass-110 Reports tab is displayed.
-Sun May 07 21:12:15 IST 2023 INFO Logger-logAndReportPass-110 Datasets tab is displayed.
-Sun May 07 21:12:15 IST 2023 INFO Logger-logAndReportPass-110 Global Search Filter is displayed.
-Sun May 07 21:12:15 IST 2023 INFO Logger-logAndReportInfo-95 Searched for test improve report 
-Sun May 07 21:12:18 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-list-all-reports[1]/div[2]/div[1]/div[1]/div[1]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[2]/td[2]/button[1]/i[1]] status = true
-Sun May 07 21:12:18 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on Improvement Project Report
-Sun May 07 21:12:18 IST 2023 INFO Logger-logAndReportInfo-95 Serial.No Column is displayed.
-Sun May 07 21:12:18 IST 2023 INFO Logger-logAndReportInfo-95 ParameterColumn is displayed.
-Sun May 07 21:12:18 IST 2023 INFO Logger-logAndReportInfo-95 Status Column is displayed.
-Sun May 07 21:12:18 IST 2023 INFO Logger-logAndReportPass-110 Local Search Filter is displayed.
-Sun May 07 21:12:18 IST 2023 INFO Logger-logAndReportInfo-95 Searched for up
-Sun May 07 21:13:00 IST 2023 INFO Gestures-click-78 Method: click for locator = Proxy element for: DefaultElementLocator 'By.xpath: //td[normalize-space()='up']' status = true
-Sun May 07 21:13:00 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on up Parameter
-Sun May 07 21:13:00 IST 2023 INFO Logger-logAndReportPass-110 Graphs tab is is displayed.
-Sun May 07 21:13:00 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-report[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[2]/div[1]/app-filter[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/app-material-auto-complete[1]/div[1]/mat-form-field[1]/div[1]/div[1]] status = true
-Sun May 07 21:13:01 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: (//span[@class='mat-checkbox-label'])[1]] status = true
-Sun May 07 21:13:01 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: (//span[@class='mat-checkbox-label'])[2]] status = true
-Sun May 07 21:13:02 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-report[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[2]/div[1]/app-filter[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-material-auto-complete[1]/div[1]/mat-form-field[1]/div[1]/div[1]] status = true
-Sun May 07 21:13:02 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: (//span[@class='mat-checkbox-label'])[1]] status = true
-Sun May 07 21:13:03 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: (//span[@class='mat-checkbox-label'])[2]] status = true
-Sun May 07 21:13:03 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-report[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[2]/div[1]/app-filter[1]/form[1]/div[1]/div[1]/div[1]/div[3]/div[1]/app-material-auto-complete[1]/div[1]/mat-form-field[1]/div[1]/div[1]] status = true
-Sun May 07 21:13:03 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: (//span[@class='mat-checkbox-label'])[1]] status = true
-Sun May 07 21:13:04 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: (//span[@class='mat-checkbox-label'])[2]] status = true
-Sun May 07 21:13:04 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-report[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[2]/div[1]/app-filter[1]/form[1]/div[1]/div[1]/div[1]/div[4]/div[1]/app-material-auto-complete[1]/div[1]/mat-form-field[1]/div[1]/div[1]] status = true
-Sun May 07 21:13:04 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: (//span[@class='mat-checkbox-label'])[1]] status = true
-Sun May 07 21:13:05 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-report[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[1]/div[3]/div[1]/label[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]/span[1]] status = true
-Sun May 07 21:13:05 IST 2023 INFO Logger-logAndReportPass-110 Pdf option is displayed.
-Sun May 07 21:13:05 IST 2023 INFO Logger-logAndReportPass-110 Img option is displayed.
-Sun May 07 21:13:08 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: //span[normalize-space()='Pdf']] status = true
-Sun May 07 21:13:09 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-report[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[1]/div[3]/div[1]/label[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]/span[1]] status = true
-Sun May 07 21:13:12 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: //span[normalize-space()='Img']] status = true
-Sun May 07 21:13:52 IST 2023 INFO Gestures-click-78 Method: click for locator = Proxy element for: DefaultElementLocator 'By.xpath: //button[@aria-label='back-button']' status = true
-Sun May 07 21:13:52 IST 2023 INFO Logger-logAndReportInfo-95 Searched for Unique User Observation Report 
-Sun May 07 21:13:53 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: //tbody//i[1]] status = true
-Sun May 07 21:13:53 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on Unique User Observation Report
-Sun May 07 21:13:53 IST 2023 INFO Logger-logAndReportInfo-95 Serial.No Column is displayed.
-Sun May 07 21:13:53 IST 2023 INFO Logger-logAndReportInfo-95 ParameterColumn is displayed.
-Sun May 07 21:13:53 IST 2023 INFO Logger-logAndReportInfo-95 Status Column is displayed.
-Sun May 07 21:13:53 IST 2023 INFO Logger-logAndReportInfo-95 Searched for up
-Sun May 07 21:14:35 IST 2023 INFO Gestures-click-78 Method: click for locator = Proxy element for: DefaultElementLocator 'By.xpath: //td[normalize-space()='up']' status = true
-Sun May 07 21:14:35 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on up Parameter
-Sun May 07 21:14:35 IST 2023 INFO Logger-logAndReportPass-110 Graphs tab is is displayed.
-Sun May 07 21:14:35 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-report[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[2]/div[1]/app-filter[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/app-material-auto-complete[1]/div[1]/mat-form-field[1]/div[1]/div[1]] status = true
-Sun May 07 21:14:36 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: (//span[@class='mat-checkbox-label'])[1]] status = true
-Sun May 07 21:14:36 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: (//span[@class='mat-checkbox-label'])[2]] status = true
-Sun May 07 21:14:36 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-report[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[2]/div[1]/app-filter[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-material-auto-complete[1]/div[1]/mat-form-field[1]/div[1]/div[1]] status = true
-Sun May 07 21:14:36 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: (//span[@class='mat-checkbox-label'])[1]] status = true
-Sun May 07 21:14:36 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: (//span[@class='mat-checkbox-label'])[2]] status = true
-Sun May 07 21:14:36 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-report[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[2]/div[1]/app-filter[1]/form[1]/div[1]/div[1]/div[1]/div[3]/div[1]/app-material-auto-complete[1]/div[1]/mat-form-field[1]/div[1]/div[1]] status = true
-Sun May 07 21:14:37 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: (//span[@class='mat-checkbox-label'])[1]] status = true
-Sun May 07 21:14:37 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-report[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[1]/div[3]/div[1]/label[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]/span[1]] status = true
-Sun May 07 21:14:37 IST 2023 INFO Logger-logAndReportPass-110 Pdf option is displayed.
-Sun May 07 21:14:37 IST 2023 INFO Logger-logAndReportPass-110 Img option is displayed.
-Sun May 07 21:14:39 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: //span[normalize-space()='Pdf']] status = true
-Sun May 07 21:14:39 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-report[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[1]/div[3]/div[1]/label[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]/span[1]] status = true
-Sun May 07 21:14:42 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: //span[normalize-space()='Img']] status = true
-Sun May 07 21:15:22 IST 2023 INFO Gestures-click-78 Method: click for locator = Proxy element for: DefaultElementLocator 'By.xpath: //button[@aria-label='back-button']' status = true
-Sun May 07 21:15:22 IST 2023 INFO Logger-logAndReportInfo-95 Searched for Unique User Survey Report
-Sun May 07 21:15:23 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: //tbody//i[1]] status = true
-Sun May 07 21:15:23 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on Unique User Survey Report
-Sun May 07 21:15:23 IST 2023 INFO Logger-logAndReportInfo-95 Serial.No Column is displayed.
-Sun May 07 21:15:23 IST 2023 INFO Logger-logAndReportInfo-95 ParameterColumn is displayed.
-Sun May 07 21:15:23 IST 2023 INFO Logger-logAndReportInfo-95 Status Column is displayed.
-Sun May 07 21:15:23 IST 2023 INFO Logger-logAndReportInfo-95 Searched for up
-Sun May 07 21:16:05 IST 2023 INFO Gestures-click-78 Method: click for locator = Proxy element for: DefaultElementLocator 'By.xpath: //td[normalize-space()='up']' status = true
-Sun May 07 21:16:05 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on up Parameter
-Sun May 07 21:16:05 IST 2023 INFO Logger-logAndReportPass-110 Graphs tab is is displayed.
-Sun May 07 21:16:05 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-report[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[2]/div[1]/app-filter[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/app-material-auto-complete[1]/div[1]/mat-form-field[1]/div[1]/div[1]] status = true
-Sun May 07 21:16:05 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: (//span[@class='mat-checkbox-label'])[1]] status = true
-Sun May 07 21:16:06 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: (//span[@class='mat-checkbox-label'])[2]] status = true
-Sun May 07 21:16:06 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-report[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[2]/div[1]/app-filter[1]/form[1]/div[1]/div[1]/div[1]/div[2]/div[1]/app-material-auto-complete[1]/div[1]/mat-form-field[1]/div[1]/div[1]] status = true
-Sun May 07 21:16:06 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: (//span[@class='mat-checkbox-label'])[1]] status = true
-Sun May 07 21:16:06 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: (//span[@class='mat-checkbox-label'])[2]] status = true
-Sun May 07 21:16:06 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-report[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[2]/div[1]/app-filter[1]/form[1]/div[1]/div[1]/div[1]/div[3]/div[1]/app-material-auto-complete[1]/div[1]/mat-form-field[1]/div[1]/div[1]] status = true
-Sun May 07 21:16:06 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: (//span[@class='mat-checkbox-label'])[1]] status = true
-Sun May 07 21:16:07 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-report[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[1]/div[3]/div[1]/label[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]/span[1]] status = true
-Sun May 07 21:16:07 IST 2023 INFO Logger-logAndReportPass-110 Pdf option is displayed.
-Sun May 07 21:16:07 IST 2023 INFO Logger-logAndReportPass-110 Img option is displayed.
-Sun May 07 21:16:09 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: //span[normalize-space()='Pdf']] status = true
-Sun May 07 21:16:09 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-report[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[1]/div[3]/div[1]/label[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]/span[1]] status = true
-Sun May 07 21:16:11 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (41d413b04d42f4d305c7e83423f9607a)] -> xpath: //span[normalize-space()='Img']] status = true
+Mon May 08 15:47:10 IST 2023 INFO Logger-logAndReportPass-110 Welcome title is displayed succesfully.
+Mon May 08 15:47:11 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (e14180c3d9fe21248c7c0b957cf16f9a)] -> xpath: (//div[contains(text(),'School head OR Officials')])[1]] status = true
+Mon May 08 15:47:11 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the continue button
+Mon May 08 15:47:11 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (e14180c3d9fe21248c7c0b957cf16f9a)] -> xpath: //*[@id="board"]] status = true
+Mon May 08 15:47:11 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the board drop down
+Mon May 08 15:47:11 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (e14180c3d9fe21248c7c0b957cf16f9a)] -> xpath: //span[contains(text(),'CBSE')]] status = true
+Mon May 08 15:47:11 IST 2023 INFO Logger-logAndReportInfo-95 Selected the option cbse or ncert.
+Mon May 08 15:47:15 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (e14180c3d9fe21248c7c0b957cf16f9a)] -> xpath: //button[contains(.,'Submit')]] status = true
+Mon May 08 15:47:15 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the submit button on BMC selection window.
+Mon May 08 15:47:15 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (e14180c3d9fe21248c7c0b957cf16f9a)] -> xpath: //div[contains(@aria-label, 'Select State')]] status = true
+Mon May 08 15:47:16 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (e14180c3d9fe21248c7c0b957cf16f9a)] -> xpath: (//span[contains(text(),'Andhra Pradesh')])] status = true
+Mon May 08 15:47:16 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (e14180c3d9fe21248c7c0b957cf16f9a)] -> xpath: //div[contains(@aria-label, 'Select District')]] status = true
+Mon May 08 15:47:16 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (e14180c3d9fe21248c7c0b957cf16f9a)] -> xpath: //div[@tabindex='0']//span[text()='Anantapur']] status = true
+Mon May 08 15:47:16 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the submit button on location selection window.
+Mon May 08 15:47:16 IST 2023 INFO Logger-logAndReportPass-110 Home button is displayed succesfully
+Mon May 08 15:48:02 IST 2023 INFO Gestures-click-78 Method: click for locator = Proxy element for: DefaultElementLocator 'By.xpath: //a[contains(.,'Login')]' status = true
+Mon May 08 15:48:02 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (e14180c3d9fe21248c7c0b957cf16f9a)] -> xpath: //button[@id='login']] status = true
+Mon May 08 15:48:06 IST 2023 INFO Logger-logAndReportPass-110 Observation button is displayed succesfully
+Mon May 08 15:48:06 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (e14180c3d9fe21248c7c0b957cf16f9a)] -> xpath: //a[text()=' Observation ']] status = true
+Mon May 08 15:48:07 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the observation button
+Mon May 08 15:48:12 IST 2023 INFO Logger-logAndReportPass-110 Observation title is displayed succesfully.
+Mon May 08 15:48:13 IST 2023 INFO Logger-logAndReportInfo-95  searched thing is : Obs with Rub – Only slider with score
+Mon May 08 15:48:18 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (e14180c3d9fe21248c7c0b957cf16f9a)] -> xpath: //button[text()='Search']] status = true
+Mon May 08 15:48:20 IST 2023 INFO Logger-logAndReportInfo-95 clicked on the search button.
+Mon May 08 15:48:20 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (e14180c3d9fe21248c7c0b957cf16f9a)] -> xpath: //a[text()=' Observation ']] status = true
+Mon May 08 15:48:21 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the observation button
+Mon May 08 15:49:02 IST 2023 INFO Gestures-click-78 Method: click for locator = Proxy element for: DefaultElementLocator 'By.xpath: //h4[@title='Obs with Rub – Only slider with score']' status = true
+Mon May 08 15:49:02 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the observation with rub only slider with score.
+Mon May 08 15:49:02 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (e14180c3d9fe21248c7c0b957cf16f9a)] -> xpath: //i[contains(@class,'trash')]] status = true
+Mon May 08 15:49:02 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the entity delete option
+Mon May 08 15:49:02 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (e14180c3d9fe21248c7c0b957cf16f9a)] -> xpath: //button[text()=' Yes ']] status = true
+Mon May 08 15:49:02 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the yes confirmation for entity deletion.
+Mon May 08 15:49:02 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (e14180c3d9fe21248c7c0b957cf16f9a)] -> xpath: //button[text()=' Add School ']] status = true
+Mon May 08 15:49:02 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the Add School Button 
+Mon May 08 15:49:04 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (e14180c3d9fe21248c7c0b957cf16f9a)] -> xpath: /html[1]/body[1]/div[2]/div[2]/div[1]/mat-dialog-container[1]/div[1]/mat-dialog-content[2]/div[1]/div[1]/div[1]/div[1]/div[1]/label[1]] status = true
+Mon May 08 15:49:04 IST 2023 INFO Logger-logAndReportInfo-95 Selected first entity for the school.
+Mon May 08 15:49:04 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (e14180c3d9fe21248c7c0b957cf16f9a)] -> xpath: //button[text()=' Submit ']] status = true
+Mon May 08 15:49:04 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the submit button on add entity window.
+Mon May 08 15:49:06 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (e14180c3d9fe21248c7c0b957cf16f9a)] -> xpath: /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-observation-details[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/entity-list[1]/div[1]/div[1]/div[1]/label[1]] status = true
+Mon May 08 15:49:06 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on Added Entity.
+Mon May 08 15:49:07 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (e14180c3d9fe21248c7c0b957cf16f9a)] -> xpath: //button[text()=' Observe again ']] status = true
+Mon May 08 15:49:07 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the observe again button.
+Mon May 08 15:49:07 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (e14180c3d9fe21248c7c0b957cf16f9a)] -> xpath: //button[text()=' Yes ']] status = true
+Mon May 08 15:49:07 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the yes button for obsere again button.
+Mon May 08 15:49:08 IST 2023 INFO Logger-logAndReportPass-110 Observation 1 title is displayed succesfully.
+Mon May 08 15:49:10 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (e14180c3d9fe21248c7c0b957cf16f9a)] -> xpath: //div//span[text()='Observation 1']] status = true
+Mon May 08 15:49:10 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the observation 1 Title.
+Mon May 08 15:49:11 IST 2023 INFO Logger-logAndReportPass-110 Start button for the observation is displayed succesfully.
+Mon May 08 15:49:11 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (e14180c3d9fe21248c7c0b957cf16f9a)] -> xpath: //i[contains(@class,'ellipsis vertical icon')]] status = true
+Mon May 08 15:49:11 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the three dot on observation. 
+Mon May 08 15:49:13 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (e14180c3d9fe21248c7c0b957cf16f9a)] -> xpath: //div[normalize-space()='Delete']] status = true
+Mon May 08 15:49:13 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the delete option from observation three dot ellipse.
+Mon May 08 15:49:15 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (e14180c3d9fe21248c7c0b957cf16f9a)] -> xpath: //button[normalize-space()='Yes']] status = true
+Mon May 08 15:49:15 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the yes confirmation for deleting observation.
+Mon May 08 15:49:18 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the back button on the observation page.
+Mon May 08 15:49:21 IST 2023 INFO Logger-logAndReportPass-110 Observation title is displayed succesfully.
