@@ -520,6 +520,26 @@ public class ObservationPageAction {
     		 
     		 ShikshaLokamClient.get().gestures().click(observationPageObjects.withOutRubricAnswer1);
     		 Logger.logAndReportInfo("Answered first Question");
+   //****** 		 
+    		 ShikshaLokamClient.get().gestures().click(observationPageObjects.addFile1);
+    		 Logger.logAndReportInfo("Clicked on Add file ");
+    		 
+    		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.privacyPolicyPopup),"Privacy Policy Pop-up is not present .");
+       		Logger.logAndReportPass("Privacy Policy Pop-up is present");
+       		
+       		Assert.assertTrue(ShikshaLokamClient.get().gestures().isEnabled(observationPageObjects.doNotUploadButtonOnPrivacyPolicyPopup),"Do not Upload Button is enabled by default on Privacy Policy Pop-up .");
+       		Logger.logAndReportPass("Do not Upload Button is not enabled by default on Privacy Policy Pop-up .");
+       		
+       	    ShikshaLokamClient.get().gestures().click(observationPageObjects.acceptCheckBoxOnPrivacyPolicyPopup);
+		    Logger.logAndReportInfo("Clicked on Checkbox on Privacy Policy Pop-up");
+		    Thread.sleep(2000);
+		    
+		    Assert.assertTrue(ShikshaLokamClient.get().gestures().isEnabled(observationPageObjects.uploadButtonOnPrivacyPolicyPopup),"Upload Button is enabled on Privacy Policy Pop-up .");
+       		Logger.logAndReportPass("Upload Button is enabled on Privacy Policy Pop-up .");
+       		
+       		ShikshaLokamClient.get().gestures().click(observationPageObjects.closeIconOnPrivacyPolicyPopup);
+		    Logger.logAndReportInfo("Clicked on Close icon on Privacy Policy Pop-up ");
+    		 
              observationPageObjects.fileUpload1.sendKeys(filepath+"//Fileupload_files//Shikshalokam.jpg"); 
 	    	 verifyEvidenceUploadedPopup();
 	    	 clickOnOkButtonOnEvidenceUploadedPopup();
@@ -796,6 +816,23 @@ public class ObservationPageAction {
    	    		Logger.logAndReportInfo("License terms section is Present .");
    	    		
    	    	}
+   	    	
+   	    	public void VerifyCreditsPopup() throws Exception {
+   	    		ShikshaLokamClient.get().gestures().click(observationPageObjects.creditslink);
+   	    		Logger.logAndReportInfo("Clicked on Credits link .");
+   	    		
+   	    		softAssert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.creditsPopup),"Credits Pop-up is not Present.");
+   	    		Logger.logAndReportInfo("Credits Pop-up is Present .");
+   	    		
+   	    		softAssert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.copyrightsSectionOncreditsPopup),"COPYRIGHT section is not Present on Credits Pop-up.");
+   	    		Logger.logAndReportInfo("COPYRIGHT section is Present on Credits Pop-up.");
+   	    		
+   	    		ShikshaLokamClient.get().gestures().click(observationPageObjects.closeIconOncreditsPopup);
+   	    		Logger.logAndReportInfo("Clicked on 'X' on Credits Pop-up");
+   	    
+   	    	}
+   	    	
+   	    	
    	  
    	 	public void verifyBrowseOtherCategories() throws Exception {
             Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.browseOtherCategories),"Browse Other Categories is not displayed.");

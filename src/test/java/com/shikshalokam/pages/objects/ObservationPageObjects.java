@@ -223,6 +223,18 @@ public class ObservationPageObjects {
     @FindBy(xpath = "//a[.=' Credits ']")
     public WebElement creditslink;
     
+    @FindBy(xpath = "//div[.=' CREDITS ']")
+    public WebElement creditsPopup;
+    
+    @FindBy(xpath = "//div[.='COPYRIGHT']")
+    public WebElement copyrightsSectionOncreditsPopup;
+    
+    @FindBy(xpath = "//span[normalize-space()='×']")
+    public WebElement closeIconOncreditsPopup;
+    
+  //span[normalize-space()='×']
+  //div[.='COPYRIGHT']
+  //div[.=' CREDITS ']
     @FindBy(xpath = "//div[.=' License terms']")
     public WebElement licenseterms;
     
@@ -275,6 +287,13 @@ public class ObservationPageObjects {
     @FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-questionnaire[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/form[1]/sl-input[1]/div[2]/div[1]/div[1]/div[2]/sl-page-questions[1]/sl-input[1]/div[1]/div[2]/div[1]/div[2]/sl-date-input[1]/div[1]/div[1]/input[1]")
     public WebElement domain2Answer7;
     
+    @FindBy(xpath = "(//i[@class='plus icon'])[1]")
+    public WebElement addFile1;
+    
+    @FindBy(xpath = "(//i[@class='plus icon'])[2]")
+    public WebElement addFile2;
+    
+    //(//i[@class='plus icon'])[1]
     @FindBy(xpath = "(//input[@type='file'])[1]")
     public WebElement fileUpload1;
     
@@ -286,6 +305,29 @@ public class ObservationPageObjects {
     
     @FindBy(xpath = "//button[normalize-space()='OK']")
     public WebElement okOnevidenceUplodedPopup;
+   
+    //***** 
+    @FindBy(xpath = "//label[@for='myCheck']")
+    public WebElement privacyPolicyPopup;
+    
+    @FindBy(xpath = "//button[normalize-space()='Do not Upload']")
+    public WebElement doNotUploadButtonOnPrivacyPolicyPopup;
+    
+    @FindBy(xpath = "//input[@id='myCheck']")
+    public WebElement acceptCheckBoxOnPrivacyPolicyPopup;
+    
+    @FindBy(xpath = "//button[normalize-space()='Upload']")
+    public WebElement uploadButtonOnPrivacyPolicyPopup;
+    
+    @FindBy(xpath = "//i[@class='close inside icon']")
+    public WebElement closeIconOnPrivacyPolicyPopup;
+    //******
+    
+  //i[@class='close inside icon']
+  //button[normalize-space()='Upload']
+  //input[@id='myCheck']
+  //button[normalize-space()='Do not Upload']
+  //label[@for='myCheck']
     
    //.......
     

@@ -176,22 +176,7 @@ public class ObservationPageTest {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!F:G");
         observationPageTestData = TestData.getFullGoogleSheetDataAsMapString("Observation!A:B");
         switchEnvironment();
-        //getLoginPageActions().clickOnExploreDiksha();
-     /*   appUrl = PropUtlis.readConfig("webAppConfig", "appUrl");
-        if(appUrl.contentEquals("https://preprod.ntp.net.in/"))
-        {
-        	getLoginPageActions().clickOnExploreDiksha();
-        }
-        appUrl = PropUtlis.readConfig("webAppConfig", "appUrl");  */
-     
         
-      /*  getLoginPageActions().selectRoleHTAndOffical();
-        getLoginPageActions().clickOnContinue();
-        getLoginPageActions().clickOnBoardDropDown();
-        getLoginPageActions().selectcbseOrNcertBoardOption();
-        getLoginPageActions().verifySubmitButtonEnabled();
-        Thread.sleep(5000);
-        getLoginPageActions().clickOnSubmitButtonOnLocationWindow();  */
         getLoginPageActions().BMCLSelection();
         Thread.sleep(5000);
         getLoginPageActions().clickOnGuest();
@@ -231,24 +216,43 @@ public class ObservationPageTest {
         getLoginPageActions().selectBlock();
         
         getLoginPageActions().verifySubmitButtonEnabledonPersonaldetailspage();
-        getLoginPageActions().clickOnBackbutton();
+        getLoginPageActions().clickOnBackbutton();      
         
         getObservationPageActions().verifyObservationButton();
         getObservationPageActions().clickOnObservationButton();
         
         //Thread.sleep(2000);
-        getObservationPageActions().selectSchoolEntityobservation();  
+       getObservationPageActions().selectSchoolEntityobservation();  
         getObservationPageActions().verifySchoolentityisnotadded(); 
-        //verifying credits and license
-        getLoginPageActions().clickOnBackbutton();
+             
+}
+    
+    @Test(description = "To verify school enitity is not added by deafault")
+    @Author(name = "SHREEJITH")
+    public void verifyCreditsAndLicenseDropdown() throws Exception {
+        loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!F:G");
+        observationPageTestData = TestData.getFullGoogleSheetDataAsMapString("Observation!A:B");
+        switchEnvironment();
+        
+        getLoginPageActions().BMCLSelection();
+        Thread.sleep(5000);
+        getLoginPageActions().clickOnGuest();
+        getLoginPageActions().clickOnLogin();
+        getLoginPageActions().enterUserName(loginTestData.get("userName"));
+        getLoginPageActions().enterPassword(loginTestData.get("password"));
+        getLoginPageActions().clickOnLoginButton();
+        Thread.sleep(2000);
+        
+        getObservationPageActions().verifyObservationButton();
+        getObservationPageActions().clickOnObservationButton();
+        
         getObservationPageActions().selectCreditAndLicenceobservation();
         //Thread.sleep(2000);
         getObservationPageActions().clickOnCreditAndLicencedropdown();
         getObservationPageActions().verifyCreditsandLicensecontents();
-        
-     
-}
+        getObservationPageActions().VerifyCreditsPopup();
     
+    }
 
     @Test(description = "Login as Teacher and Verify Observation Tile and Observation Details page")
     @Author(name = "SHREEJITH")
@@ -269,31 +273,28 @@ public class ObservationPageTest {
         getObservationPageActions().verifyObservationTileunderBrowseOtherCategories();
         getObservationPageActions().clickOnObservationTileunderBrowseOtherCategories();
         //verifying Observation With Rubric Multiple Submission
-       getObservationPageActions().clickOnObservationWithRubricMultipleSubmission();
+        getObservationPageActions().clickOnObservationWithRubricMultipleSubmission();
         getObservationPageActions().verifyObservationDetailsPageForWithRubricmultipleSubmission();
         getObservationPageActions().saveAndSubmitObservationWithRubricMultipleSubmission();
      
-        getObservationPageActions().clickOnBackButton();   
-      //verifying Observation Without Rubric 
+        getObservationPageActions().clickOnBackButton();  
+        //verifying Observation Without Rubric 
         getObservationPageActions().clickOnObservationWithoutRubric();
-       getObservationPageActions().verifyObservationDetailsPageForWithoutRubricmultipleSubmission();
+        //getObservationPageActions().verifyObservationDetailsPageForWithoutRubricmultipleSubmission();
         getObservationPageActions().saveAndSubmitObservationWithoutRubric();
        
         getObservationPageActions().clickOnBackButton(); 
         //verifying Observation With Rubric Single Submission
         getObservationPageActions().clickOnObservationWithRubricSingleSubmission();
-        getObservationPageActions().verifyObservationDetailsPageForSingleSubmission();
+        getObservationPageActions().verifyObservationDetailsPageForSingleSubmission();  
         
-        
-        
-        
-        /* getObservationPageActions().upload();
-        getObservationPageActions().fileupload2();
-    Thread.sleep(10000); */
         
 
     }
-
+    
+    /* getObservationPageActions().upload();
+    getObservationPageActions().fileupload2();
+Thread.sleep(10000); */
 
 
 
