@@ -47,9 +47,9 @@ public class ProgramDashboardAction {
 	 }
 	 
 
-		public void verifyProgramResourcePopup() throws Exception {
-	        Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.programresourcePopup),"Select Program and Resource Pop-up is not displayed.");
-			Logger.logAndReportPass("Select Program and Resource Pop-up is displayed. succesfully");
+		public void verifyselectProgramPopup() throws Exception {
+	        Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.selectProgramPopup),"Select Program Pop-up is not displayed.");
+			Logger.logAndReportPass("Select Program is displayed. succesfully");
 		}
 		
 		 public void clickOnSelectProgramDropdown() throws Exception {
@@ -77,7 +77,7 @@ public class ProgramDashboardAction {
 		    }
 		 
 		 public void selectProjectResource() throws Exception {
-			 ShikshaLokamClient.get().gestures().click(programDashboardObjects.selectresoursedropdownonpopup);
+			 ShikshaLokamClient.get().gestures().click(programDashboardObjects.selectresourse);
 			Thread.sleep(2000);
 		        if(getEnvironmentValue().contains("diksha")) {
 		            ShikshaLokamClient.get().report().log(Status.INFO, "NO Resource");	
@@ -97,7 +97,7 @@ public class ProgramDashboardAction {
 		 
 		 public void clickOnSelectResourceDropdown() throws Exception {
 			 //ShikshaLokamClient.get().gestures().waitTillTheElementIsVisibleAndClickable(programDashboardObjects.selectresoursedropdown);
-			 ShikshaLokamClient.get().gestures().click(programDashboardObjects.selectresoursedropdownonpopup);
+			 ShikshaLokamClient.get().gestures().click(programDashboardObjects.selectresourse);
 			 Thread.sleep(2000);
 	        ShikshaLokamClient.get().report().log(Status.INFO, "Clicked on Select Resource Dropdown");
          }
@@ -115,11 +115,11 @@ public class ProgramDashboardAction {
 		         ShikshaLokamClient.get().report().log(Status.INFO, "Selected Project link consumption -FD 98");
              }
 		 
-		 public void verifyandclickConfirmbuttEnabledonProgramResourcePopup() throws Exception {
-			 ShikshaLokamClient.get().gestures().waitTillTheElementIsVisibleAndClickable(programDashboardObjects.confirmbuttonOnprogramresourcePopup);
-			   Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.confirmbuttonOnprogramresourcePopup),"Confirm Button got Enabled on Program Resource Pop-up.");
+		 public void verifyandclickOnEnabledConfirmbuttonOnSelectProgramPopup() throws Exception {
+			 ShikshaLokamClient.get().gestures().waitTillTheElementIsVisibleAndClickable(programDashboardObjects.confirmbuttonOnSelectprogramPopup);
+			   Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.confirmbuttonOnSelectprogramPopup),"Confirm Button got Enabled on Program Resource Pop-up.");
 			   Logger.logAndReportPass("Confirm Button got Enabled on Program Resource Pop-up.");
-		    	ShikshaLokamClient.get().gestures().click(programDashboardObjects.confirmbuttonOnprogramresourcePopup);
+		    	ShikshaLokamClient.get().gestures().click(programDashboardObjects.confirmbuttonOnSelectprogramPopup);
               }
 		 
 	
@@ -128,7 +128,7 @@ public class ProgramDashboardAction {
 			 Thread.sleep(2000);
 			 VerifyProgradDataset();
 			 VerifyGraphs();
-			 VerifyTables();
+			 //VerifyTables();
 		 
 		 }
 

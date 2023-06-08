@@ -75,22 +75,19 @@ public class ProgramDashboardTest {
         //Thread.sleep(2000);
         getLoginPageActions().clickOnLoginButton();
         Thread.sleep(3000);
-        getProgramDashboardActions().clickOnProfileIcon();
-   
+        getLoginPageActions().clickOnGuest();
+
         getProgramDashboardActions().clickOnprogramdashboard();
-        getProgramDashboardActions().verifyProgramResourcePopup();
+        getProgramDashboardActions().verifyselectProgramPopup();
         getProgramDashboardActions().selectProgram();
         Thread.sleep(2000);
-        getProgramDashboardActions().selectProjectResource();
-       // Thread.sleep(5000);
-       /* getProgramDashboardActions().clickOnSelectProgramDropdown();
-        getProgramDashboardActions().scrollandclickOnTesting4point4staging();
-        getProgramDashboardActions().clickOnSelectResourceDropdown();
-       // Thread.sleep(2000);
-        getProgramDashboardActions().scrollandclickOnprojectlinkconsumptionfd98staging();   */
+      //  getProgramDashboardActions().selectProjectResource();
+      
        
-        getProgramDashboardActions().verifyandclickConfirmbuttEnabledonProgramResourcePopup();
+        getProgramDashboardActions().verifyandclickOnEnabledConfirmbuttonOnSelectProgramPopup();
         getProgramDashboardActions().verifyTabsOnProgramdashboardPage();
+        getProgramDashboardActions().selectProjectResource();
+        
         getProgramDashboardActions().selectDistrictandOrgPD();
         //getProgramDashboardActions().selectdate();
        getProgramDashboardActions().verifyProjectReports();  

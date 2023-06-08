@@ -145,9 +145,9 @@ public class LoginPageObjects {
 
    // New xpaths
     //@FindBy(xpath="//a[@class='profile-avtar p-0'][1]")
-    @FindBy(xpath="(//div[contains(@class,'avatar') and text()=' G '])[2]")
+    @FindBy(xpath="/html[1]/body[1]/app-root[1]/div[1]/div[1]/app-header[1]/div[1]/div[1]/div[1]/header[1]/div[1]/div[3]/div[1]/a[2]/div[1]/sb-avatar[1]/div[1]/div[1]/div[1]/span[1]")
     public WebElement guestIcon;
-    
+ //   (//div[contains(@class,'avatar') and text()=' G '])[2]")
     @FindBy(xpath="//h1[contains(text(),'Welcome to')]")
     public WebElement welcomeTitle;
     

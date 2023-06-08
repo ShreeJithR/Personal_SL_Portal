@@ -69,7 +69,16 @@ public class ReportPageAction {
             Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(reportPageObjects.myReportsTitle),"My reports title is not displayed.");
     		Logger.logAndReportPass("My reports title is displayed succesfully. ");
     	}
-    
+    	
+    	 public void verifyMyReportInTableFormat() throws Exception {
+ 	        Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(reportPageObjects.serialNoCloumn),"Serial.No Column is not displayed.");
+ 			Logger.logAndReportInfo("Serial.No Column is displayed.");
+ 			Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(reportPageObjects.titleCloumn),"Tile Column is not displayed.");
+ 			Logger.logAndReportInfo("Title Column is displayed.");
+ 			Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(reportPageObjects.latestSubmissionCloumn),"Latest Submission Column is not displayed.");
+ 			Logger.logAndReportInfo("Latest Submission Column is displayed.");
+ 			
+ 		}
     	public void verifyEntityFilterOption() throws Exception {
             Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(reportPageObjects.entityFilterForReport),"Entity Filter for report is not displayed.");
     		Logger.logAndReportPass("Entity Filter for report is displayed succesfully.");

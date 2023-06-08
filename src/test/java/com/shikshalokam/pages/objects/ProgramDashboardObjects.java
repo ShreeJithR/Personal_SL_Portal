@@ -13,8 +13,8 @@ public class ProgramDashboardObjects {
      @FindBy(xpath="//li[.=' Program dashboard ']")
         public  WebElement programdashboard;
        
-     @FindBy(xpath="//div[.=' Note: Please select program and resource name.']")
-     public  WebElement programresourcePopup;
+     @FindBy(xpath="//div[.=' Note: Please select a program.']")
+     public  WebElement selectProgramPopup;
 
      @FindBy(xpath="(//span[.='Select program'])[2]")
      public  WebElement selectprogramdropdownonpopup;
@@ -27,8 +27,8 @@ public class ProgramDashboardObjects {
      public  WebElement programTestingProgram4point4;
    //span[normalize-space()='Testing Program 4.4']
  
-     @FindBy(xpath="(//span[.='Select resource'])[2]")
-     public  WebElement selectresoursedropdownonpopup;
+     @FindBy(xpath="(//span[.='Select resource'])[1]")
+     public  WebElement selectresourse;
      
      @FindBy(xpath="(//div[@class='mat-select-arrow-wrapper'])[3]")
      public  WebElement selectresoursedropdown;
@@ -36,7 +36,7 @@ public class ProgramDashboardObjects {
     // (//div[@class='mat-select-arrow-wrapper'])[3]
      
      @FindBy(xpath="//button[normalize-space()='Confirm']")
-     public  WebElement confirmbuttonOnprogramresourcePopup;
+     public  WebElement confirmbuttonOnSelectprogramPopup;
      
      @FindBy(xpath="//span[normalize-space()='Project link consumption -FD 98']")
      public  WebElement projectlinkconsumptionfd98;
@@ -208,43 +208,9 @@ public class ProgramDashboardObjects {
      @FindBy(xpath="//span[normalize-space()='Survey Test Expiry -29/12/2021 -- FD 196']")
      public  WebElement surveypreprod;
      
-     
-   //span[normalize-space()='Survey Test Expiry -29/12/2021 -- FD 196']
-    // (//span[normalize-space()='Survey FD-443 expiry - 24/06/2022'])[3]
-   //span[contains(text(),' Obs without rubric - FD 137 ')]
-   //span[contains(text(),' Observation without rubric targeted – FD 98 ')]
-     
-   //span[@class='mat-option-text'][normalize-space()='Question Report']
-   //span[@class='mat-option-text'][normalize-space()='Domain Criteria Report']
-     
-     
-   //span[contains(text(),' Obs with rubric - FD 137 ')]
-   //span[contains(text(),'Observation with Rubrics – FD 98')]
-   //label[normalize-space()='Minimum no. of project evidence']
-   //div[@id='mat-select-value-3']
-   //label[normalize-space()='Minimum no. of tasks in the project']
-   //label[normalize-space()='Minimum no. of task evidence']
-   //label[normalize-space()='Minimum no. of project evidence']
-
-   //span[normalize-space()='Started']
-   //span[normalize-space()='Submitted']
-   //span[normalize-space()='Inprogress']
- 
-   //span[@class='mat-select-placeholder mat-select-min-line ng-tns-c47-67 ng-star-inserted']
-     //(//div[normalize-space()='Are you sure you want to request this report?'])[2]
-     //button[normalize-space()='Yes']
-     //(//input[@data-placeholder='dd/mm/yyyy'])[1]
-   //div[.=' 15 ']
-   //button[@class='mat-calendar-previous-button mat-focus-indicator mat-icon-button mat-button-base']
-    //(//button[@aria-label='Open calendar'])[1]
-   //input[@placeholder='Enter a password to request Report']
-     
-   //div[normalize-space()='Are you sure you want to request this report?']
-   //button[.=' Request report ']  
-}//span[@class='mat-select-placeholder mat-select-min-line ng-tns-c47-3 ng-star-inserted']
-//span[@class='mat-option-text'][normalize-space()='Task Report']
-//span[@class='mat-option-text'][normalize-space()='Status Report']
-//span[@class='mat-option-text'][normalize-space()='Filtered task detail report']
+    
+  
+}
 		
 		
 		

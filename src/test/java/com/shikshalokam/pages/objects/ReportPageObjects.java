@@ -56,6 +56,14 @@ public class ReportPageObjects {
 	@FindBy(xpath = "//mat-select[@aria-label='Select Submission']")
 	public WebElement selectSubmissionDropdown;
 	
-	//mat-select[@aria-label='Select Submission']
+	 @FindBy(xpath="//th[@aria-label='Serial No: activate to sort column descending']")
+     public  WebElement serialNoCloumn;  
+	 
+	 @FindBy(xpath="//th[@aria-label='Title: activate to sort column ascending']")
+     public  WebElement titleCloumn;
+	 
+	 @FindBy(xpath="//th[@aria-label='Latest Submission: activate to sort column ascending']")
+     public  WebElement latestSubmissionCloumn;
+	//th[@aria-label='Title: activate to sort column ascending']
 	
 }

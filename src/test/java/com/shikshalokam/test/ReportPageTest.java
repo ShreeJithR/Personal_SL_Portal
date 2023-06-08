@@ -95,10 +95,7 @@ public class ReportPageTest {
     public void visitMyReportsAndVerifyFeatures() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!A:B");
         appUrl = PropUtlis.readConfig("webAppConfig", "appUrl");
-        if(appUrl.contentEquals("https://preprod.ntp.net.in/"))
-        {
-        	getLoginPageActions().clickOnExploreDiksha();
-        }
+        switchEnvironment();
         getLoginPageActions().BMCLSelection();
         getLoginPageActions().clickOnGuest();
         getLoginPageActions().clickOnLogin();
@@ -110,6 +107,7 @@ public class ReportPageTest {
         getReportPageActions().clickOnMyReportsTab();
         getReportPageActions().verifyMyReportsTitle();
         getReportPageActions().verifyEntityFilterOption();
+        getReportPageActions().verifyMyReportInTableFormat();
         getReportPageActions().clickOn1stReport();
         getReportPageActions().verifyQuestionTabInReport();
         getReportPageActions().verifyCriteriaTabInReport();
