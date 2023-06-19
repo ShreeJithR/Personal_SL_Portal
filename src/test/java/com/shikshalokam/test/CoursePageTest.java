@@ -86,7 +86,8 @@ public class CoursePageTest {
 	        getLoginPageActions().enterPassword(loginTestData.get("contentCreatorPwd"));
 	        //Thread.sleep(2000);
 	        getLoginPageActions().clickOnLoginButton();
-	        getProgramDashboardActions().clickOnProfileIcon();
+	        getLoginPageActions().clickOnGuest();
+	        //getProgramDashboardActions().clickOnProfileIcon();
 	     	getCoursePageActions().clickOnWorkspace();
 	     	getCoursePageActions().clickCreateCourse();
 	     	Thread.sleep(5000);
@@ -109,7 +110,9 @@ public class CoursePageTest {
 		    getLoginPageActions().enterUserName(loginTestData.get("contentReviewerUser"));
 	        getLoginPageActions().enterPassword(loginTestData.get("contentReviewerPwd"));
 	        getLoginPageActions().clickOnLoginButton();
-	        getProgramDashboardActions().clickOnProfileIcon();
+	        getLoginPageActions().clickOnGuest();
+
+	        //getProgramDashboardActions().clickOnProfileIcon();
 	     	getCoursePageActions().clickOnWorkspace();
 	     	getCoursePageActions().clickOnUpforReview();
 	     	getCoursePageActions().searchUpforReviewCourse(courseTestData.get("courseTitle"));

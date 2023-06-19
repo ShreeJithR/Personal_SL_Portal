@@ -61,7 +61,8 @@ public class AdminDashboardTest {
 	    	        //Thread.sleep(2000);
 	    	        getLoginPageActions().clickOnLoginButton();
 	    	        Thread.sleep(3000);
-	    	        getProgramDashboardActions().clickOnProfileIcon();
+	    	        getLoginPageActions().clickOnGuest();
+	    	        //getProgramDashboardActions().clickOnProfileIcon();
 	    	   
 	    	        getAdminDashboardActions().clickOnadmindashboard();
 	    	       getAdminDashboardActions().verifyReportsandDatasetsTab();

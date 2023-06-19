@@ -9,12 +9,13 @@ import org.testng.asserts.SoftAssert;
 import com.aventstack.extentreports.Status;
 import com.shikshalokam.client.ShikshaLokamClient;
 import com.shikshalokam.pages.objects.CoursePageObjects;
+import com.shikshalokam.pages.objects.LoginPageObjects;
 import com.shikshalokam.utils.logger.Logger;
 import com.shikshalokam.utils.prop.PropUtlis;
 
 public class CoursePageAction {
 	CoursePageObjects coursepageObjects;
-	
+	  LoginPageObjects loginPageObjects;
 	 public CoursePageAction() throws Exception {
 		 coursepageObjects = PageFactory.initElements(ShikshaLokamClient.get().driver(), CoursePageObjects.class);
 	    }
@@ -197,8 +198,8 @@ public class CoursePageAction {
 
 		}
 	    public void clickOnProfileiconAndLogout() throws Exception {
-	    	ShikshaLokamClient.get().gestures().waitTillTheElementIsVisibleAndClickable(coursepageObjects.profileicon); 
-	    	ShikshaLokamClient.get().gestures().click(coursepageObjects.profileicon);
+	    	ShikshaLokamClient.get().gestures().waitTillTheElementIsVisibleAndClickable(coursepageObjects.guestIcon); 
+	    	ShikshaLokamClient.get().gestures().click(coursepageObjects.guestIcon);
 	    	Logger.logAndReportInfo("Clicked on Profile Icon ");
 	    	Thread.sleep(2000);
 	    	ShikshaLokamClient.get().gestures().click(coursepageObjects.logout);

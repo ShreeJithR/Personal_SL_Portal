@@ -131,6 +131,9 @@ public class CoursePageObjects {
 	
 	@FindBy(xpath = "//button[normalize-space()='No']")
 	public WebElement noButtonOnCollectionPopUp;
+	
+	@FindBy(xpath="/html[1]/body[1]/app-root[1]/div[1]/div[1]/app-header[1]/div[1]/div[1]/div[1]/header[1]/div[1]/div[3]/div[1]/a[2]/div[1]/sb-avatar[1]/div[1]/div[1]/div[1]/span[1]")
+    public WebElement guestIcon;
 	//button[normalize-space()='No']
 	
 	//span[normalize-space()='Are you sure you want to publish this Collection?']

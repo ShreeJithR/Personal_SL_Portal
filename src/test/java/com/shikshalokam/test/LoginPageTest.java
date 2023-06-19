@@ -7,6 +7,7 @@ import org.testng.AssertJUnit;
 
 import com.shikshalokam.annotation.Author;
 import com.shikshalokam.pages.actions.LoginPageAction;
+import com.shikshalokam.pages.actions.ObservationPageAction;
 import com.shikshalokam.utils.gSheet.TestData;
 import com.shikshalokam.utils.prop.PropUtlis;
 
@@ -26,6 +27,9 @@ public class LoginPageTest {
     
     public LoginPageAction getLoginPageActions() throws Exception {
         return new LoginPageAction();
+    }
+    public ObservationPageAction getObservationPageActions() throws Exception {
+        return new ObservationPageAction();
     }
     
     public String getEnvironmentValue() throws Exception {
@@ -228,7 +232,9 @@ public class LoginPageTest {
         getLoginPageActions().selectDistrict();
         getLoginPageActions().clickOnSubmitButtonOnLocationWindow();
         getLoginPageActions().verifyHomeButton();
-        getLoginPageActions().clickOnProfileIcon();
+        getLoginPageActions().clickOnGuest();
+
+        //getLoginPageActions().clickOnProfileIcon();
         getLoginPageActions().verifyNameOnProfile();
         Assert.assertTrue(true,"User name is not present on profile");
         //getLoginPageActions().getUserNameFromProfile();
@@ -354,4 +360,18 @@ public class LoginPageTest {
         getLoginPageActions().verifyYourLocationPopUp();
 }
     
+    @Test(description = "login through observation tab")
+    @Author(name = "Manjunatha K")
+    public void loginFromObservationTab() throws Exception {
+        loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!A:B");
+        switchEnvironment();
+        getLoginPageActions().BMCLSelection();
+        getObservationPageActions().verifyObservationButton();
+        getObservationPageActions().clickOnObservationButton();
+        getLoginPageActions().verifyLoginScreen();
+        getLoginPageActions().enterUserName(loginTestData.get("userName"));
+        getLoginPageActions().enterPassword(loginTestData.get("password"));
+        getLoginPageActions().clickOnLoginButton();
+        getObservationPageActions().verifyObservationListingScreen();
+    } 
 }

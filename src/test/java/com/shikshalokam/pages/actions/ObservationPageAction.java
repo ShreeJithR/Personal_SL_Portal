@@ -591,6 +591,11 @@ public class ObservationPageAction {
             Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.observationTitle),"Observation title is not displayed.");
     		Logger.logAndReportPass("Observation title is displayed succesfully.");
     	}
+    	public void verifyObservationListingScreen() throws Exception {
+    		Thread.sleep(2000);
+            Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.observationTitle),"Not Redirected to Observation listing page");
+    		Logger.logAndReportPass("Redirected to Observation listing page");
+    	}
     
     	public void verifyObservationDetailsTitle() throws Exception {
             Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.observationDetailsTitle),"Observation Details title is not displayed.");

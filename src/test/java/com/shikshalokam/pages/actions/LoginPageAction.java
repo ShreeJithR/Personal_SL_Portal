@@ -3,6 +3,7 @@ package com.shikshalokam.pages.actions;
 import com.aventstack.extentreports.Status;
 import com.shikshalokam.client.ShikshaLokamClient;
 import com.shikshalokam.pages.objects.LoginPageObjects;
+import com.shikshalokam.pages.objects.ObservationPageObjects;
 import com.shikshalokam.report.ShikshaLokamReport;
 import com.shikshalokam.test.LoginPageTest;
 import com.shikshalokam.utils.gestures.Gestures;
@@ -21,7 +22,7 @@ public class LoginPageAction {
 
 
     LoginPageObjects loginPageObjects;
-
+    ObservationPageObjects observationPageObjects = new ObservationPageObjects();
     public LoginPageAction() throws Exception {
         loginPageObjects = PageFactory.initElements(ShikshaLokamClient.get().driver(), LoginPageObjects.class);
     }
@@ -535,5 +536,10 @@ public class LoginPageAction {
 			  Thread.sleep(8000);
 		    	
 		    }
+	    public void verifyLoginScreen() throws Exception {
+        	 Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(loginPageObjects.loginScreen),"Did not Redirect to Login screen");  
+	    	Logger.logAndReportPass("Redirected to Login screen");
+	    }
+	    
 	    
 }

@@ -30,6 +30,9 @@ public class LoginPageObjects {
 
     @FindBy(xpath = "//li[contains(.,'Profile')]")
     public WebElement profile;
+   
+    @FindBy(xpath = "//p[@class='subtitle']")
+    public WebElement loginScreen;
 
     @FindBy(xpath = "//input[@id='username']")
     public WebElement userName;
