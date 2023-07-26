@@ -8,6 +8,7 @@
 	</listeners>
 	<test thread-count="5" name="Test" preserve-order="true"> 
     <classes>
+	<!-- Sanity Suite:rowno 12-19 -->
       <class name="com.shikshalokam.utils.gSheet.TestData"/>
        <class name="com.shikshalokam.test.ObservationPageTest"/> 
       <class name="com.shikshalokam.test.ProgramDashboardTest"/>
@@ -16,6 +17,7 @@
     <!--  <class name="com.shikshalokam.test.observationTestcaseStaging.ObservationPageTest"/>    -->
       <class name="com.shikshalokam.test.AdminDashboardTest"/>
       <class name="com.shikshalokam.test.CoursePageTest"/>
+      <!-- Regression Suite:rowno 12-19 -->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

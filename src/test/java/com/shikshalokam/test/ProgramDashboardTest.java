@@ -45,7 +45,7 @@ public class ProgramDashboardTest {
         }}
     
     @Test(description = "login as Program manager and verify types of reports")
-    @Author(name = "SHREEJITH R")
+    @Author(name = "SHREEJITH")
     public void programDashboardPM() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!D:E");
        // observationPageTestData = TestData.getFullGoogleSheetDataAsMapString("Observation!A:B");

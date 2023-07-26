@@ -885,6 +885,8 @@ public class ObservationPageAction {
     	    	    observationPageObjects.fileUpload1.sendKeys(filepath+"//Fileupload_files//Shikshalokam.jpg");
     	            ShikshaLokamClient.get().gestures().click(observationPageObjects.okOnevidenceUplodedPopup);
     		}
+               ////////
+            
 }
 
 

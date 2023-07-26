@@ -227,7 +227,7 @@ public class ObservationPageTest {
              
 }
     
-    @Test(description = "To verify school enitity is not added by deafault")
+    @Test(description = "To verify Credits and License Dropdown")
     @Author(name = "SHREEJITH")
     public void verifyCreditsAndLicenseDropdown() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!F:G");

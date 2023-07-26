@@ -85,7 +85,8 @@ public class ReportPageAction {
     	}
     	
     	public void verifyQuestionTabInReport() throws Exception {
-            Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(reportPageObjects.questionTabFromReport),"Question Tab inside the report is not displayed.");
+    		Thread.sleep(10000);
+            Assert.assertTrue(ShikshaLokamClient.get().gestures().click(reportPageObjects.questionTabFromReport),"Question Tab inside the report is not displayed.");
     		Logger.logAndReportPass("Question Tab inside the report is displayed succesfully.");
     	}
     	

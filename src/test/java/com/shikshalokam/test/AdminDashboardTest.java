@@ -40,7 +40,7 @@ public class AdminDashboardTest {
 
 	    	
 	    	  @Test(description = "login as Admin ")
-	    	    @Author(name = "SHREEJITH R")
+	    	    @Author(name = "SHREEJITH")
 	    	    public void adminDashboard() throws Exception {
 	    	        loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!H:I");
 	    	       // observationPageTestData = TestData.getFullGoogleSheetDataAsMapString("Observation!A:B");

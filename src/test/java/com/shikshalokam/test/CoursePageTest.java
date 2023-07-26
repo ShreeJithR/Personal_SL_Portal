@@ -47,7 +47,7 @@ public class CoursePageTest {
 	    
 
   	  @Test(description = "Join Course")
-  	    @Author(name = "SHREEJITH R")
+  	    @Author(name = "SHREEJITH")
   	    public void joinCourse() throws Exception {
   	        loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!J:K");
   	    
@@ -71,7 +71,7 @@ public class CoursePageTest {
 }
   	 
   	@Test(description = "Create and Publish Course")
-	    @Author(name = "SHREEJITH R")
+	    @Author(name = "SHREEJITH")
 	    public void createCourseandPublish() throws Exception {
 	        loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!J:K");
 	        courseTestData = TestData.getFullGoogleSheetDataAsMapString("CourseTestData!A:B");

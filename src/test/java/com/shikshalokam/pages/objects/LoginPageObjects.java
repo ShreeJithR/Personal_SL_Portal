@@ -128,7 +128,7 @@ public class LoginPageObjects {
     @FindBy(xpath = "//div[@tabindex='0']//span[text()='AGRA']")
     public WebElement  agraDistrict;
     
-    @FindBy(xpath = "//div[@tabindex='0']//span[text()='Anantapur']")
+    @FindBy(xpath = "//div[@tabindex='0']//span[text()='Ananthapuram']")
     public WebElement ananthpurDistrict;
     
     @FindBy(xpath = "//div[@tabindex='0']//span[text()='Alappuzha']")
@@ -330,6 +330,9 @@ public class LoginPageObjects {
     @FindBy(xpath = "//span[.='AGALI']")
     public WebElement AgaliBlock;
     
+    
+    //////////////
+  
     
   
  

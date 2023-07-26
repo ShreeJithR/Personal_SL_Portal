@@ -373,5 +373,7 @@ public class LoginPageTest {
         getLoginPageActions().enterPassword(loginTestData.get("password"));
         getLoginPageActions().clickOnLoginButton();
         getObservationPageActions().verifyObservationListingScreen();
-    } 
+    }
+    //////////////
+  
 }
