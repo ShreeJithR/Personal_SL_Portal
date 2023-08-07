@@ -89,9 +89,9 @@ public class AdminDashboardAction {
 		 	        Logger.logAndReportInfo("Clicked on Improvement Project Report"); 
 		        } else {
 		        	
-		        	 ShikshaLokamClient.get().gestures().sendValueToTextBox(adminDashboardObjects.globalSearchFilter,"test improve report");
+		        	 ShikshaLokamClient.get().gestures().sendValueToTextBox(adminDashboardObjects.globalSearchFilter,"Unique User Improvement Project Report");
 		        	 //System.out.println(Clock.SYSTEM);
-		 	        Logger.logAndReportInfo("Searched for test improve report ");
+		 	        Logger.logAndReportInfo("Searched for Unique User Improvement Project Report ");
 		 	        Thread.sleep(2000);
 		 	        ShikshaLokamClient.get().gestures().click(adminDashboardObjects.impProjectReportStaging);
 		 	       //System.out.println(Clock.SYSTEM);
@@ -134,12 +134,12 @@ public class AdminDashboardAction {
 			 	        ShikshaLokamClient.get().gestures().click(adminDashboardObjects.surveyReport);
 			 	        Logger.logAndReportInfo("Clicked on Unique User Survey Report"); 
 			        } else {
-                        ShikshaLokamClient.get().gestures().sendValueToTextBox(adminDashboardObjects.globalSearchFilter,"Unique User Survey Report");
+                        ShikshaLokamClient.get().gestures().sendValueToTextBox(adminDashboardObjects.globalSearchFilter,"Survey consumption Report");
 			 	    	
-			 	        Logger.logAndReportInfo("Searched for Unique User Survey Report");
+			 	        Logger.logAndReportInfo("Searched for Survey consumption Report");
 			 	        //Thread.sleep(2000);
 			 	        ShikshaLokamClient.get().gestures().click(adminDashboardObjects.surveyReport);
-			 	        Logger.logAndReportInfo("Clicked on Unique User Survey Report"); 
+			 	        Logger.logAndReportInfo("Clicked on Survey consumption Report"); 
 			        }
 		    }
 	        
@@ -198,12 +198,12 @@ public class AdminDashboardAction {
      ShikshaLokamClient.get().gestures().click(adminDashboardObjects.filterCheckBox2);
      ShikshaLokamClient.get().report().log(Status.INFO, "Selected multiple filters");
      //Thread.sleep(2000);
-     ShikshaLokamClient.get().gestures().click(adminDashboardObjects.selectOrganisationFilter);
+/*     ShikshaLokamClient.get().gestures().click(adminDashboardObjects.selectOrganisationFilter);
      ShikshaLokamClient.get().report().log(Status.INFO, "Clicked on Select Organisation Filter"); 
      //Thread.sleep(2000);
      ShikshaLokamClient.get().gestures().click(adminDashboardObjects.filterCheckBox1);
     // ShikshaLokamClient.get().gestures().click(adminDashboardObjects.filterCheckBox2);
-     ShikshaLokamClient.get().report().log(Status.INFO,  "Selected multiple filters");
+     ShikshaLokamClient.get().report().log(Status.INFO,  "Selected multiple filters");   */
      
 	    }
 	    

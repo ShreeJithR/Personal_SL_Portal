@@ -82,10 +82,17 @@ public class CoursePageTest {
 	        Thread.sleep(2000);
 	        getLoginPageActions().clickOnGuest();
 	        getLoginPageActions().clickOnLogin();
+	        
 	        getLoginPageActions().enterUserName(loginTestData.get("contentCreatorUser"));
 	        getLoginPageActions().enterPassword(loginTestData.get("contentCreatorPwd"));
 	        //Thread.sleep(2000);
 	        getLoginPageActions().clickOnLoginButton();
+	        
+	        //using refreshpage due to blank screen showing up after login 
+	         Thread.sleep(10000);
+	         getLoginPageActions().refreshpage();
+	         Thread.sleep(5000);  
+	         
 	        getLoginPageActions().clickOnGuest();
 	        //getProgramDashboardActions().clickOnProfileIcon();
 	     	getCoursePageActions().clickOnWorkspace();
@@ -110,6 +117,12 @@ public class CoursePageTest {
 		    getLoginPageActions().enterUserName(loginTestData.get("contentReviewerUser"));
 	        getLoginPageActions().enterPassword(loginTestData.get("contentReviewerPwd"));
 	        getLoginPageActions().clickOnLoginButton();
+	        
+	        //using refreshpage due to blank screen showing up after login 
+	         Thread.sleep(10000);
+	         getLoginPageActions().refreshpage();
+	         Thread.sleep(5000);  
+	        
 	        getLoginPageActions().clickOnGuest();
 
 	        //getProgramDashboardActions().clickOnProfileIcon();

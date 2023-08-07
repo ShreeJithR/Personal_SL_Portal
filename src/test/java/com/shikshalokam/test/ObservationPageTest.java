@@ -131,6 +131,13 @@ public class ObservationPageTest {
         getLoginPageActions().enterUserName(loginTestData.get("userName"));
         getLoginPageActions().enterPassword(loginTestData.get("password"));
         getLoginPageActions().clickOnLoginButton();
+        
+        //using refreshpage due to blank screen showing up after login 
+        /* Thread.sleep(10000);
+         getLoginPageActions().refreshpage();
+         Thread.sleep(5000);  */
+        
+        
         getObservationPageActions().verifyObservationButton();
         getObservationPageActions().clickOnObservationButton();
         Thread.sleep(5000);
@@ -243,6 +250,12 @@ public class ObservationPageTest {
         getLoginPageActions().clickOnLoginButton();
         Thread.sleep(2000);
         
+        //using refreshpage due to blank screen showing up after login 
+        /* Thread.sleep(10000);
+         getLoginPageActions().refreshpage();
+         Thread.sleep(5000);  */
+        
+        
         getObservationPageActions().verifyObservationButton();
         getObservationPageActions().clickOnObservationButton();
         
@@ -267,8 +280,14 @@ public class ObservationPageTest {
         getLoginPageActions().enterUserName(loginTestData.get("TeacheruserName"));
         getLoginPageActions().enterPassword(loginTestData.get("Teacherpassword"));
         getLoginPageActions().clickOnLoginButton();
-        switchEnvironmentforHomeButton();
         
+        //using refreshpage due to blank screen showing up after login 
+        /* Thread.sleep(10000);
+         getLoginPageActions().refreshpage();
+         Thread.sleep(5000);  */
+        
+        
+        switchEnvironmentforHomeButton();
         getObservationPageActions().verifyBrowseOtherCategories();
         getObservationPageActions().verifyObservationTileunderBrowseOtherCategories();
         getObservationPageActions().clickOnObservationTileunderBrowseOtherCategories();

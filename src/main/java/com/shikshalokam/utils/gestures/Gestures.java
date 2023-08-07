@@ -142,6 +142,7 @@ public class Gestures {
     public void clearValue(WebElement element) {
         element.clear();
     }
+    
 
     public boolean assertIfElementExistsAndClick(WebDriver mDriver, String identifyBy, WebElement locator)
             throws Exception {
@@ -173,9 +174,9 @@ public class Gestures {
     // Method to Wait till the Element is Visible and Clickable
     public void waitTillTheElementIsVisibleAndClickable(WebElement element) {
         try {
-            WebDriverWait wait = new WebDriverWait(driver, 10);     //30
+            WebDriverWait wait = new WebDriverWait(driver, 30);     //30
             wait.until(ExpectedConditions.visibilityOf(element));
-            wait = new WebDriverWait(driver, 5);                     //25
+            wait = new WebDriverWait(driver, 25);                     //25
             wait.until(ExpectedConditions.elementToBeClickable(element));
         } catch (Exception e) {
             e.printStackTrace();

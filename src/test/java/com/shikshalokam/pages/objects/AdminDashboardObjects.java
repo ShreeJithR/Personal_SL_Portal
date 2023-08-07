@@ -18,7 +18,7 @@ public class AdminDashboardObjects {
      public  WebElement globalSearchFilter;
 
 	 
-	 @FindBy(xpath="/html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-list-all-reports[1]/div[2]/div[1]/div[1]/div[1]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[2]/td[2]/button[1]/i[1]")
+	 @FindBy(xpath="/html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-list-all-reports[1]/div[2]/div[1]/div[1]/div[1]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[2]/button[1]/i[1]")
      public  WebElement impProjectReportStaging;
 	 
 	 @FindBy(xpath="//tbody//i[1]")

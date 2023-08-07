@@ -102,6 +102,12 @@ public class ReportPageTest {
         getLoginPageActions().enterUserName(loginTestData.get("userName"));
         getLoginPageActions().enterPassword(loginTestData.get("password"));
         getLoginPageActions().clickOnLoginButton();
+         
+        //using refreshpage due to blank screen showing up after login 
+        /* Thread.sleep(10000);
+         getLoginPageActions().refreshpage();
+         Thread.sleep(5000);  */
+       
         getObservationPageActions().clickOnObservationButton();
         getLoginPageActions().clickOnProfileIcon1();
         getReportPageActions().clickOnMyReportsTab();
@@ -129,6 +135,12 @@ public class ReportPageTest {
         getLoginPageActions().enterUserName(loginTestData.get("TeacheruserName"));
         getLoginPageActions().enterPassword(loginTestData.get("Teacherpassword"));
         getLoginPageActions().clickOnLoginButton();
+        
+       //using refreshpage due to blank screen showing up after login 
+       /* Thread.sleep(10000);
+        getLoginPageActions().refreshpage();
+        Thread.sleep(5000);  */
+       
       
         getLoginPageActions().clickOnProfileIcon1();
         getReportPageActions().clickOnMyReportsTab();

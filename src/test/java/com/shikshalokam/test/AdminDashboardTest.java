@@ -43,14 +43,7 @@ public class AdminDashboardTest {
 	    	    @Author(name = "SHREEJITH")
 	    	    public void adminDashboard() throws Exception {
 	    	        loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!H:I");
-	    	       // observationPageTestData = TestData.getFullGoogleSheetDataAsMapString("Observation!A:B");
-	    	        //getLoginPageActions().clickOnExploreDiksha();
-	    	     /*   appUrl = PropUtlis.readConfig("webAppConfig", "appUrl");
-	    	        if(appUrl.contentEquals("https://preprod.ntp.net.in/"))
-	    	        {
-	    	        	getLoginPageActions().clickOnExploreDiksha();
-	    	        }  */
-	    	        
+	    	
 	    	        switchEnvironment();
 	    	        getLoginPageActions().BMCLSelection();
 	    	        Thread.sleep(2000);
@@ -61,6 +54,12 @@ public class AdminDashboardTest {
 	    	        //Thread.sleep(2000);
 	    	        getLoginPageActions().clickOnLoginButton();
 	    	        Thread.sleep(3000);
+	    	        
+	    	       /* Thread.sleep(10000);
+	    	        getLoginPageActions().refreshpage();
+	    	        Thread.sleep(5000); */
+	    	       
+	    	        
 	    	        getLoginPageActions().clickOnGuest();
 	    	        //getProgramDashboardActions().clickOnProfileIcon();
 	    	   
@@ -72,6 +71,7 @@ public class AdminDashboardTest {
 	    	        getAdminDashboardActions().verifySelectedReportInTableFormat();
 	    	        getAdminDashboardActions().verifyLocalSearchfilter();
 	    	        getAdminDashboardActions().searchAndSelectParameter();
+	    	        Thread.sleep(10000);
 	    	         getAdminDashboardActions().verifyGraphsTab();
 	    	        getAdminDashboardActions().selectProjectFilters();
 	    	        getAdminDashboardActions().ExportAs();

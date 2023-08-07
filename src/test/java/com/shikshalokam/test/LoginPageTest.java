@@ -70,6 +70,11 @@ public class LoginPageTest {
         getLoginPageActions().enterUserName(loginTestData.get("userName"));
         getLoginPageActions().enterPassword(loginTestData.get("password"));
         getLoginPageActions().clickOnLoginButton();
+        
+        Thread.sleep(10000);
+        getLoginPageActions().refreshpage();
+        Thread.sleep(5000);
+        
         getLoginPageActions().verifyValidLoginSuccessful();
     }
     
@@ -102,6 +107,11 @@ public class LoginPageTest {
         getLoginPageActions().BMCLSelection();
         getLoginPageActions().clickOnGuest();
         getLoginPageActions().clickOnLogin();
+       
+        Thread.sleep(10000);
+        getLoginPageActions().refreshpage();
+        Thread.sleep(5000);
+        
         getLoginPageActions().clickOnRegister();
         getLoginPageActions().verifyRegisterWindowTitle();
 

@@ -45,6 +45,8 @@ public class ProgramDashboardAction {
 			ShikshaLokamClient.get().gestures().click(programDashboardObjects.programdashboard);
      ShikshaLokamClient.get().report().log(Status.INFO, "Clicked on Program Dashboard");
 	 }
+	
+	
 	 
 
 		public void verifyselectProgramPopup() throws Exception {
@@ -252,9 +254,22 @@ public class ProgramDashboardAction {
 		 //***********
 		Thread.sleep(2000);
 		 ShikshaLokamClient.get().gestures().click(programDashboardObjects.nobutton);
-     	 
-  	
   	}
+  	
+  	public void requestStatusreportPD() throws Exception {	
+   	 ShikshaLokamClient.get().gestures().click(programDashboardObjects.statusReport);
+   	 Logger.logAndReportPass("Selected Status Report .");
+   	 Assert.assertTrue(ShikshaLokamClient.get().gestures().isEnabled(programDashboardObjects.requestReport),"Request Report button is not Enabled.");
+   	 Logger.logAndReportPass("Request Report button is Enabled.");
+   	 ShikshaLokamClient.get().gestures().click(programDashboardObjects.requestReport);
+   	 Logger.logAndReportInfo("Clicked on Request Report.");
+   	 Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.requestReportYesNoPopup),"Request Report Yes No Pop-up is not Displayed");
+   	 Logger.logAndReportPass("Request Report Yes No Pop-up is Displayed");
+   	 //***********
+   	 Thread.sleep(2000);
+   	 ShikshaLokamClient.get().gestures().click(programDashboardObjects.nobutton);
+   	 }
+  	
   	
 	public void requestStatusreportYES() throws Exception {	
  		 ShikshaLokamClient.get().gestures().click(programDashboardObjects.selectReportDropdown);
@@ -520,5 +535,16 @@ public class ProgramDashboardAction {
       Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.statusReport),"Status Report type is not Present.");
        Logger.logAndReportInfo("Status Report type is Present .");
        }
+   
+    public void verifyPDReports() throws Exception {
+    	 Thread.sleep(2000);
+    	 ShikshaLokamClient.get().gestures().click(programDashboardObjects.selectReportDropdown);
+    	 Logger.logAndReportInfo("Clicked on Select Report Dropdown");
+    	 Thread.sleep(2000);
+    	 Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.statusReport),"Status Report type is not Present.");
+    	 Logger.logAndReportInfo("Only Status Report type is Present .");
+    	 }
+    
+    	
    	
 }

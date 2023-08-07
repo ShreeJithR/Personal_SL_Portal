@@ -48,25 +48,9 @@ public class ProgramDashboardTest {
     @Author(name = "SHREEJITH")
     public void programDashboardPM() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!D:E");
-       // observationPageTestData = TestData.getFullGoogleSheetDataAsMapString("Observation!A:B");
-        //getLoginPageActions().clickOnExploreDiksha();
-      /*  appUrl = PropUtlis.readConfig("webAppConfig", "appUrl");
-        if(appUrl.contentEquals("https://preprod.ntp.net.in/"))
-        {
-        	getLoginPageActions().clickOnExploreDiksha();
-        }  */
         switchEnvironment();
         getLoginPageActions().BMCLSelection();  
         
-       /* getLoginPageActions().selectRoleHTAndOffical();
-        getLoginPageActions().clickOnContinue();
-        getLoginPageActions().clickOnBoardDropDown();
-        getLoginPageActions().selectcbseOrNcertBoardOption();
-        Thread.sleep(2000);
-        getLoginPageActions().clickOnSubmitButtonOnCourseWindow();
-        Thread.sleep(2000);
-       
-        getLoginPageActions().clickOnSubmitButtonOnLocationWindow();  */
         Thread.sleep(3000);
         getLoginPageActions().clickOnGuest();
         getLoginPageActions().clickOnLogin();
@@ -75,6 +59,12 @@ public class ProgramDashboardTest {
         //Thread.sleep(2000);
         getLoginPageActions().clickOnLoginButton();
         Thread.sleep(3000);
+        
+        //using refreshpage due to blank screen showing up after login 
+        Thread.sleep(10000);
+         getLoginPageActions().refreshpage();
+         Thread.sleep(5000);  
+        
         getLoginPageActions().clickOnGuest();
 
         getProgramDashboardActions().clickOnprogramdashboard();
@@ -114,5 +104,56 @@ public class ProgramDashboardTest {
         //To verify user is able request report by clicking Yes on confirmation popup
         //getProgramDashboardActions().requestStatusreportYES();
       
+    }
+    @Test(description = "login as Program designer and verify types of reports")
+    @Author(name = "GAGAN")
+    public void programDashboardPD() throws Exception {
+    loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!D:E");
+    switchEnvironment();
+    getLoginPageActions().BMCLSelection();
+    Thread.sleep(3000);
+    getLoginPageActions().clickOnGuest();
+    getLoginPageActions().clickOnLogin();
+    getLoginPageActions().enterUserName(loginTestData.get("userNamePD"));
+    getLoginPageActions().enterPassword(loginTestData.get("passwordPD"));
+    //Thread.sleep(2000);
+    getLoginPageActions().clickOnLoginButton();
+    Thread.sleep(3000);
+    
+    //using refreshpage due to blank screen showing up after login 
+    /*Thread.sleep(10000);
+     getLoginPageActions().refreshpage();
+     Thread.sleep(5000);  */
+    
+    getLoginPageActions().clickOnGuest();
+    getProgramDashboardActions().clickOnprogramdashboard();
+    getProgramDashboardActions().verifyselectProgramPopup();
+    getProgramDashboardActions().selectProgram();
+    Thread.sleep(2000);
+    // getProgramDashboardActions().selectProjectResource();
+    getProgramDashboardActions().verifyandclickOnEnabledConfirmbuttonOnSelectProgramPopup();
+    getProgramDashboardActions().verifyTabsOnProgramdashboardPage();
+    getProgramDashboardActions().selectProjectResource();
+    getProgramDashboardActions().selectDistrictandOrgPD();
+    //getProgramDashboardActions().selectdate();
+    getProgramDashboardActions().verifyPDReports();
+    // getProgramDashboardActions().requestTaskreport();
+    getProgramDashboardActions().requestStatusreportPD();
+    //getProgramDashboardActions().requestFilteredTaskDetailreport();
+    getProgramDashboardActions(). selectObswithrubrics();
+    getProgramDashboardActions().verifyPDReports();
+    //getProgramDashboardActions().requestQuestionreport();
+    getProgramDashboardActions().requestStatusreportPD();
+    //getProgramDashboardActions().requestDomainCriteriareport();
+    getProgramDashboardActions().selectObswithoutrubrics();
+    getProgramDashboardActions().verifyPDReports();
+    //getProgramDashboardActions().requestQuestionreport();
+    getProgramDashboardActions().requestStatusreportPD();
+    getProgramDashboardActions().selectSurvey();
+    getProgramDashboardActions().verifyPDReports();
+    //getProgramDashboardActions().requestQuestionreport();
+    getProgramDashboardActions().requestStatusreportPD(); //here we are clicking on No on confirmation Popup
+    //To verify user is able request report by clicking Yes on confirmation popup
+    //getProgramDashboardActions().requestStatusreportYES();
     }
 }

@@ -30,7 +30,7 @@ public class ProgramDashboardObjects {
      @FindBy(xpath="(//span[.='Select resource'])[1]")
      public  WebElement selectresourse;
      
-     @FindBy(xpath="(//div[@class='mat-select-arrow-wrapper'])[3]")
+     @FindBy(xpath="/html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-datasets[1]/div[2]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/form[1]/div[1]/div[1]/div[2]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]/span[1]")
      public  WebElement selectresoursedropdown;
      
     // (//div[@class='mat-select-arrow-wrapper'])[3]
@@ -54,10 +54,10 @@ public class ProgramDashboardObjects {
      @FindBy(xpath="//span[normalize-space()='Tables']")
      public  WebElement Tables;
      
-     @FindBy(xpath="(//div[@class='mat-select-arrow-wrapper'])[4]")
+     @FindBy(xpath="/html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-datasets[1]/div[2]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/form[1]/div[1]/div[1]/div[3]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]")
      public  WebElement districtDropdown;
      
-     @FindBy(xpath="//span[normalize-space()='Anantapur']")
+     @FindBy(xpath="//span[normalize-space()='Ananthapuram']")
      public  WebElement Anantapurdistrict;
      
      @FindBy(xpath="//span[normalize-space()='Chittoor']")
@@ -70,7 +70,7 @@ public class ProgramDashboardObjects {
      public  WebElement Ambedkarnagardistrict;
      
    //span[.=' Agra '] //span[normalize-space()='Agra']   //span[normalize-space()='Ambedkar Nagar']
-     @FindBy(xpath="(//div[@class='mat-select-arrow-wrapper'])[5]")
+     @FindBy(xpath="/html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-datasets[1]/div[2]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/form[1]/div[1]/div[1]/div[5]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]")
      public  WebElement organisationsDropdown;
      
      @FindBy(xpath="//span[normalize-space()='Staging Custodian Organization']")

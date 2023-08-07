@@ -438,6 +438,11 @@ public class LoginPageAction {
     	Logger.logAndReportInfo("Clicked on Home button");
     }
     
+    public void refreshpage() throws Exception {
+		ShikshaLokamClient.get().driver().navigate().refresh();
+ShikshaLokamClient.get().report().log(Status.INFO, "Page refreshed");
+ }
+    
     //************** Verify Actions *************************************//
     public void verifyObservationTile() throws Exception {
         Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(loginPageObjects.observations),"Observation title is not displayed.");
