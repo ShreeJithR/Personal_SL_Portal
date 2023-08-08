@@ -105,6 +105,7 @@ public class ProgramDashboardTest {
         //getProgramDashboardActions().requestStatusreportYES();
       
     }
+    
     @Test(description = "login as Program designer and verify types of reports")
     @Author(name = "GAGAN")
     public void programDashboardPD() throws Exception {
@@ -130,30 +131,24 @@ public class ProgramDashboardTest {
     getProgramDashboardActions().verifyselectProgramPopup();
     getProgramDashboardActions().selectProgram();
     Thread.sleep(2000);
-    // getProgramDashboardActions().selectProjectResource();
+ 
     getProgramDashboardActions().verifyandclickOnEnabledConfirmbuttonOnSelectProgramPopup();
     getProgramDashboardActions().verifyTabsOnProgramdashboardPage();
     getProgramDashboardActions().selectProjectResource();
     getProgramDashboardActions().selectDistrictandOrgPD();
-    //getProgramDashboardActions().selectdate();
     getProgramDashboardActions().verifyPDReports();
-    // getProgramDashboardActions().requestTaskreport();
     getProgramDashboardActions().requestStatusreportPD();
-    //getProgramDashboardActions().requestFilteredTaskDetailreport();
     getProgramDashboardActions(). selectObswithrubrics();
     getProgramDashboardActions().verifyPDReports();
-    //getProgramDashboardActions().requestQuestionreport();
     getProgramDashboardActions().requestStatusreportPD();
-    //getProgramDashboardActions().requestDomainCriteriareport();
     getProgramDashboardActions().selectObswithoutrubrics();
     getProgramDashboardActions().verifyPDReports();
-    //getProgramDashboardActions().requestQuestionreport();
     getProgramDashboardActions().requestStatusreportPD();
     getProgramDashboardActions().selectSurvey();
     getProgramDashboardActions().verifyPDReports();
-    //getProgramDashboardActions().requestQuestionreport();
     getProgramDashboardActions().requestStatusreportPD(); //here we are clicking on No on confirmation Popup
     //To verify user is able request report by clicking Yes on confirmation popup
     //getProgramDashboardActions().requestStatusreportYES();
+    //////
     }
 }
