@@ -45,6 +45,7 @@ public class TestListeners implements ITestListener {
         } catch (Exception e) {
             debugLogger().error("Exception onTestStart: " + e.getMessage());
             e.printStackTrace();
+            
         }
 
     }
