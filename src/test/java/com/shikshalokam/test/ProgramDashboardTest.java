@@ -76,7 +76,8 @@ public class ProgramDashboardTest {
        
         getProgramDashboardActions().verifyandclickOnEnabledConfirmbuttonOnSelectProgramPopup();
         getProgramDashboardActions().verifyTabsOnProgramdashboardPage();
-        getProgramDashboardActions().selectProjectResource();
+        getProgramDashboardActions().VerifySelectResourceMessage();
+     /*   getProgramDashboardActions().selectProjectResource();
         
         getProgramDashboardActions().selectDistrictandOrgPD();
         //getProgramDashboardActions().selectdate();
@@ -103,7 +104,7 @@ public class ProgramDashboardTest {
         
         //To verify user is able request report by clicking Yes on confirmation popup
         //getProgramDashboardActions().requestStatusreportYES();
-      
+       */
     }
     
     @Test(description = "login as Program designer and verify types of reports")

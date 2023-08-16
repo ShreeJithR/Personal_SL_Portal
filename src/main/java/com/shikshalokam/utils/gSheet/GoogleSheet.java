@@ -25,7 +25,7 @@ public class GoogleSheet {
 	public static GoogleSheet sheetAPI = new GoogleSheet();
 
 	/** Application name. */
-	private static final String APPLICATION_NAME = "SikshaLokamTestData";
+	private static final String APPLICATION_NAME = "ShikshaLokamTestData";
 
 	/** Directory to store user credentials for this application. */
 	private static final File DATA_STORE_DIR = new File(System.getProperty("user.home"),

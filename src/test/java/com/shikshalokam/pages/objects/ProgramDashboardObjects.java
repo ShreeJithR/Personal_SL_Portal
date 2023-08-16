@@ -51,8 +51,15 @@ public class ProgramDashboardObjects {
      @FindBy(xpath="//span[normalize-space()='Graphs']")
      public  WebElement Graphs;
      
-     @FindBy(xpath="//span[normalize-space()='Tables']")
-     public  WebElement Tables;
+     @FindBy(xpath="//span[normalize-space()='District wise Status']")
+     public  WebElement DistrictWiseStatus;
+     
+     @FindBy(xpath="//span[normalize-space()='Block wise Status']")
+     public  WebElement BlockWiseStatus;
+     
+     @FindBy(xpath="//div[normalize-space()='*Please select the resource name to get data']")
+     public  WebElement SelectResourceMessage;
+     
      
      @FindBy(xpath="/html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-datasets[1]/div[2]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/form[1]/div[1]/div[1]/div[3]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]")
      public  WebElement districtDropdown;

@@ -130,7 +130,9 @@ public class ProgramDashboardAction {
 			 Thread.sleep(2000);
 			 VerifyProgradDataset();
 			 VerifyGraphs();
-			 //VerifyTables();
+			 VerifyDistrictWiseStatus();
+			 VerifyBlockWiseStatus();
+			//VerifyTables();
 		 
 		 }
 
@@ -144,9 +146,18 @@ public class ProgramDashboardAction {
    	    		Logger.logAndReportInfo("Graphs tab is Present .");
    	    	}
 
-   	    	public void VerifyTables() throws Exception {
-   	            Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.Tables),"Tables tab is not Present.");
-   	    		Logger.logAndReportInfo("Tables tab is Present .");
+   	    	public void VerifyDistrictWiseStatus() throws Exception {
+   	            Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.DistrictWiseStatus),"District wise Status tab is not Present.");
+   	    		Logger.logAndReportInfo("District wise Status tab is Present .");
+   	    	}
+   	    	
+   	    	public void VerifyBlockWiseStatus() throws Exception {
+   	            Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.BlockWiseStatus),"Block wise Status tab is not Present.");
+   	    		Logger.logAndReportInfo("Block wise Status tab is Present .");
+   	    	}
+   	    	public void VerifySelectResourceMessage() throws Exception {
+   	            Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.SelectResourceMessage),"*Please select the resource name to get data message shows up.");
+   	    		Logger.logAndReportInfo("*Please select the resource name to get data message doesn't shows up.");
    	    	}
    	    	
    	    	//selecting district and organisation in staging
