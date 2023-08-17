@@ -1,27 +1,35 @@
-Wed Aug 16 10:35:11 IST 2023 INFO Logger-logAndReportPass-110 Welcome title is displayed succesfully.
-Wed Aug 16 10:35:11 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (09bb69d15a42f38942b60880aaff0936)] -> xpath: (//div[contains(text(),'School head OR Officials')])[1]] status = true
-Wed Aug 16 10:35:11 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the continue button
-Wed Aug 16 10:35:11 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (09bb69d15a42f38942b60880aaff0936)] -> xpath: //*[@id="board"]] status = true
-Wed Aug 16 10:35:11 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the board drop down
-Wed Aug 16 10:35:12 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (09bb69d15a42f38942b60880aaff0936)] -> xpath: //span[contains(text(),'CBSE')]] status = true
-Wed Aug 16 10:35:12 IST 2023 INFO Logger-logAndReportInfo-95 Selected the option cbse or ncert.
-Wed Aug 16 10:35:14 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (09bb69d15a42f38942b60880aaff0936)] -> xpath: //button[contains(.,'Submit')]] status = true
-Wed Aug 16 10:35:14 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the submit button on BMC selection window.
-Wed Aug 16 10:35:14 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (09bb69d15a42f38942b60880aaff0936)] -> xpath: //div[contains(@aria-label, 'Select State')]] status = true
-Wed Aug 16 10:35:14 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (09bb69d15a42f38942b60880aaff0936)] -> xpath: (//span[contains(text(),'Andhra Pradesh')])] status = true
-Wed Aug 16 10:35:14 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (09bb69d15a42f38942b60880aaff0936)] -> xpath: //div[contains(@aria-label, 'Select District')]] status = true
-Wed Aug 16 10:35:14 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (09bb69d15a42f38942b60880aaff0936)] -> xpath: //div[@tabindex='0']//span[text()='Ananthapuram']] status = true
-Wed Aug 16 10:35:15 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the submit button on location selection window.
-Wed Aug 16 10:35:15 IST 2023 INFO Logger-logAndReportPass-110 Home button is displayed succesfully
-Wed Aug 16 10:36:04 IST 2023 INFO Gestures-click-78 Method: click for locator = Proxy element for: DefaultElementLocator 'By.xpath: //a[contains(.,'Login')]' status = true
-Wed Aug 16 10:36:04 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (09bb69d15a42f38942b60880aaff0936)] -> xpath: //button[@id='login']] status = true
-Wed Aug 16 10:37:08 IST 2023 INFO Gestures-click-78 Method: click for locator = Proxy element for: DefaultElementLocator 'By.xpath: //li[.=' Program dashboard ']' status = true
-Wed Aug 16 10:37:08 IST 2023 INFO Logger-logAndReportPass-110 Select Program is displayed. succesfully
-Wed Aug 16 10:37:08 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (09bb69d15a42f38942b60880aaff0936)] -> xpath: (//span[.='Select program'])[2]] status = true
-Wed Aug 16 10:37:10 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (09bb69d15a42f38942b60880aaff0936)] -> xpath: //span[.=' Testing 4.4 ']] status = true
-Wed Aug 16 10:37:12 IST 2023 INFO Logger-logAndReportPass-110 Confirm Button got Enabled on Program Resource Pop-up.
-Wed Aug 16 10:37:12 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (09bb69d15a42f38942b60880aaff0936)] -> xpath: //button[normalize-space()='Confirm']] status = true
-Wed Aug 16 10:37:15 IST 2023 INFO Logger-logAndReportInfo-95 Program Datasets tab is Present .
-Wed Aug 16 10:37:15 IST 2023 INFO Logger-logAndReportInfo-95 Graphs tab is Present .
-Wed Aug 16 10:37:15 IST 2023 INFO Logger-logAndReportInfo-95 District wise Status tab is Present .
-Wed Aug 16 10:37:15 IST 2023 INFO Logger-logAndReportInfo-95 Block wise Status tab is Present .
+Thu Aug 17 17:46:12 IST 2023 INFO Logger-logAndReportPass-110 Welcome title is displayed succesfully.
+Thu Aug 17 17:46:12 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (d0691a46896da49960a21742143e0ff7)] -> xpath: (//div[contains(text(),'School head OR Officials')])[1]] status = true
+Thu Aug 17 17:46:12 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the continue button
+Thu Aug 17 17:46:12 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (d0691a46896da49960a21742143e0ff7)] -> xpath: //*[@id="board"]] status = true
+Thu Aug 17 17:46:12 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the board drop down
+Thu Aug 17 17:46:12 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (d0691a46896da49960a21742143e0ff7)] -> xpath: //span[contains(text(),'CBSE')]] status = true
+Thu Aug 17 17:46:12 IST 2023 INFO Logger-logAndReportInfo-95 Selected the option cbse or ncert.
+Thu Aug 17 17:46:16 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (d0691a46896da49960a21742143e0ff7)] -> xpath: //button[contains(.,'Submit')]] status = true
+Thu Aug 17 17:46:16 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the submit button on BMC selection window.
+Thu Aug 17 17:46:19 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (d0691a46896da49960a21742143e0ff7)] -> xpath: //div[contains(@aria-label, 'Select State')]] status = true
+Thu Aug 17 17:46:19 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (d0691a46896da49960a21742143e0ff7)] -> xpath: (//span[contains(text(),'Andhra Pradesh')])] status = true
+Thu Aug 17 17:46:19 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (d0691a46896da49960a21742143e0ff7)] -> xpath: //div[contains(@aria-label, 'Select District')]] status = true
+Thu Aug 17 17:46:19 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (d0691a46896da49960a21742143e0ff7)] -> xpath: //div[@tabindex='0']//span[text()='Ananthapuram']] status = true
+Thu Aug 17 17:46:19 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on the submit button on location selection window.
+Thu Aug 17 17:46:19 IST 2023 INFO Logger-logAndReportPass-110 Home button is displayed succesfully
+Thu Aug 17 17:47:09 IST 2023 INFO Gestures-click-78 Method: click for locator = Proxy element for: DefaultElementLocator 'By.xpath: //a[contains(.,'Login')]' status = true
+Thu Aug 17 17:47:10 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (d0691a46896da49960a21742143e0ff7)] -> xpath: //button[@id='login']] status = true
+Thu Aug 17 17:48:13 IST 2023 INFO Gestures-click-78 Method: click for locator = Proxy element for: DefaultElementLocator 'By.xpath: //li[.=' Program dashboard ']' status = true
+Thu Aug 17 17:48:13 IST 2023 INFO Logger-logAndReportPass-110 Select Program is displayed. succesfully
+Thu Aug 17 17:48:13 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (d0691a46896da49960a21742143e0ff7)] -> xpath: (//span[.='Select program'])[2]] status = true
+Thu Aug 17 17:48:16 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (d0691a46896da49960a21742143e0ff7)] -> xpath: //span[.=' Program - HT and officials ']] status = true
+Thu Aug 17 17:48:18 IST 2023 INFO Logger-logAndReportPass-110 Confirm Button got Enabled on Program Resource Pop-up.
+Thu Aug 17 17:48:18 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (d0691a46896da49960a21742143e0ff7)] -> xpath: //button[normalize-space()='Confirm']] status = true
+Thu Aug 17 17:48:20 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (d0691a46896da49960a21742143e0ff7)] -> xpath: /html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-datasets[1]/div[2]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/div[1]/div[1]/div[2]/div[1]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[2]] status = true
+Thu Aug 17 17:48:20 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on Select Report Dropdown
+Thu Aug 17 17:48:22 IST 2023 INFO Logger-logAndReportInfo-95 User Detail Report type  is Present .
+Thu Aug 17 17:48:22 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (d0691a46896da49960a21742143e0ff7)] -> xpath: //span[@class='mat-option-text'][normalize-space()='User Detail Report']] status = true
+Thu Aug 17 17:48:22 IST 2023 INFO Logger-logAndReportPass-110 Selected User Detail Report .
+Thu Aug 17 17:48:22 IST 2023 INFO Logger-logAndReportPass-110 Request Report button is Enabled.
+Thu Aug 17 17:48:22 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (d0691a46896da49960a21742143e0ff7)] -> xpath: //button[normalize-space()='Request report']] status = true
+Thu Aug 17 17:48:22 IST 2023 INFO Logger-logAndReportInfo-95 Clicked on Request Report.
+Thu Aug 17 17:48:23 IST 2023 INFO Logger-logAndReportPass-110 Request Report Password Pop-up is Displayed
+Thu Aug 17 17:48:23 IST 2023 INFO Logger-logAndReportInfo-95 Entered password as : Test1234
+Thu Aug 17 17:48:23 IST 2023 INFO Logger-logAndReportPass-110 Yes button is Enabled.
+Thu Aug 17 17:48:23 IST 2023 INFO Gestures-click-78 Method: click for locator = [[ChromeDriver: chrome on LINUX (d0691a46896da49960a21742143e0ff7)] -> xpath: //button[normalize-space()='No']] status = true

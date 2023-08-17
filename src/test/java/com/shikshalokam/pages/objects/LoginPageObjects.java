@@ -18,6 +18,9 @@ public class LoginPageObjects {
 
     @FindBy(xpath = "//a[contains(.,'Login')]")
     public WebElement login;
+    
+    @FindBy(xpath = "//li[normalize-space()='Logout']")
+	public WebElement logout;
 
     @FindBy(xpath = "//a[contains(.,'Observations')]")
     public WebElement observations;
