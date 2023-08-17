@@ -69,7 +69,7 @@ public class ProgramDashboardTest {
 
         getProgramDashboardActions().clickOnprogramdashboard();
         getProgramDashboardActions().verifyselectProgramPopup();
-        getProgramDashboardActions().selectProgram();
+        getProgramDashboardActions().selectOldProgram();
         Thread.sleep(2000);
       //  getProgramDashboardActions().selectProjectResource();
       
@@ -77,7 +77,7 @@ public class ProgramDashboardTest {
         getProgramDashboardActions().verifyandclickOnEnabledConfirmbuttonOnSelectProgramPopup();
         getProgramDashboardActions().verifyTabsOnProgramdashboardPage();
         getProgramDashboardActions().VerifySelectResourceMessage();
-     /*   getProgramDashboardActions().selectProjectResource();
+      getProgramDashboardActions().selectProjectResource();
         
         getProgramDashboardActions().selectDistrictandOrgPD();
         //getProgramDashboardActions().selectdate();
@@ -104,7 +104,7 @@ public class ProgramDashboardTest {
         
         //To verify user is able request report by clicking Yes on confirmation popup
         //getProgramDashboardActions().requestStatusreportYES();
-       */
+       
     }
     
     @Test(description = "login as Program designer and verify types of reports")
@@ -130,7 +130,7 @@ public class ProgramDashboardTest {
     getLoginPageActions().clickOnGuest();
     getProgramDashboardActions().clickOnprogramdashboard();
     getProgramDashboardActions().verifyselectProgramPopup();
-    getProgramDashboardActions().selectProgram();
+    getProgramDashboardActions().selectOldProgram();
     Thread.sleep(2000);
  
     getProgramDashboardActions().verifyandclickOnEnabledConfirmbuttonOnSelectProgramPopup();
@@ -152,4 +152,99 @@ public class ProgramDashboardTest {
     //getProgramDashboardActions().requestStatusreportYES();
     //////
     }
+    
+    
+    @Test(description = "login as Program manager and Program Designer to verfy Big Number Chart")
+    @Author(name = "SHREEJITH")
+    public void bigNumbersPMandPD() throws Exception {
+        loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!D:E");
+        switchEnvironment();
+        getLoginPageActions().BMCLSelection();  
+        
+        Thread.sleep(3000);
+        getLoginPageActions().clickOnGuest();
+        getLoginPageActions().clickOnLogin();
+        getLoginPageActions().enterUserName(loginTestData.get("userNamePM"));
+        getLoginPageActions().enterPassword(loginTestData.get("passwordPM"));
+        //Thread.sleep(2000);
+        getLoginPageActions().clickOnLoginButton();
+        Thread.sleep(3000);
+        
+        //using refreshpage due to blank screen showing up after login 
+        Thread.sleep(10000);
+         getLoginPageActions().refreshpage();
+         Thread.sleep(5000);  
+        
+        getLoginPageActions().clickOnGuest();
+
+        getProgramDashboardActions().clickOnprogramdashboard();
+        getProgramDashboardActions().verifyselectProgramPopup();
+        getProgramDashboardActions().selectNewProgram();
+        Thread.sleep(2000);
+        getProgramDashboardActions().verifyandclickOnEnabledConfirmbuttonOnSelectProgramPopup();
+        getProgramDashboardActions().clickOnGraphsTab();
+        getProgramDashboardActions().VerifyBigNumberChart();
+        
+        getLoginPageActions().clickOnProfileiconAndLogout();
+        switchEnvironment();
+     	
+     	getLoginPageActions().clickOnGuest();
+	    getLoginPageActions().clickOnLogin();
+	    getLoginPageActions().enterUserName(loginTestData.get("userNamePD"));
+        getLoginPageActions().enterPassword(loginTestData.get("passwordPD"));
+        getLoginPageActions().clickOnLoginButton();
+        
+        //using refreshpage due to blank screen showing up after login 
+         Thread.sleep(10000);
+         getLoginPageActions().refreshpage();
+         Thread.sleep(5000);  
+        
+        getLoginPageActions().clickOnGuest();
+        
+        getProgramDashboardActions().clickOnprogramdashboard();
+        getProgramDashboardActions().verifyselectProgramPopup();
+        getProgramDashboardActions().selectNewProgram();
+        Thread.sleep(2000);
+        getProgramDashboardActions().verifyandclickOnEnabledConfirmbuttonOnSelectProgramPopup();
+        getProgramDashboardActions().clickOnGraphsTab();
+        getProgramDashboardActions().VerifyBigNumberChart();
+  
+}
+    
+    
+    @Test(description = "login as Program manager and verify User Detail Report")
+    @Author(name = "SHREEJITH")
+    public void userDetailReport() throws Exception {
+        loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!D:E");
+        switchEnvironment();
+        getLoginPageActions().BMCLSelection();  
+        
+        Thread.sleep(3000);
+        getLoginPageActions().clickOnGuest();
+        getLoginPageActions().clickOnLogin();
+        getLoginPageActions().enterUserName(loginTestData.get("userNamePM"));
+        getLoginPageActions().enterPassword(loginTestData.get("passwordPM"));
+        //Thread.sleep(2000);
+        getLoginPageActions().clickOnLoginButton();
+        Thread.sleep(3000);
+        
+        //using refreshpage due to blank screen showing up after login 
+        Thread.sleep(10000);
+         getLoginPageActions().refreshpage();
+         Thread.sleep(5000);  
+        
+        getLoginPageActions().clickOnGuest();
+
+        getProgramDashboardActions().clickOnprogramdashboard();
+        getProgramDashboardActions().verifyselectProgramPopup();
+        getProgramDashboardActions().selectNewProgram();
+        Thread.sleep(2000);
+        getProgramDashboardActions().verifyandclickOnEnabledConfirmbuttonOnSelectProgramPopup();
+        
+        getProgramDashboardActions().verifyPmUdrReport();
+        getProgramDashboardActions().requestUDRreport();
+    
+
+}
+    
 }

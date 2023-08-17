@@ -22,6 +22,9 @@ public class ProgramDashboardObjects {
      @FindBy(xpath="//span[.=' Testing 4.4 ']")
      public  WebElement programTesting4point4;
      
+   //span[.=' Program - HT and officials ']
+     @FindBy(xpath="//span[.=' Program - HT and officials ']")
+     public  WebElement programHtandOfficials;
      
      @FindBy(xpath="//span[normalize-space()='Testing Program 4.4']")
      public  WebElement programTestingProgram4point4;
@@ -50,6 +53,10 @@ public class ProgramDashboardObjects {
      
      @FindBy(xpath="//span[normalize-space()='Graphs']")
      public  WebElement Graphs;
+     
+   //div[.='No. of users who joined program']
+     @FindBy(xpath=" //div[.='No. of users who joined program']")
+     public  WebElement BigNumberChart;
      
      @FindBy(xpath="//span[normalize-space()='District wise Status']")
      public  WebElement DistrictWiseStatus;
@@ -106,6 +113,9 @@ public class ProgramDashboardObjects {
      
     // @FindBy(xpath="(//div[@class='mat-select-arrow-wrapper'])[7]")         //(//div[@class='mat-select-arrow-wrapper'])[6]   //span[.='Select report']
      //public  WebElement selectReportDropdown2;
+   //span[@class='mat-option-text'][normalize-space()='User Detail Report']
+     @FindBy(xpath="//span[@class='mat-option-text'][normalize-space()='User Detail Report']")
+     public  WebElement udrReport;
      
      @FindBy(xpath="//span[@class='mat-option-text'][normalize-space()='Task Report']")
      public  WebElement taskReport;

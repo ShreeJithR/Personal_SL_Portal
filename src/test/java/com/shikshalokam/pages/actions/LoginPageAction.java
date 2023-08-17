@@ -443,6 +443,16 @@ public class LoginPageAction {
 ShikshaLokamClient.get().report().log(Status.INFO, "Page refreshed");
  }
     
+    public void clickOnProfileiconAndLogout() throws Exception {
+    	ShikshaLokamClient.get().gestures().waitTillTheElementIsVisibleAndClickable(loginPageObjects.guestIcon); 
+    	ShikshaLokamClient.get().gestures().click(loginPageObjects.guestIcon);
+    	Logger.logAndReportInfo("Clicked on Profile Icon ");
+    	Thread.sleep(2000);
+    	ShikshaLokamClient.get().gestures().click(loginPageObjects.logout);
+    	Logger.logAndReportInfo("Clicked on Logout");
+    	Thread.sleep(2000);	
+    }
+    
     //************** Verify Actions *************************************//
     public void verifyObservationTile() throws Exception {
         Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(loginPageObjects.observations),"Observation title is not displayed.");
