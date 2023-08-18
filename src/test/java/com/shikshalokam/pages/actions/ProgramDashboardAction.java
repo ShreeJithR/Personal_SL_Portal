@@ -50,6 +50,11 @@ public class ProgramDashboardAction {
 			ShikshaLokamClient.get().gestures().click(programDashboardObjects.Graphs);
   ShikshaLokamClient.get().report().log(Status.INFO, "Clicked Graphs Tab");
 	 }
+	 
+	 public void clickOnProgramDatasetsTab() throws Exception {
+			ShikshaLokamClient.get().gestures().click(programDashboardObjects.Programdatasets);
+ShikshaLokamClient.get().report().log(Status.INFO, "Clicked on Program Datasets Tab");
+	 }
 	
 	
 	 
@@ -176,9 +181,75 @@ public class ProgramDashboardAction {
    	            Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.BlockWiseStatus),"Block wise Status tab is not Present.");
    	    		Logger.logAndReportInfo("Block wise Status tab is Present .");
    	    	}
+   	    	
+   	    	public void VerifyProgramDatasetFilters() throws Exception {
+   	    		Logger.logAndReportInfo("On Program Dataset Tab");
+   	            Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.ProgramFilter),"Program Filter is not Present.");
+   	    		Logger.logAndReportInfo("Program Filter is Present .");
+   	    	    Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.ResourceFilter),"Resource Filter is not Present.");
+	    		Logger.logAndReportInfo("Resource Filter is Present .");
+	    		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.DistrictFilter),"District Filter is not Present.");
+	   	    	Logger.logAndReportInfo("District Filter is Present .");
+	   	        Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.BlockFilter),"Block Filter is not Present.");
+	   	    	Logger.logAndReportInfo("Block Filter is Present .");
+	   	        Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.OrganisationFilter),"Organisation Filter is not Present.");
+	   	    	Logger.logAndReportInfo("Organisation Filter is Present .");
+	   	     Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.StartDateFilter),"StartDate Filter is not Present.");
+	   	    	Logger.logAndReportInfo("StartDate Filter is Present .");
+	   	     Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.EndDateFilter),"EndDate Filter is not Present.");
+	   	    	Logger.logAndReportInfo("EndDate Filter is Present .");
+   	    	}
+   	    	
+   	    	public void VerifyGraphsFilters() throws Exception {
+   	    	 ShikshaLokamClient.get().gestures().click(programDashboardObjects.Graphs);
+   	    		Logger.logAndReportInfo("Clicked On Graphs Tab");
+   	            Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.ProgramFilter),"Program Filter is not Present.");
+   	    		Logger.logAndReportInfo("Program Filter is Present .");
+   	    	    Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.ResourceFilter),"Resource Filter is not Present.");
+	    		Logger.logAndReportInfo("Resource Filter is Present .");
+	    		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.DistrictFilter),"District Filter is not Present.");
+	   	    	Logger.logAndReportInfo("District Filter is Present .");
+	   	        Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.BlockFilter),"Block Filter is not Present.");
+	   	    	Logger.logAndReportInfo("Block Filter is Present .");
+	   	        Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.OrganisationFilter),"Organisation Filter is not Present.");
+	   	    	Logger.logAndReportInfo("Organisation Filter is Present .");
+	   	   
+   	    	}
+   	    	
+   	    	public void VerifyDistrictWiseStatusFilters() throws Exception {
+      	    	 ShikshaLokamClient.get().gestures().click(programDashboardObjects.DistrictWiseStatus);
+      	    		Logger.logAndReportInfo("Clicked On District Wise Status Tab");
+      	            Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.ProgramFilter),"Program Filter is not Present.");
+      	    		Logger.logAndReportInfo("Program Filter is Present .");
+      	    	    Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.ResourceFilter),"Resource Filter is not Present.");
+   	    		Logger.logAndReportInfo("Resource Filter is Present .");
+   	    		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.DistrictFilter),"District Filter is not Present.");
+   	   	    	Logger.logAndReportInfo("District Filter is Present .");
+   	   	        Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.OrganisationFilter),"Organisation Filter is not Present.");
+   	   	    	Logger.logAndReportInfo("Organisation Filter is Present .");
+   	   	   
+      	    	}
+   	    	
+   	    	public void VerifyBlockWiseStatusFilters() throws Exception {
+      	    	 ShikshaLokamClient.get().gestures().click(programDashboardObjects.BlockWiseStatus);
+      	    		Logger.logAndReportInfo("Clicked On Block Wise Status Tab");
+      	            Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.ProgramFilter),"Program Filter is not Present.");
+      	    		Logger.logAndReportInfo("Program Filter is Present .");
+      	    	    Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.ResourceFilter),"Resource Filter is not Present.");
+   	    		Logger.logAndReportInfo("Resource Filter is Present .");
+   	    		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.DistrictFilter),"District Filter is not Present.");
+   	   	    	Logger.logAndReportInfo("District Filter is Present .");
+   	   	  Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.BlockFilter),"Block Filter is not Present.");
+ 	    	Logger.logAndReportInfo("Block Filter is Present .");
+   	   	        Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.OrganisationFilter),"Organisation Filter is not Present.");
+   	   	    	Logger.logAndReportInfo("Organisation Filter is Present .");
+   	   	   
+      	    	}
+   	    	
+   	    	
    	    	public void VerifySelectResourceMessage() throws Exception {
-   	            Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.SelectResourceMessage),"*Please select the resource name to get data message shows up.");
-   	    		Logger.logAndReportInfo("*Please select the resource name to get data message doesn't shows up.");
+   	            Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(programDashboardObjects.SelectResourceMessage),"*Please select the resource name to get data message doesn't shows up.");
+   	    		Logger.logAndReportInfo("*Please select the resource name to get data message shows up.");
    	    	}
    	    	
    	    	//selecting district and organisation in staging
@@ -188,7 +259,7 @@ public class ProgramDashboardAction {
    		 }
    	    	public void selectDistrictPD() throws Exception {
    	         ShikshaLokamClient.get().gestures().click(programDashboardObjects.districtDropdown);
-		      //Thread.sleep(2000);
+		      Thread.sleep(2000);
    	      if(getEnvironmentValue().contains("diksha")) {
 	            ShikshaLokamClient.get().report().log(Status.INFO, "NO Resource");	
 	        } else if(getEnvironmentValue().contains("preprod")) {
