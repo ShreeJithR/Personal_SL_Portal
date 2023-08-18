@@ -76,10 +76,18 @@ public class ProgramDashboardTest {
        
         getProgramDashboardActions().verifyandclickOnEnabledConfirmbuttonOnSelectProgramPopup();
         getProgramDashboardActions().verifyTabsOnProgramdashboardPage();
-        getProgramDashboardActions().VerifySelectResourceMessage();
-      getProgramDashboardActions().selectProjectResource();
+        getProgramDashboardActions().VerifyProgramDatasetFilters();
+        getProgramDashboardActions().VerifyGraphsFilters();
+        getProgramDashboardActions().VerifyDistrictWiseStatusFilters();
+        getProgramDashboardActions().VerifyBlockWiseStatusFilters();
         
-        getProgramDashboardActions().selectDistrictandOrgPD();
+        getProgramDashboardActions().clickOnProgramDatasetsTab();
+        
+        
+        getProgramDashboardActions().VerifySelectResourceMessage();
+        getProgramDashboardActions().selectProjectResource();
+        
+      //  getProgramDashboardActions().selectDistrictandOrgPD();
         //getProgramDashboardActions().selectdate();
        getProgramDashboardActions().verifyProjectReports();  
         getProgramDashboardActions().requestTaskreport();

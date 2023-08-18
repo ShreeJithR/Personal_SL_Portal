@@ -64,6 +64,27 @@ public class ProgramDashboardObjects {
      @FindBy(xpath="//span[normalize-space()='Block wise Status']")
      public  WebElement BlockWiseStatus;
      
+     @FindBy(xpath="//label[normalize-space()='Program']")
+     public  WebElement ProgramFilter;
+     
+     @FindBy(xpath="//label[normalize-space()='Resource']")
+     public  WebElement ResourceFilter;
+     
+     @FindBy(xpath="//label[normalize-space()='District']")
+     public  WebElement DistrictFilter;
+     
+     @FindBy(xpath="//label[normalize-space()='Block']")
+     public  WebElement BlockFilter;
+     
+     @FindBy(xpath="//label[normalize-space()='Organisation']")
+     public  WebElement OrganisationFilter;
+     
+     @FindBy(xpath="//label[normalize-space()='Start Date']")
+     public  WebElement StartDateFilter;
+     
+     @FindBy(xpath="//label[normalize-space()='End Date']")
+     public  WebElement EndDateFilter;
+     
      @FindBy(xpath="//div[normalize-space()='*Please select the resource name to get data']")
      public  WebElement SelectResourceMessage;
      
@@ -71,6 +92,7 @@ public class ProgramDashboardObjects {
      @FindBy(xpath="/html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-datasets[1]/div[2]/mat-tab-group[1]/div[1]/mat-tab-body[1]/div[1]/form[1]/div[1]/div[1]/div[3]/mat-form-field[1]/div[1]/div[1]/div[1]/mat-select[1]/div[1]/div[1]")
      public  WebElement districtDropdown;
      
+    
      @FindBy(xpath="//span[normalize-space()='Ananthapuram']")
      public  WebElement Anantapurdistrict;
      
