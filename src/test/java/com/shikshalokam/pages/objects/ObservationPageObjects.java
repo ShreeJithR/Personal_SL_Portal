@@ -172,6 +172,14 @@ public class ObservationPageObjects {
     @FindBy(xpath = "//h4[@class='mb-4']")
     public WebElement ObservationName;
 	
+    //h4[@title= 'Without rubric 2'])[1]
+    @FindBy(xpath = "(//h4[@title= 'Without rubric 2'])[1]")
+    public WebElement ObsWithoutRubric2;
+    
+  //button[normalize-space()='Join program']
+    @FindBy(xpath = "//button[normalize-space()='Join program']")
+    public WebElement JoinProgramButton;
+    
 	//,,,,,,,,,,,,,,,,
     
    // @FindBy(xpath = "//bdi[.='Test - Obs without rub – 2']")
@@ -344,17 +352,57 @@ public class ObservationPageObjects {
     @FindBy(xpath = "//label[normalize-space()='Yes']")
     public WebElement withOutRubricAnswer3;
     
-    
-  //label[normalize-space()='Yes']
-  //button[normalize-space()='Auto Capture']
-    
-    
-    
     @FindBy(xpath = "//h4//bdi[normalize-space()='Automation rubric with single submission - Teacher']")
     public WebElement observationWithRubricSingleSubmission;
     
+
+   	@FindBy(xpath = "(//div[normalize-space()='Consent to share details'])[2]")
+ 	public WebElement pIIPopup;
+   	
+   	
+ 	@FindBy(xpath = "//label[text()='User Name']")
+ 	public WebElement userNameSection;
     
-    
+ 	@FindBy(xpath = "//label[text()='State']")
+ 	public WebElement stateSection;
+ 	//label[text()='State']
+	@FindBy(xpath = "//label[text()='User ID']")
+ 	public WebElement userIdSection;
+	
+	@FindBy(xpath = "//label[text()='External Id']")
+ 	public WebElement externalIdSection;
+	
+	@FindBy(xpath = "//label[text()='District']")
+ 	public WebElement districtSection;
+	
+	@FindBy(xpath = "//label[text()='Block']")
+ 	public WebElement blockSection;
+	
+	@FindBy(xpath = "//label[text()='School ID']")
+ 	public WebElement schoolIdSection;
+	
+	@FindBy(xpath = "//label[text()='School or Org name']")
+ 	public WebElement schoolOrOrgNameSection;
+	
+	@FindBy(xpath = "//label[text()='Mobile Number']")
+ 	public WebElement mobileNumberSection;
+	
+	@FindBy(xpath = "//label[text()='Email address']")
+ 	public WebElement emailAddressSection;
+	
+	@FindBy(xpath = "//div[.='You can edit these details from your profile page ']")
+ 	public WebElement suggestionText;
+	
+	@FindBy(xpath = "//p[text()=' I consent to share my details with the administrators of this program. All administrators are bound by the privacy policy and SUNBIRD terms of use of my data. ']")
+ 	public WebElement checkboxSection;
+	
+	@FindBy(xpath = "//button[text()='Do not share']")
+ 	public WebElement doNotShareButton;
+	
+	@FindBy(xpath = "//button[text()='Share']")
+ 	public WebElement shareButton;
+	
+	//button[text()='Do not share']
  
     
     //................  demo file upload
@@ -363,18 +411,8 @@ public class ObservationPageObjects {
     
     @FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/main[1]/app-questionnaire[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/form[1]/sl-input[1]/div[1]/div[1]/div[1]/div[2]/sl-page-questions[1]/sl-input[1]/div[8]/div[1]/div[1]/div[1]/div[1]/div[1]")
     public WebElement demoq9;
-    
    
-    //(//input[@type='file'])[1]
+    
   
    
-  //button[normalize-space()='OK']
-   // (//div[.=' Evidence uploaded '])[1]
-    //(//input[@type='file'])[1]
-  //h4//bdi[normalize-space()='Teacher Obs Form']
-  //label[normalize-space()='Observation']
-  //div[contains(text(),'Browse Other Categories')]
-    
-    
-  //mat-panel-title[@aria-label='Credits & license info accordion']   
-}//h4[@title='Infrastructure Assessment- Furniture']
+}
