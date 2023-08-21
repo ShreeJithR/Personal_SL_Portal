@@ -165,6 +165,10 @@ public class ObservationPageAction {
     		Logger.logAndReportInfo("Clicked on the parent child observation.");
     	}
     	
+    	public void clickOnObservationWithoutRubric2() throws Exception {
+    		ShikshaLokamClient.get().gestures().click(observationPageObjects.ObsWithoutRubric2);
+    		Logger.logAndReportInfo("Clicked on Without rubric 2.");
+    	}
     	//parent child actions
     	/*public void clickOn1stAnswerFor1stParent() throws Exception {
     		ShikshaLokamClient.get().gestures().click(observationPageObjects.parent1firstAnswer);
@@ -564,6 +568,10 @@ public class ObservationPageAction {
       		Logger.logAndReportInfo("Clicked on Automation rubric with single submission - Teacher");
     		
     	 }
+    		public void ClickOnJoinProgramButton() throws Exception {
+                ShikshaLokamClient.get().gestures().click(observationPageObjects.JoinProgramButton);
+        		Logger.logAndReportPass("Clicked on Join Program Button ");
+        	}
     	 
     	 public void verifyObservationDetailsPageForSingleSubmission() throws Exception {
     		 verifyObservation1instanceisAddedByDefault();
@@ -855,7 +863,104 @@ public class ObservationPageAction {
             Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.evidenceUplodedPopup),"Evidence Uploaded Pop-up is not displayed.");
     		Logger.logAndReportPass("Evidence Uploaded Pop-up is displayed succesfully.");
     	}
+    	
+    	public void verifyJoinProgramButton() throws Exception {
+            Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.JoinProgramButton),"Join Program Button is not displayed.");
+    		Logger.logAndReportPass("Join Program Button is displayed succesfully");
+    	}
    
+    	
+    	//Verifying PII pop up
+    	public void verifyPiiPopup() throws Exception {
+    		ShikshaLokamClient.get().gestures().waitForElementToAppear(observationPageObjects.pIIPopup);
+            Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.pIIPopup),"PII Pop-up Doesn't Show up");
+    		Logger.logAndReportPass("PII Pop-up Shows up");
+    	}
+    	public void verifyPiiPopupContents() throws Exception {
+    		verifyPiiHeader();
+    		verifyuserNameSection();
+    		verifystateSection();
+    		verifyuserIdSection();
+    		verifyexternalIdSection();
+    		verifydistrictSection();
+    		verifyblockSection();
+    		verifyschoolIdSection();
+    		verifyschoolOrOrgNameSection();
+    		verifymobileNumberSection();
+    		verifyemailAddressSection();
+    		verifysuggestionText();
+    		verifycheckboxSection();
+    		verifydoNotShareButton();
+    		verifyshareButton();
+    		
+    		
+    		Logger.logAndReportPass("PII Pop-up Contents are Verified");
+    	}
+    	
+    	
+    	public void verifyPiiHeader() throws Exception {
+    		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.pIIPopup),"Consent to share details - Header is not Displayed");
+    		Logger.logAndReportInfo("Consent to share details - Header is Displayed.");	
+    	}
+    	
+    	public void verifyuserNameSection() throws Exception {
+    		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.userNameSection),"User Name Section is not Present");
+    		Logger.logAndReportInfo("User Name Section is Present");	
+    	}
+    	public void verifystateSection() throws Exception {
+    		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.stateSection),"State Section is not Present");
+    		Logger.logAndReportInfo("State Section is Present");	
+    	}
+    	public void verifyuserIdSection() throws Exception {
+    		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.userIdSection),"User ID Section is not Present");
+    		Logger.logAndReportInfo("User ID Section is Present");	
+    	}
+    	public void verifyexternalIdSection() throws Exception {
+    		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.externalIdSection),"External ID Section is not Present");
+    		Logger.logAndReportInfo("External ID Section is Present");	
+    	}
+    	public void verifydistrictSection() throws Exception {
+    		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.districtSection),"District Section is not Present");
+    		Logger.logAndReportInfo("District Section is Present");	
+    	}
+    	public void verifyblockSection() throws Exception {
+    		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.blockSection),"Block Section is not Present");
+    		Logger.logAndReportInfo("Block Section is Present");	
+    	}
+    	public void verifyschoolIdSection() throws Exception {
+    		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.schoolIdSection),"School ID Section is not Present");
+    		Logger.logAndReportInfo("School ID Section is Present");	
+    	}
+    	public void verifyschoolOrOrgNameSection() throws Exception {
+    		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.schoolOrOrgNameSection),"School or Org name Section is not Present");
+    		Logger.logAndReportInfo("School or Org name Section is Present");	
+    	}
+    	public void verifymobileNumberSection() throws Exception {
+    		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.mobileNumberSection),"Mobile Number Section is not Present");
+    		Logger.logAndReportInfo("Mobile Number Section is Present");	
+    	}
+    	public void verifyemailAddressSection() throws Exception {
+    		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.emailAddressSection),"Email address Section is not Present");
+    		Logger.logAndReportInfo("Email address Section is Present");	
+    	}
+    	public void verifysuggestionText() throws Exception {
+    		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.suggestionText),"You can edit these details from your profile page - message is not Displayed");
+    		Logger.logAndReportInfo("You can edit these details from your profile page - message is Displayed");	
+    	}
+    	public void verifycheckboxSection() throws Exception {
+    		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.checkboxSection),"Checkbox is not Present");
+    		Logger.logAndReportInfo("Checkbox is Present");	
+    	}
+    	public void verifydoNotShareButton() throws Exception {
+    		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.doNotShareButton),"DO NOT SHARE Button is not Present");
+    		Logger.logAndReportInfo("DO NOT SHARE Button is Present");	
+    	}
+    	public void verifyshareButton() throws Exception {
+    		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.shareButton),"SHARE Button is not Present");
+    		Logger.logAndReportInfo("SHARE Button is Present");	
+    	}
+   
+    	
     	
     	//.....@#$%^&demo file upload
     		

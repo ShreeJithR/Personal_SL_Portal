@@ -310,10 +310,44 @@ public class ObservationPageTest {
         
 
     }
+
+    @Test(description = "Verify Join Program and PII Pop up")
+    @Author(name = "SHREEJITH")
+    public void joiningProgramandVerifyingPIIpopupFromObservationTab() throws Exception {
+        loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!L:M");
+       // observationPageTestData = TestData.getFullGoogleSheetDataAsMapString("Observation!A:B");
+        switchEnvironment();
+        getLoginPageActions().BMCLSelection();
+        Thread.sleep(3000);
+        getLoginPageActions().clickOnGuest();
+        getLoginPageActions().clickOnLogin();
+        getLoginPageActions().enterUserName(loginTestData.get("NewUserName"));
+        getLoginPageActions().enterPassword(loginTestData.get("Newpassword"));
+        getLoginPageActions().clickOnLoginButton();
+        
+        //using refreshpage due to blank screen showing up after login 
+         Thread.sleep(10000);
+         getLoginPageActions().refreshpage();
+         Thread.sleep(5000);  
+        
+        switchEnvironmentforHomeButton();
+        
+        getObservationPageActions().verifyObservationButton();
+        getObservationPageActions().clickOnObservationButton();
+        Thread.sleep(3000);
+        getObservationPageActions().verifyObservationTitle();
+        getObservationPageActions().clickOnObservationWithoutRubric2();
+        getObservationPageActions().verifyJoinProgramButton();
+        getObservationPageActions().ClickOnJoinProgramButton();
+        getObservationPageActions().verifyPiiPopup();
+        getObservationPageActions().verifyPiiPopupContents();
+        getLoginPageActions().browserBackButton();
+        getObservationPageActions().clickOnObservationWithoutRubric2();
+        getObservationPageActions().verifyPiiPopup();
+        
+        
+    }
     
-    /* getObservationPageActions().upload();
-    getObservationPageActions().fileupload2();
-Thread.sleep(10000); */
 
 
 

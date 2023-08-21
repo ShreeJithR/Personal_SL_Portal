@@ -442,6 +442,10 @@ public class LoginPageAction {
 		ShikshaLokamClient.get().driver().navigate().refresh();
 ShikshaLokamClient.get().report().log(Status.INFO, "Page refreshed");
  }
+    public void browserBackButton() throws Exception {
+		ShikshaLokamClient.get().driver().navigate().back();
+ShikshaLokamClient.get().report().log(Status.INFO, "clicked on Browser Back Button");
+ }
     
     public void clickOnProfileiconAndLogout() throws Exception {
     	ShikshaLokamClient.get().gestures().waitTillTheElementIsVisibleAndClickable(loginPageObjects.guestIcon); 
