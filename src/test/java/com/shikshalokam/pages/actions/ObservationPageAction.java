@@ -124,7 +124,7 @@ public class ObservationPageAction {
     	public void clickOnObserveAgainYesConfirmation() throws Exception {
     		ShikshaLokamClient.get().gestures().click(observationPageObjects.yesConfirmationObserveAgain);
     		js.executeScript("arguments[0].scrollIntoView(true);", observationPageObjects.observeAgainButton);
-    		Logger.logAndReportInfo("Clicked on the yes button for obsere again button.");
+    		Logger.logAndReportInfo("Clicked on the yes button for observe again button.");
     	}
     	
     	public void clickOnThreeDotEllipseOnObservation() throws Exception {
@@ -166,8 +166,12 @@ public class ObservationPageAction {
     	}
     	
     	public void clickOnObservationWithoutRubric2() throws Exception {
+    		/*js.executeScript("arguments[0].scrollIntoView(true);", observationPageObjects.ObsWithoutRubric2);
+    		Thread.sleep(2000);
+    		ShikshaLokamClient.get().gestures().waitTillTheElementIsVisibleAndClickable(observationPageObjects.ObsWithoutRubric2);
+		    ShikshaLokamClient.get().report().log(Status.INFO, "Clicked on Without rubric 2.");   */
     		ShikshaLokamClient.get().gestures().click(observationPageObjects.ObsWithoutRubric2);
-    		Logger.logAndReportInfo("Clicked on Without rubric 2.");
+    	    Logger.logAndReportInfo("Clicked on Without rubric 2.");
     	}
     	//parent child actions
     	/*public void clickOn1stAnswerFor1stParent() throws Exception {
@@ -568,15 +572,43 @@ public class ObservationPageAction {
       		Logger.logAndReportInfo("Clicked on Automation rubric with single submission - Teacher");
     		
     	 }
-    		public void ClickOnJoinProgramButton() throws Exception {
+    		public void clickOnJoinProgramButton() throws Exception {
                 ShikshaLokamClient.get().gestures().click(observationPageObjects.JoinProgramButton);
         		Logger.logAndReportPass("Clicked on Join Program Button ");
+        	}
+    		
+    		public void checkTheCheckBox() throws Exception {
+                ShikshaLokamClient.get().gestures().click(observationPageObjects.checkbox);
+        		Logger.logAndReportPass("Checked the Checkbox");
+        	}
+    		
+    		public void clickOnShareButton() throws Exception {
+                ShikshaLokamClient.get().gestures().click(observationPageObjects.shareButton);
+        		Logger.logAndReportPass("clicked on Share Button");
+        	}
+    		
+    		public void clickOnObservation2() throws Exception {
+    		/*	js.executeScript("arguments[0].scrollIntoView(true);", observationPageObjects.obsObservation2);
+   			 ShikshaLokamClient.get().gestures().click(observationPageObjects.obsObservation2);
+   		         ShikshaLokamClient.get().report().log(Status.INFO, "clicked on Observation 2"); */
+                ShikshaLokamClient.get().gestures().click(observationPageObjects.obsObservation2);
+        		Logger.logAndReportPass("clicked on Observation 2");
         	}
     	 
     	 public void verifyObservationDetailsPageForSingleSubmission() throws Exception {
     		 verifyObservation1instanceisAddedByDefault();
     		 verifyObserveAgainButtonisNotPresent();
       	}
+    	 
+    	 public void clickOnCloseButtonOnPopup() throws Exception {
+             ShikshaLokamClient.get().gestures().click(observationPageObjects.closeButtonOnPopup);
+     		Logger.logAndReportPass("clicked on close Button on Pop-up");
+     	}
+    	 
+    	 public void clickOnJoinProgramButtonOnPopup() throws Exception {
+             ShikshaLokamClient.get().gestures().click(observationPageObjects.JoinProgramButtonOnPopup);
+     		Logger.logAndReportPass("clicked on JoinProgram Button on Pop-up");
+     	}
     	 
     	//******************Verify*********************************************************//
     	 public void verifyObservation1instanceisAddedByDefault() throws Exception {
@@ -959,9 +991,53 @@ public class ObservationPageAction {
     		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.shareButton),"SHARE Button is not Present");
     		Logger.logAndReportInfo("SHARE Button is Present");	
     	}
-   
     	
+    	public void verifyshareButtonGotEnabled() throws Exception {
+    	 Assert.assertTrue(ShikshaLokamClient.get().gestures().isEnabled(observationPageObjects.shareButton),"Share Button is not enabled on PII Pop-up .");
+    		Logger.logAndReportPass("Share Button is enabled on PII Pop-up .");	
+    	}
     	
+    	public void verifyUserIsAbleToConsumeObservation() throws Exception {
+    		Thread.sleep(2000);
+    		clickOnObserveAgainButton();
+		Thread.sleep(2000);
+		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.observeAgainTitle),"User is not able to Consume the Observation.");
+		Logger.logAndReportPass("User is able to Consume the Observation.");
+		ShikshaLokamClient.get().gestures().click(observationPageObjects.yesConfirmationObserveAgain);
+    	}
+    	
+    	public void verifyJoinProgramPopup() throws Exception {
+    		ShikshaLokamClient.get().gestures().waitForElementToAppear(observationPageObjects.joinProgramPopup);
+            Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.joinProgramPopup),"Join Program Pop-up Doesn't Show up");
+    		Logger.logAndReportPass("Join Program Pop-up Shows up");
+    	}
+    	
+    	public void verifyJoinProgramPopupContents() throws Exception {
+    		verifyJoinProgramHeader();
+    		verifyjoinProgramPopupText();
+    		verifyJoinProgramButtonOnPopup();
+    		verifyCloseButtonOnPopup();
+    	}
+    	
+    		
+    	public void verifyJoinProgramHeader() throws Exception {
+    		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.joinProgramPopup),"Join program - Header is not Displayed");
+    		Logger.logAndReportInfo("Join program - Header is Displayed");	
+    	}
+    	
+    	public void verifyjoinProgramPopupText() throws Exception {
+    		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.joinProgramPopupText),"Join Program Popup Text is not Displayed");
+    		Logger.logAndReportInfo("Join Program Popup Text is Displayed");	
+    	}
+    	public void verifyJoinProgramButtonOnPopup() throws Exception {
+    		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.JoinProgramButtonOnPopup),"Join Program Button is not Present");
+    		Logger.logAndReportInfo("Join Program Button is Present");
+    	}
+    	
+    	public void verifyCloseButtonOnPopup() throws Exception {
+    		Assert.assertTrue(ShikshaLokamClient.get().gestures().isElementPresent(observationPageObjects.closeButtonOnPopup),"Close icon Button is not Present");
+    		Logger.logAndReportInfo("Close icon Button is Present");
+    	}
     	//.....@#$%^&demo file upload
     		
     		public void upload() throws Exception {

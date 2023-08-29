@@ -171,14 +171,21 @@ public class ObservationPageObjects {
     
     @FindBy(xpath = "//h4[@class='mb-4']")
     public WebElement ObservationName;
-	
+  //div[@id='18']//div[@class='sb--card__meta']
     //h4[@title= 'Without rubric 2'])[1]
-    @FindBy(xpath = "(//h4[@title= 'Without rubric 2'])[1]")
+    //h4//bdi[.= 'Without rubric 2'])[1]
+    @FindBy(xpath = "(//h4//bdi[.= 'Without rubric 2'])[1]")
     public WebElement ObsWithoutRubric2;
     
-  //button[normalize-space()='Join program']
+
     @FindBy(xpath = "//button[normalize-space()='Join program']")
     public WebElement JoinProgramButton;
+    
+    @FindBy(xpath = "(//button[normalize-space()='Join program'])[2]")
+    public WebElement JoinProgramButtonOnPopup;
+
+    @FindBy(xpath = " //mat-icon[@role='img']")
+    public WebElement closeButtonOnPopup;
     
 	//,,,,,,,,,,,,,,,,
     
@@ -359,13 +366,17 @@ public class ObservationPageObjects {
    	@FindBy(xpath = "(//div[normalize-space()='Consent to share details'])[2]")
  	public WebElement pIIPopup;
    	
+   
+   	@FindBy(xpath = "(//div[normalize-space()='Join program'])[1]")
+   	public WebElement joinProgramPopup;
+   	
    	
  	@FindBy(xpath = "//label[text()='User Name']")
  	public WebElement userNameSection;
     
  	@FindBy(xpath = "//label[text()='State']")
  	public WebElement stateSection;
- 	//label[text()='State']
+ 	
 	@FindBy(xpath = "//label[text()='User ID']")
  	public WebElement userIdSection;
 	
@@ -402,8 +413,20 @@ public class ObservationPageObjects {
 	@FindBy(xpath = "//button[text()='Share']")
  	public WebElement shareButton;
 	
-	//button[text()='Do not share']
- 
+	@FindBy(xpath = "//input[@type='checkbox']")
+ 	public WebElement checkbox;
+	
+	
+	@FindBy(xpath = "(//h4//bdi[.= 'Observation 2'])[1]")
+	public WebElement obsObservation2;
+	
+	//p[contains(text(),' Please join ') ]
+	
+	@FindBy(xpath = "//p[contains(text(),' Please join ') ]")
+	public WebElement joinProgramPopupText;
+	
+
+	
     
     //................  demo file upload
     @FindBy(xpath = "//h4//bdi[normalize-space()='Teacher Obs Form']")

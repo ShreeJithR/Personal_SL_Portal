@@ -61,9 +61,7 @@ public class LoginPageTest {
     @Author(name = "Manjunatha K")
     public void loginAsHeadTeacher() throws Exception {
         loginTestData = TestData.getFullGoogleSheetDataAsMapString("LoginTestData!A:B");
-        if(getEnvironmentValue().contains("preprod")) {
-        	getLoginPageActions().clickOnExploreDiksha();
-        }
+        switchEnvironment();
         getLoginPageActions().BMCLSelection();
         getLoginPageActions().clickOnGuest();
         getLoginPageActions().clickOnLogin();

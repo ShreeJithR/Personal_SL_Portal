@@ -177,6 +177,9 @@ public class LoginPageObjects {
     
     @FindBy(xpath="//span[contains(text(),'CBSE')]")
     public WebElement cbseNcertOption;
+  
+    @FindBy(xpath="//span[contains(text(),'NCF')]")
+    public WebElement ncfOption;
     
     @FindBy(xpath="(//span[contains(text(),'English')])[2]")
     public WebElement englishOption;
