@@ -336,26 +336,39 @@ public class ObservationPageTest {
         getObservationPageActions().clickOnObservationButton();
         Thread.sleep(3000);
         getObservationPageActions().verifyObservationTitle();
-        getObservationPageActions().clickOnObservationWithoutRubric2();
+       getObservationPageActions().clickOnObservationWithoutRubric2();
         getObservationPageActions().verifyJoinProgramButton();
-        getObservationPageActions().ClickOnJoinProgramButton();
+        getObservationPageActions().clickOnJoinProgramButton();
         getObservationPageActions().verifyPiiPopup();
         getObservationPageActions().verifyPiiPopupContents();
         getLoginPageActions().browserBackButton();
         getObservationPageActions().clickOnObservationWithoutRubric2();
         getObservationPageActions().verifyPiiPopup();
-        
-        
+        getObservationPageActions().checkTheCheckBox();
+        getObservationPageActions().verifyshareButtonGotEnabled();
+        getObservationPageActions().clickOnShareButton();
+        getObservationPageActions().verifyUserIsAbleToConsumeObservation();
+        getObservationPageActions().clickOnBackButton(); 
+       Thread.sleep(2000);
+        getObservationPageActions().clickOnObservation2();
+        getObservationPageActions().clickOnAddSchoolButton();
+        getObservationPageActions().verifyJoinProgramPopup();
+        getObservationPageActions().verifyJoinProgramPopupContents();
+        getObservationPageActions().clickOnCloseButtonOnPopup();
+        Thread.sleep(2000);
+        getObservationPageActions().clickOnObserveAgainButton();
+        getObservationPageActions().verifyJoinProgramPopup();
+        getObservationPageActions().verifyJoinProgramPopupContents();
+        getObservationPageActions().clickOnJoinProgramButtonOnPopup();
+        getObservationPageActions().verifyPiiPopup();
+        getObservationPageActions().verifyPiiPopupContents();
+        getObservationPageActions().checkTheCheckBox();
+        getObservationPageActions().verifyshareButtonGotEnabled();
+        getObservationPageActions().clickOnShareButton();
+        getObservationPageActions().verifyUserIsAbleToConsumeObservation();
+        //
+          
     }
     
-
-
-
-
-
-
-
-
-
 
 }

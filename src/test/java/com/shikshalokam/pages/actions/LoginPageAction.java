@@ -279,8 +279,16 @@ public class LoginPageAction {
     }
     
     public void selectcbseOrNcertBoardOption() throws Exception {
-    	ShikshaLokamClient.get().gestures().click(loginPageObjects.cbseNcertOption);
-    	Logger.logAndReportInfo("Selected the option cbse or ncert.");
+    	 if(getEnvironmentValue().contains("diksha")) {
+    		 ShikshaLokamClient.get().gestures().click(loginPageObjects.cbseNcertOption);
+    	    	Logger.logAndReportInfo("Selected the option cbse or ncert.");
+         } else if(getEnvironmentValue().contains("dev")) {
+             ShikshaLokamClient.get().gestures().click(loginPageObjects.ncfOption);
+             Logger.logAndReportInfo("Selected the option NCF.");      
+         } else {
+        	 ShikshaLokamClient.get().gestures().click(loginPageObjects.cbseNcertOption);
+         	Logger.logAndReportInfo("Selected the option cbse or ncert.");      	
+         }
     }
     
     public void clickOnMediumDropDown() throws Exception {
@@ -406,7 +414,7 @@ public class LoginPageAction {
          selectcbseOrNcertBoardOption();
          Thread.sleep(2000);
          clickOnSubmitButtonOnCourseWindow();
-        selectState();
+         selectState();
          selectDistrict();
          clickOnSubmitButtonOnLocationWindow();
          verifyHomeButton();
@@ -563,6 +571,19 @@ ShikshaLokamClient.get().report().log(Status.INFO, "clicked on Browser Back Butt
 	    
 	    ///////////
 	    
-	    
+	    public void BMCLSelection1() throws Exception {
+	    	 verifyWelcomeTitle();
+	         selectRoleHTAndOffical();
+	         clickOnContinue();
+	         clickOnBoardDropDown();
+	         selectcbseOrNcertBoardOption();
+	         Thread.sleep(2000);
+	         clickOnSubmitButtonOnCourseWindow();
+	         Thread.sleep(2000);
+	        //selectState();
+	         //selectDistrict();
+	         clickOnSubmitButtonOnLocationWindow();
+	         verifyHomeButton();
+	    }
 	    
 }
